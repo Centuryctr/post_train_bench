@@ -1,0 +1,382 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "export_normalized_records.py",
+    "version": "1.1.0"
+  },
+  "generated_at": "2026-10-20T09:00:18.748470+00:00",
+  "run_id": "qwen17_gsm8k_1h_r01",
+  "task": "gsm8k",
+  "run_root": "/root/emhua/qrzeng/post_train_bench/runs/qwen17_gsm8k_1h_r01",
+  "semantics": {
+    "agent_model_outputs": "Completed Codex agent messages and exposed reasoning summaries. Reasoning summaries are not raw hidden chain-of-thought.",
+    "agent_system_outputs": "Completed Codex tool outputs, unstructured runtime messages, and any started items that never completed. Command output is the CLI aggregated stream and may combine stdout and stderr.",
+    "eval_model_outputs": "Per-sample downstream model completions exported from controller Inspect AI logs.",
+    "linux_system_outputs": "Experiment-scoped resource snapshots, separated stdout/stderr events, and conservative warning/error backfills from legacy logs. Host-wide journal and kernel logs are intentionally excluded."
+  },
+  "sources": {
+    "agent_log": {
+      "path": "agent_home/task/agent.jsonl",
+      "bytes": 293394,
+      "sha256": "c875ecc85a6732fc765ae11254baf542ed1e9cd223468a85ea0516f3f0ca482f"
+    },
+    "inspect_logs": [
+      {
+        "path": "base_full/inspect_logs/2026-10-14T11-11-25+00-00_gsm8k_mLVbmPeRfB7yMVYerqdxMY.json",
+        "bytes": 68727534,
+        "sha256": "21e4a8a3f026ab2bff60bd7e7bae342daf95a38c3e7e5f0d94a4a9e8b6550b22",
+        "sample_count": 1319
+      },
+      {
+        "path": "base_limit2/inspect_logs/2026-10-14T11-07-10+00-00_gsm8k_dFQtjLNNavvRiP4HYMhwL8.json",
+        "bytes": 103726,
+        "sha256": "aa4deae9a89499c485cac2696f047d9d49f6714d30a167bdcddabb427218d048",
+        "sample_count": 2
+      },
+      {
+        "path": "base_limit2.failed.20261014_110605/inspect_logs/2026-10-14T10-54-26+00-00_gsm8k_o9nTFnytthj6iSafTkAomD.json",
+        "bytes": 415565,
+        "sha256": "f038677f30ea512128a0e45084e0dc01d84e87b30734f73658084ef3b0708e9b",
+        "sample_count": 2
+      },
+      {
+        "path": "final_full/inspect_logs/2026-10-14T13-39-22+00-00_gsm8k_CRcNnpNmxHUHJR4Utf2brD.json",
+        "bytes": 55402599,
+        "sha256": "11095f5a8ba6872ce0d234d82b939a33abf503a255a33de2d3bbd6043d48f08a",
+        "sample_count": 1319
+      }
+    ],
+    "inspect_log_errors": []
+  },
+  "agent_trace": {
+    "exists": true,
+    "valid_json_lines": 282,
+    "invalid_json_lines": 1,
+    "model_output_records": 57,
+    "system_output_records": 112,
+    "events_by_type": {
+      "item.completed:agent_message": 36,
+      "item.completed:command_execution": 108,
+      "item.completed:reasoning": 21,
+      "item.completed:web_search": 3,
+      "item.started:command_execution": 108,
+      "item.started:web_search": 3,
+      "thread.started": 1,
+      "turn.completed": 1,
+      "turn.started": 1
+    },
+    "thread_ids": [
+      "01a13a46-a6b9-7e73-8d9b-464060d18d2e"
+    ],
+    "turn_usage": [
+      {
+        "input_tokens": 10655509,
+        "cached_input_tokens": 10503424,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 67361,
+        "reasoning_output_tokens": 46537
+      }
+    ],
+    "unfinished_item_ids": []
+  },
+  "linux_system": {
+    "records": 141,
+    "structured_sources": [],
+    "legacy_sources": [
+      {
+        "path": "agent_home/task/logs/add_context.log",
+        "bytes": 65,
+        "sha256": "095149a5fdace300ce3a3e9689c443c3c3fe228711982a278db2afb290f58280",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/base_eval.log",
+        "bytes": 27751,
+        "sha256": "71fc328a95b1a4babc3f3c92b91b1323f79a402b9ab378791b5eea8f71875041",
+        "selection": "warning_error_lines",
+        "scanned_lines": 301,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/checkpoint_evaluations.log",
+        "bytes": 562,
+        "sha256": "ad9864ee09f721f8d98aaae7ba5657167d6919988f207c21e3d16e3d99993d77",
+        "selection": "warning_error_lines",
+        "scanned_lines": 9,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/final_artifact_check.log",
+        "bytes": 173,
+        "sha256": "0defdd0f4c775a7017d22375499a4b4a362f202f94615059db051e561fb72ef7",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/final_candidate0_eval.log",
+        "bytes": 48709,
+        "sha256": "8ccfb89f8f061a0e1fcb6e8abef40e7e346963517ce303ef2217240e629c98e5",
+        "selection": "warning_error_lines",
+        "scanned_lines": 480,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/final_candidate1_eval.log",
+        "bytes": 48823,
+        "sha256": "60d59706d3c5999d32fda05c3b4833158503408c4f0bf46f9d29f237728dddd0",
+        "selection": "warning_error_lines",
+        "scanned_lines": 483,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/final_candidate2_eval.log",
+        "bytes": 48816,
+        "sha256": "1359a1d86c2e30df40a0b88d9d20fde422d335ae7d15fc1c2affb751217b71c0",
+        "selection": "warning_error_lines",
+        "scanned_lines": 481,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/final_candidate3_eval.log",
+        "bytes": 48569,
+        "sha256": "483be8b2dcda8dc437f8b99841527dae7be68061519703805fcd7616f562a228",
+        "selection": "warning_error_lines",
+        "scanned_lines": 481,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/final_compare.log",
+        "bytes": 2435,
+        "sha256": "19566a843c40a661d9d929f9db3052cc59d36e9a8143b1a49e2fb8d4415bf43b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 56,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/mix_epoch1_eval.log",
+        "bytes": 27253,
+        "sha256": "fb1b635be52452f2b385d1ecd023a0bc57051e33207b268695e81c73b7b40ab8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 278,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/mix_step250_eval.log",
+        "bytes": 27260,
+        "sha256": "9d70067b7518eb812752af1f5ea41cd89e64565e15e0ef2fef37a0182ba114c0",
+        "selection": "warning_error_lines",
+        "scanned_lines": 280,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/mix_step500_eval.log",
+        "bytes": 27497,
+        "sha256": "66ec153316b94286b0c15f37c493322ef61bc344548b47751787a93dc414dcf2",
+        "selection": "warning_error_lines",
+        "scanned_lines": 282,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/mixture_evaluations.log",
+        "bytes": 271,
+        "sha256": "8feefcd970fed292686696612dfa81c67eaec2a7b934b4fea490f28aa4bb2db8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/phase_two.log",
+        "bytes": 70,
+        "sha256": "76a9210f3f727216cc3c1c7578a795dc655533df24e8edce15578b6ab267f632",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare.log",
+        "bytes": 775,
+        "sha256": "c7e72bf8388043bbb9237e2217fae63b22eec5dbd9e9036f9d7d49444739a4ce",
+        "selection": "warning_error_lines",
+        "scanned_lines": 20,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_diverse.log",
+        "bytes": 1164,
+        "sha256": "0ea23b4b2ea06bd6678b9d664beee7e8543e7a88247339e1681692815d1283c9",
+        "selection": "warning_error_lines",
+        "scanned_lines": 9,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/promote.log",
+        "bytes": 773,
+        "sha256": "4e75216dc4457ffd7c5533fb3ba5971ad35deee594735f78a127f32022a3d1e4",
+        "selection": "warning_error_lines",
+        "scanned_lines": 8,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/refine_epoch1_eval.log",
+        "bytes": 26925,
+        "sha256": "66af81e3dfd14da1e008f4f7db8f49e3aaf96b52fc209302f78cacc6ce8f30ec",
+        "selection": "warning_error_lines",
+        "scanned_lines": 277,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/refinement.log",
+        "bytes": 575,
+        "sha256": "41bd168a0f066c4b750f6dc51fc7b12434b240574dd1a1ed8417a35c2ae6a4f7",
+        "selection": "warning_error_lines",
+        "scanned_lines": 11,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/select_best.log",
+        "bytes": 972,
+        "sha256": "77d8bfd82a873903069508f2ca0cc3776c4dd8bf184017706757c11244502d73",
+        "selection": "warning_error_lines",
+        "scanned_lines": 39,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/select_best_current.log",
+        "bytes": 874,
+        "sha256": "ddf2f39a2d11462ce41b74e72aa8150db6a344fea73d458adf500275429e83d8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 37,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/sft_epoch1_eval.log",
+        "bytes": 27376,
+        "sha256": "21c335c9c421961d31244bd90a41c9e2e63e25a447f716b6ab625b35b7493811",
+        "selection": "warning_error_lines",
+        "scanned_lines": 283,
+        "records": 7
+      },
+      {
+        "path": "agent_home/task/logs/sft_epoch2_eval.log",
+        "bytes": 27198,
+        "sha256": "07740dc9c5d4ab17be09cb9a7c726e005a78772aaa7143eb350e98834f8e487f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 280,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/sft_epoch3_eval.log",
+        "bytes": 27152,
+        "sha256": "3af9d8e5aac951b6cb6feae05590c1b80f8f0609a920db2f9575140e8716ea55",
+        "selection": "warning_error_lines",
+        "scanned_lines": 280,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/train_mixture.log",
+        "bytes": 10204,
+        "sha256": "261caa74c3e5267d39466e7ebd9793175363aedad0f996c35fb4f982fc9ebf0c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 122,
+        "records": 14
+      },
+      {
+        "path": "agent_home/task/logs/train_original.log",
+        "bytes": 7132,
+        "sha256": "8b0d911bbef910dbace39874b4bd838a8c653eb89f073ad1af9d16e24a89499e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 78,
+        "records": 14
+      },
+      {
+        "path": "agent_home/task/logs/train_refinement.log",
+        "bytes": 3378,
+        "sha256": "3784a01977af417726027572080472a2aef87c1b691c09dee31a6d82d3c420ab",
+        "selection": "warning_error_lines",
+        "scanned_lines": 33,
+        "records": 14
+      },
+      {
+        "path": "controller/base_full/evaluate.log",
+        "bytes": 183769,
+        "sha256": "3f8316945c9f86f24b6bbf13725d28a05ba195c398bfbf0e15a14df25e0772cd",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1847,
+        "records": 5
+      },
+      {
+        "path": "controller/base_limit2.failed.20261014_105323/evaluate.log",
+        "bytes": 19071,
+        "sha256": "5c2a971a02a2a86a8c85a89afb512ca25ed70534b9d9eb7723d1f3362c6201eb",
+        "selection": "warning_error_lines",
+        "scanned_lines": 209,
+        "records": 8
+      },
+      {
+        "path": "controller/base_limit2.failed.20261014_110605/evaluate.log",
+        "bytes": 91705,
+        "sha256": "e44a6cef4d43c943cb5a54526dd9556c3f112e1a63fabb560e981f35ebb9270a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 483,
+        "records": 19
+      },
+      {
+        "path": "controller/base_limit2/evaluate.log",
+        "bytes": 16212,
+        "sha256": "ba0b2a8f0fac87903510159e4e70933f8f4ad12175fdce3129bc3ad198be93ec",
+        "selection": "warning_error_lines",
+        "scanned_lines": 168,
+        "records": 5
+      },
+      {
+        "path": "controller/final_full/evaluate.log",
+        "bytes": 171944,
+        "sha256": "78650d0f23a2b9caf2a6f87ae91bafa251611cca21870a460c09a8a782ca37bc",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1651,
+        "records": 5
+      }
+    ],
+    "source_errors": [],
+    "records_by_event_type": {
+      "log_line": 141
+    },
+    "records_by_severity": {
+      "error": 18,
+      "warning": 123
+    }
+  },
+  "outputs": {
+    "agent_model": {
+      "path": "agent_model_outputs.jsonl",
+      "bytes": 31691,
+      "sha256": "414f326de830bca14a8035c27f1aa8f3386956f836cee7c9a794b6800f097dd6",
+      "records": 57
+    },
+    "agent_system": {
+      "path": "agent_system_outputs.jsonl",
+      "bytes": 206238,
+      "sha256": "f8a844eda895ffcf1374716510ef040fe211e4b8669cc82c5b6f911ba1bfccc9",
+      "records": 112
+    },
+    "eval_model": {
+      "path": "eval_model_outputs.jsonl",
+      "bytes": 8721593,
+      "sha256": "6d5ad7584bd015be220b7355ec2709b5bdf54bff37aaf233d81d14d14a817d0a",
+      "records": 2642
+    },
+    "linux_system": {
+      "path": "linux_system_outputs.jsonl",
+      "bytes": 70685,
+      "sha256": "9c20b18c80f0107a5d0898de2df4c5df5021a44a6486b8f9b121b4c612096770",
+      "records": 141
+    }
+  },
+  "privacy": {
+    "sanitized": false,
+    "note": "Derived records can contain prompts, benchmark inputs, command outputs, paths, and other sensitive text. Review before sharing."
+  }
+}

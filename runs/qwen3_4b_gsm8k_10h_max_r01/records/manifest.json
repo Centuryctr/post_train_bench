@@ -1,0 +1,2708 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "export_normalized_records.py",
+    "version": "1.1.0"
+  },
+  "generated_at": "2026-10-20T09:00:43.671476+00:00",
+  "run_id": "qwen3_4b_gsm8k_10h_max_r01",
+  "task": "gsm8k",
+  "run_root": "/root/emhua/qrzeng/post_train_bench/runs/qwen3_4b_gsm8k_10h_max_r01",
+  "semantics": {
+    "agent_model_outputs": "Completed Codex agent messages and exposed reasoning summaries. Reasoning summaries are not raw hidden chain-of-thought.",
+    "agent_system_outputs": "Completed Codex tool outputs, unstructured runtime messages, and any started items that never completed. Command output is the CLI aggregated stream and may combine stdout and stderr.",
+    "eval_model_outputs": "Per-sample downstream model completions exported from controller Inspect AI logs.",
+    "linux_system_outputs": "Experiment-scoped resource snapshots, separated stdout/stderr events, and conservative warning/error backfills from legacy logs. Host-wide journal and kernel logs are intentionally excluded."
+  },
+  "sources": {
+    "agent_log": {
+      "path": "agent_home/task/agent.jsonl",
+      "bytes": 2807848,
+      "sha256": "9da2baa60a3698df7bed2f7ee65ad63fdccdd1a5cd92a143b9dddc6a01a0f7a2"
+    },
+    "inspect_logs": [
+      {
+        "path": "base_full/inspect_logs/2026-10-16T15-39-25+00-00_gsm8k_QAoPDdg4nys8WEYS6BUPAT.json",
+        "bytes": 72614443,
+        "sha256": "f35a6d27547b6a1c7628fbb3fc46f98960ddd7dd72d1b07402bad98673d16b7c",
+        "sample_count": 1319
+      },
+      {
+        "path": "final_full/inspect_logs/2026-10-17T02-48-55+00-00_gsm8k_CispAid4ieaa4HaRH64kUn.json",
+        "bytes": 58172759,
+        "sha256": "48b34e77b3d8e4c5d738b7f8daabc5bda90ca19d48e369b006dbc3862979f5b2",
+        "sample_count": 1319
+      }
+    ],
+    "inspect_log_errors": []
+  },
+  "agent_trace": {
+    "exists": true,
+    "valid_json_lines": 2240,
+    "invalid_json_lines": 1,
+    "model_output_records": 283,
+    "system_output_records": 978,
+    "events_by_type": {
+      "item.completed:agent_message": 238,
+      "item.completed:command_execution": 896,
+      "item.completed:file_change": 69,
+      "item.completed:reasoning": 45,
+      "item.completed:web_search": 12,
+      "item.started:command_execution": 896,
+      "item.started:file_change": 69,
+      "item.started:web_search": 12,
+      "thread.started": 1,
+      "turn.completed": 1,
+      "turn.started": 1
+    },
+    "thread_ids": [
+      "01a145b4-1a54-75d3-ae95-92e0df7b8973"
+    ],
+    "turn_usage": [
+      {
+        "input_tokens": 178947375,
+        "cached_input_tokens": 176294144,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 920714,
+        "reasoning_output_tokens": 702336
+      }
+    ],
+    "unfinished_item_ids": []
+  },
+  "linux_system": {
+    "records": 1206,
+    "structured_sources": [],
+    "legacy_sources": [
+      {
+        "path": "agent_home/task/logs/alternate_checkpoints_orchestrator.log",
+        "bytes": 778,
+        "sha256": "3494247799026899c8ffea25999e901ff5e6219478ea8f5dfe9caa9847f9214a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/alternate_native_dpo_40.log",
+        "bytes": 157985,
+        "sha256": "f956a87d75c936b555522597e2ffbe277fd3236947906a81ed4e534cca3a7535",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1482,
+        "records": 6
+      },
+      {
+        "path": "agent_home/task/logs/alternate_self_check_50.log",
+        "bytes": 157670,
+        "sha256": "cdebf102b995dd43e9ba1128b45c01185fb5ccf6abcb7d777985fc29c6f09516",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1481,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/augmented_generation_orchestrator.log",
+        "bytes": 35,
+        "sha256": "05981803f9483fc3ae74ccf8600bb04cfeec9b5eddf30a17fa42751d0170eb52",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/auxiliary_trials_controller.log",
+        "bytes": 1605,
+        "sha256": "0f9d25d3e76b9b7ecafc1130c1853922e5e739d131a706041abea8b1c348227e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 11,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/average_native200_few20.log",
+        "bytes": 679,
+        "sha256": "9d28331c190da6d27ed86153edac29f09798df7aea43100fc43da6079b7c6f7d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 2
+      },
+      {
+        "path": "agent_home/task/logs/averaged_full_benchmark.log",
+        "bytes": 154925,
+        "sha256": "050d0322d17dd7e3fdfc1d3fda75bdc761b2249f62267f78ce41bc677a9399e8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1463,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/base_control_gap.log",
+        "bytes": 357,
+        "sha256": "9ceab24ca46aae9c3aa250b4b897706d6ba496fa6c156f59a433cacd06446022",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/baseline_benchmark.log",
+        "bytes": 34116,
+        "sha256": "4171c4d21fabd7557ed534919fa2558d5a7e90e1329fa1cc526aeb0810ae053f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 355,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/best_dpo_orchestrator.log",
+        "bytes": 18,
+        "sha256": "0d0640b2c650c307cb13ca48fc9542ad5e802351534aabd9d78332b72902b5ca",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/best_rft_orchestrator.log",
+        "bytes": 1860,
+        "sha256": "b94e4cb8ba4384b6d1f400ca374138d2d20ef76d0d3ead9ca8d1daf1641be021",
+        "selection": "warning_error_lines",
+        "scanned_lines": 11,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/candidates_augmented_shard0.log",
+        "bytes": 10886,
+        "sha256": "8feb6544731971de3139efe7658279ecfdb559464c70fef2249330e99dcd6043",
+        "selection": "warning_error_lines",
+        "scanned_lines": 78,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/candidates_augmented_shard1.log",
+        "bytes": 11111,
+        "sha256": "5a321abedcaa37501fd779583b6d74b61b0dab2a60f4452ffc9fa43a9411a2b6",
+        "selection": "warning_error_lines",
+        "scanned_lines": 80,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/candidates_augmented_shard2.log",
+        "bytes": 11125,
+        "sha256": "eb191ffdffc25a8d26d815bfec0116463861da9738113cf5f731008a7658b558",
+        "selection": "warning_error_lines",
+        "scanned_lines": 80,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/candidates_augmented_shard3.log",
+        "bytes": 10879,
+        "sha256": "56ece5d304999d5ba9c57df8a1fb143795f886e595176e25a3c21d06015629ce",
+        "selection": "warning_error_lines",
+        "scanned_lines": 78,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/candidates_best_shard0.log",
+        "bytes": 11939,
+        "sha256": "74ff4a7fb22a682dad11cbc001cad387f2f92dd20cdc96ea1c35668ea3fbd2c0",
+        "selection": "warning_error_lines",
+        "scanned_lines": 87,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/candidates_best_shard1.log",
+        "bytes": 11934,
+        "sha256": "f2bd4940e4a22826be2a911160d385363ad938e7cd6221e5045dc8175f7f2f77",
+        "selection": "warning_error_lines",
+        "scanned_lines": 87,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/candidates_best_shard2.log",
+        "bytes": 11958,
+        "sha256": "3e1bf6fb8ea827c0c124e8b2feae127ecbe83e58d3637ddabe74b64544429ec6",
+        "selection": "warning_error_lines",
+        "scanned_lines": 87,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/candidates_best_shard3.log",
+        "bytes": 11946,
+        "sha256": "58259d874f3175597a1206b499f7e2c199891a861a20452ff5e5dee07b7d5fca",
+        "selection": "warning_error_lines",
+        "scanned_lines": 87,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/candidates_native200_shard0.log",
+        "bytes": 11431,
+        "sha256": "65eb41426ff4c44bc26f7f49c3817d63ec988de29a02f475fa94d1a08e34d8e4",
+        "selection": "warning_error_lines",
+        "scanned_lines": 83,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_100_benchmark.log",
+        "bytes": 155308,
+        "sha256": "055fbc24321a2b7cbc7e19dc6fd2af6b8d249b81472279642382109814281b7b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1467,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_100_merge.log",
+        "bytes": 254,
+        "sha256": "fb8b735704dfa009dd09edd0df0f826092e29ad02ad8cabf99c48b18a9956362",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_100_validation.log",
+        "bytes": 11686,
+        "sha256": "90caaef0964e9c674346fb7f0bafd74968a975fc5497ef0db19690b3f982d6b8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 80,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_150_benchmark.log",
+        "bytes": 154878,
+        "sha256": "90e90f4f93aff6f80a1e603392c7787f19d631d7cbbc0f5573ca6092ff163e20",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1464,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_150_merge.log",
+        "bytes": 254,
+        "sha256": "220809f038846438fd406afbc5f1f57e1bfd5bf0e996fbfe39d1b6248f509c74",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_150_validation.log",
+        "bytes": 11686,
+        "sha256": "b59805e1632de9a8e9b0844dc2c5a5734e786807adf4b43f74945235f7944f3c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 80,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_200_benchmark.log",
+        "bytes": 154931,
+        "sha256": "f23c43c0f5dd26cdc4e94c650f8e45c9a823a7b9a92a5e9c63a327ac04212eb6",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1463,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_200_merge.log",
+        "bytes": 254,
+        "sha256": "5d9ad6fdbc0c120ec7fac00d5d0372d3876fbafc39048f6c670f60ae640f4257",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_200_validation.log",
+        "bytes": 11686,
+        "sha256": "24be1e4cd524a91bc243d12bc4951341589fe19714f7aa850007d34e7f910050",
+        "selection": "warning_error_lines",
+        "scanned_lines": 80,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_250_benchmark.log",
+        "bytes": 155947,
+        "sha256": "c671ef2bae75a6166de75b8b8b899eca2b9935bb80fbad04306b854beb7d229d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1474,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_250_merge.log",
+        "bytes": 254,
+        "sha256": "f4eccfc916970ce63ca4b00d8c1cacf1d4a2887fd8a1c3bd12d3f0239887bb1d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_250_validation.log",
+        "bytes": 11685,
+        "sha256": "8fa5d36f0baa88f4ed61850be1e08e0acc1662b701f35e5a7f6756adeb259980",
+        "selection": "warning_error_lines",
+        "scanned_lines": 80,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_300_benchmark.log",
+        "bytes": 154957,
+        "sha256": "0fbb0505323a7ab571157ac0bf59a543c2f72bc3a2830f29fff6131d03fb63d6",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1465,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_300_merge.log",
+        "bytes": 254,
+        "sha256": "7cc7c048ff0f979919482bf2db526e387807e1ba7708706abcb3384e91c812a6",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_300_validation.log",
+        "bytes": 11686,
+        "sha256": "6f17f62fece3c77ff859d3a8a22b3a761fe30136c2640c35d9caa642c5a7266a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 80,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_350_benchmark.log",
+        "bytes": 155375,
+        "sha256": "1ff8e7ae1ce6f8d493f550755c3c1c9714bd392575b414da4cb0ffd2e0d06459",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1468,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_350_merge.log",
+        "bytes": 254,
+        "sha256": "5b1395ba4fafaeff9bbaba27e666d0a9673639be7d36cbedccff8eb51cbac7c1",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_350_validation.log",
+        "bytes": 11687,
+        "sha256": "d78f6814287e8a070a3a43eac063a859a84151d72091833877163b57f6980cc6",
+        "selection": "warning_error_lines",
+        "scanned_lines": 80,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_50_benchmark.log",
+        "bytes": 155445,
+        "sha256": "2f89ecbcd6aadc331220807dc7fb1831a1d0a8dfeb75fef9c079337b650e2f6a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1468,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_50_merge.log",
+        "bytes": 254,
+        "sha256": "8f355cc03b46a46d747d233b5a84fc9d00cc42964f41f21cbc3b961282d56e96",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_50_validation.log",
+        "bytes": 11686,
+        "sha256": "1b838f5e357a83cf45f9994e1c1028915af50ece0f6d846f3ba0d8e1ecea87b9",
+        "selection": "warning_error_lines",
+        "scanned_lines": 80,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_orchestrator.log",
+        "bytes": 61,
+        "sha256": "677372dd80eee2f924e6ec1560637e2a7df696998b89cb202e19a19a05c23e83",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_validation.log",
+        "bytes": 5731,
+        "sha256": "d726c091fd792addaaefb1bb74f73562a0d32f8a954ae6fc5096882f28116c18",
+        "selection": "warning_error_lines",
+        "scanned_lines": 8,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/clean_sft_validation_orchestrator.log",
+        "bytes": 30,
+        "sha256": "375c35efc1d736c15fc849d70c23acb2927d79bb08f4e5fe86bce0e91d571cc9",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/component_arithmetic_orchestrator.log",
+        "bytes": 2885,
+        "sha256": "431484bac238b1d7c42e9ffc5d60180d3880105caf08985860f50073d978c12d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 4,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/component_attention.log",
+        "bytes": 164050,
+        "sha256": "099e9d9f1e194052ea79a2976ff414dbf94039f90939eff19b6ff1f79dda068b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1540,
+        "records": 8
+      },
+      {
+        "path": "agent_home/task/logs/component_decoder_linear.log",
+        "bytes": 164139,
+        "sha256": "c8738f8a42a56172552a94a8c676302285570dee5beb01f4ae307d99665d500f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1540,
+        "records": 8
+      },
+      {
+        "path": "agent_home/task/logs/component_late_head.log",
+        "bytes": 163990,
+        "sha256": "84d70d3c6cdcbd5efea5fc026c4d77b861224ec055ee99879144f2c37aa0b759",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1538,
+        "records": 8
+      },
+      {
+        "path": "agent_home/task/logs/component_parent_head.log",
+        "bytes": 163838,
+        "sha256": "e26031d026eff0111ae72ad36b5be6fba9f46b7421f6f9464d34aed8ab2004ef",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1538,
+        "records": 7
+      },
+      {
+        "path": "agent_home/task/logs/concise_lora_orchestrator.log",
+        "bytes": 22,
+        "sha256": "eccac618d362c406d983fb275e4e16498392b5663ce4de42114f84e0a9d8eb3b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/concise_lora_validation.log",
+        "bytes": 12929,
+        "sha256": "ee8bcb33f607a50b633fa498d086b002cc272bfcc868e67845075a5fa92948e2",
+        "selection": "warning_error_lines",
+        "scanned_lines": 89,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/concise_lora_validation_orchestrator.log",
+        "bytes": 33,
+        "sha256": "b57140502cb6e61fc945ac356171e36b9c480cf79124568bb5667bc74f50e1cd",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/consolidation_20_benchmark.log",
+        "bytes": 154949,
+        "sha256": "d0e81871c2efc9dde4d72b4751ea5cabb2f89658f6f834f46a5c82d68bfb855e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1479,
+        "records": 6
+      },
+      {
+        "path": "agent_home/task/logs/consolidation_orchestrator.log",
+        "bytes": 207,
+        "sha256": "2c9cda35eb79e6b319058c076fbfe21047a0714194fa81370b42d5990972e32a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/control_benchmarks_controller.log",
+        "bytes": 409,
+        "sha256": "8d0b2a6613afce302b8362a63d37fcc64507ad59d719f8944e305b142833b025",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/convert_native.log",
+        "bytes": 4658,
+        "sha256": "f5cc7e449a2c5471e45e093525266fcfbcedecb4a073c019932fa610e10e22c6",
+        "selection": "warning_error_lines",
+        "scanned_lines": 47,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/current_packaging_audit.log",
+        "bytes": 1196,
+        "sha256": "c54d5c788c56bc912ad4140c7603886f7c62fc218a06afac6ee30d1cb68b7697",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/dense_average_validation.log",
+        "bytes": 9444,
+        "sha256": "4281fd361875400809cb0ec0afa9f4e6e9a889720dd60a851aed6ad5b2592406",
+        "selection": "warning_error_lines",
+        "scanned_lines": 64,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/dense_fewshot20_validation.log",
+        "bytes": 9249,
+        "sha256": "f542b566230938f34c28168603138a4b680e06d376954d3816cba29cd8b3d3a2",
+        "selection": "warning_error_lines",
+        "scanned_lines": 63,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/dense_native200_validation.log",
+        "bytes": 9256,
+        "sha256": "c8bc2b9dd4474aed83c450a7fe442b57f27109fbd35fdd36a7e01478f99b9acc",
+        "selection": "warning_error_lines",
+        "scanned_lines": 63,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/download_base.log",
+        "bytes": 670,
+        "sha256": "b9d7866f7e20d4045370c3b3332939906983f68d0fad525c16a310a67c0b8d16",
+        "selection": "warning_error_lines",
+        "scanned_lines": 8,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/download_data.log",
+        "bytes": 2188,
+        "sha256": "684b012e805a4154e6c1e12b698fa0cad727b4fa6a0ad060bc9c5bbb6a8e9f64",
+        "selection": "warning_error_lines",
+        "scanned_lines": 29,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/download_metamath.log",
+        "bytes": 211,
+        "sha256": "83f22fc60a3982447d7a4a187c6cda849eb8809b1b107c471fbe9d67868b3172",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/download_r1.log",
+        "bytes": 507,
+        "sha256": "c54700292822cb3bef9dfa25a57626b2cd5ef7a06887038fdead3becb3af8d31",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/download_reasoning.log",
+        "bytes": 637,
+        "sha256": "3bb8156b68c3340838ca455ee2d47d5ebd59dbeacc491aa3a982c059676442aa",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/dpo_augmented_120_benchmark.log",
+        "bytes": 157998,
+        "sha256": "b543403d78a852100866051c11f731bf21107c44a7f8bcdea90bc9ceac02cdfd",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1487,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/dpo_augmented_120_merge.log",
+        "bytes": 759,
+        "sha256": "2b1f4efea3c2ea0e3d7ae165e37d5a4a259ca46409ea6f63c717d6c8d90ef796",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/dpo_augmented_120_validation.log",
+        "bytes": 12366,
+        "sha256": "865c29169a298e500fa6bc5a1079f4953a6212ec3e1579bdc0b372e09c33d360",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/dpo_augmented_160_benchmark.log",
+        "bytes": 158362,
+        "sha256": "43cb04dc9c35709d62d26ae467ace3424b63b06d07752437d26fdf5ef11d4a85",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1491,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/dpo_augmented_160_merge.log",
+        "bytes": 759,
+        "sha256": "18d67bbc6c77d70378d46cf66d48b927fa144ebc958b259386ffc54f5362a2b0",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/dpo_augmented_160_validation.log",
+        "bytes": 12366,
+        "sha256": "b925c06185220063044842c6033a2dadb7f37f225155d7caab1e127cbdde9b06",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/dpo_augmented_40_benchmark.log",
+        "bytes": 158046,
+        "sha256": "1b906cf84081c84eabf3f5d17694162f1577ef607c4cc7158f1186ead66426c9",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1490,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/dpo_augmented_40_merge.log",
+        "bytes": 1020,
+        "sha256": "7cbc164473354a0b0a9dca5df57bcb987fb3295d2faa690a87cab6c203d5b16b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 10,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/dpo_augmented_40_validation.log",
+        "bytes": 12462,
+        "sha256": "f9277b1954f88a9fbda11cc1b3ccb28148b3a75519c88905d76b96469dce36dc",
+        "selection": "warning_error_lines",
+        "scanned_lines": 87,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/dpo_augmented_80_benchmark.log",
+        "bytes": 158371,
+        "sha256": "18bcdc921c334a0ed1e08a79175bad63af9da1dc2d5591c4ca67c1be7403cfe5",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1492,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/dpo_augmented_80_merge.log",
+        "bytes": 759,
+        "sha256": "d63c78b3325eaa32a410d3f2ba60c5629cb5ef2211b089ff020cf2af1e3449c0",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/dpo_augmented_80_validation.log",
+        "bytes": 12365,
+        "sha256": "e55c3b12c6939a42c4c7da38fe1c4ac16c8f8a3dbe2ff63cc3c23a9d6fe88b2f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/dpo_augmented_validation.log",
+        "bytes": 2504,
+        "sha256": "4f7ef752da641bedc9e9fe0a38f86d7554744d21fea98171035941e959b85336",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/dpo_avg_20_validation.log",
+        "bytes": 12157,
+        "sha256": "04122f1b615337526281c1cebf7058943600d82864291024d1599b4be8d3d617",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/dpo_avg_40_validation.log",
+        "bytes": 12156,
+        "sha256": "3ed9c163b94c00c1a56cc5127f82174760070c4f031147fd8ba662a1e8d046a2",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/dpo_avg_60_validation.log",
+        "bytes": 12156,
+        "sha256": "90eae207c6e5b91d7c31f61171b002ea268b2043305e8339f04c811fd62cb92c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/dpo_avg_80_validation.log",
+        "bytes": 12153,
+        "sha256": "94fbbe97c4b7e1690abfb775f95713eb66bff9257b9223dc553a7dfcc07dedc8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/dpo_avg_validation_controller.log",
+        "bytes": 1174,
+        "sha256": "ac0cf9c966cae94ee72d18f9f370a7f5b769d596bfd975d2970b7769c7250bba",
+        "selection": "warning_error_lines",
+        "scanned_lines": 4,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/dpo_best_120_benchmark.log",
+        "bytes": 154494,
+        "sha256": "7f47bd77fcfca0e5db33762408fba0804aa28c9b6c77ba689353870c2c7d52b5",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1461,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/dpo_best_120_merge.log",
+        "bytes": 735,
+        "sha256": "010868f9ecb07dd2ce00dbb7ba114adb6c555b8de954245b5ae4e6826c8705e7",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/dpo_best_120_validation.log",
+        "bytes": 12077,
+        "sha256": "5b6356d529cb6713d535f4f50cbaab73890c641a3baaca7991d4ea4f44113b0e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/dpo_best_180_benchmark.log",
+        "bytes": 155184,
+        "sha256": "44dc563e4a361c34d02d59c55da833a4d36f3f8f3585a9630f2bae176122da1c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1466,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/dpo_best_180_merge.log",
+        "bytes": 735,
+        "sha256": "1b48eb3c46c5ceb68f15680d8445e48c85d44b486d15e380ee3325957fe13735",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/dpo_best_180_validation.log",
+        "bytes": 12073,
+        "sha256": "c44542777e5fb1832b62f140ac67b9202c8bfc42553c9e19e5de5308f44495d8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/dpo_best_240_benchmark.log",
+        "bytes": 154807,
+        "sha256": "a0acf92fadc17440c739c925bdac833d38382c66c7694cb2bae311398c6bdf35",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1464,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/dpo_best_240_merge.log",
+        "bytes": 735,
+        "sha256": "ab6c1852b49df220e7bfb86d0dd4ea9716d300f6e995a0f2c730b828fdf3d4ac",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/dpo_best_240_validation.log",
+        "bytes": 12077,
+        "sha256": "879b116a3f24bc0357c2b4b93033c357a5c271424ba7688d0d10ec528dc1decd",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/dpo_best_60_benchmark.log",
+        "bytes": 154725,
+        "sha256": "eea299c4a0e4988f043c07d7826a14c1f15984c2204a4a3c563aa6811002395a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1463,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/dpo_best_60_merge.log",
+        "bytes": 735,
+        "sha256": "d3a2a890a0f5cd45d6765f2beb80e471a180da380b0de817dcfedcd4afbcd74f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/dpo_best_60_validation.log",
+        "bytes": 12076,
+        "sha256": "f702c1ba2ee71ff0b84d78fa221e51230dded099a3ebec66b447fc32eb499d68",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/dpo_best_validation.log",
+        "bytes": 2479,
+        "sha256": "540a6ff1735d9203450f9cdac4203d59716896c55a4952e1b8de833ee910d80e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 8,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/dpo_regularization_smoke_orchestrator.log",
+        "bytes": 36,
+        "sha256": "1772ab464b2081b54b26779299af4ccd76225c8df6f75e2839f47a39a2d84835",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/dpo_smoke.log",
+        "bytes": 4815,
+        "sha256": "285863bd89d82147d26b4c89bc55bcf9c08dc3f9f7742a93558ede425baa9088",
+        "selection": "warning_error_lines",
+        "scanned_lines": 30,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/fewshot20_default_full_benchmark.log",
+        "bytes": 174482,
+        "sha256": "e6010863f9ea1c3c56d44b308aec78cb9e704130e2607b0fa079cdc68e3309fc",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1731,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/fewshot20_default_smoke50.log",
+        "bytes": 16907,
+        "sha256": "2db2a3149a36202d46697c2082ed99a6536ff134475ca1f402b4f8d9de0f886d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 165,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/fewshot20_full_benchmark.log",
+        "bytes": 155076,
+        "sha256": "702dcb81719665f94b8c92d908f2e3b0720db00f9c5b1498576ec0104a898247",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1464,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/fewshot40_full_benchmark.log",
+        "bytes": 155557,
+        "sha256": "74b6cdf9412a1ef152e9ef1989564cfc6772824ce7ff72e1995a2d4d24853eea",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1472,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/fewshot_extrap150_full_benchmark.log",
+        "bytes": 155478,
+        "sha256": "b9c13a08c06f8ca7d77149db3c78f6ca9f20b952a88a197400866e9b0dfecb22",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1472,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/fewshot_extrap150_validation.log",
+        "bytes": 9774,
+        "sha256": "287fe4888178330e2363b6c50b43d085d0299f1d6bcfa65ce6882c55d69bbed4",
+        "selection": "warning_error_lines",
+        "scanned_lines": 67,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/fewshot_orchestrator.log",
+        "bytes": 659,
+        "sha256": "0353cd5fa1d6da82cc4f158a463009e835497c212534090e7a3376b9b3b9f8a2",
+        "selection": "warning_error_lines",
+        "scanned_lines": 8,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/final_alignment_orchestrator.log",
+        "bytes": 1220,
+        "sha256": "c5842241fd4879fc22c0feecdc39483d1e036dadf56ccf5c273ccdb7955ed3bb",
+        "selection": "warning_error_lines",
+        "scanned_lines": 6,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/final_confirmation_orchestrator.log",
+        "bytes": 429,
+        "sha256": "d515f623daf94812bf8ceb924327459e7d0cfa76532df5864f069078a798c9a5",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/final_default_smoke_benchmark.log",
+        "bytes": 12378,
+        "sha256": "54b532876c757388d033eff3a59d446c3e27038e8519cbf7010c6782677c1007",
+        "selection": "warning_error_lines",
+        "scanned_lines": 122,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/final_packaging_audit.log",
+        "bytes": 1196,
+        "sha256": "c54d5c788c56bc912ad4140c7603886f7c62fc218a06afac6ee30d1cb68b7697",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/full_focus_checkpoint-120_benchmark.log",
+        "bytes": 154579,
+        "sha256": "94387e8e427c0737df70797a8bec7797efe112bf753bf7ff3aecc0320b1d1b40",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1457,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/full_focus_checkpoint-120_validation.log",
+        "bytes": 9333,
+        "sha256": "760dcf3bb98559538052d9d8abd3209a4fe43b324c9f9ac3222564a2d877cd00",
+        "selection": "warning_error_lines",
+        "scanned_lines": 62,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/full_focus_checkpoint-128_benchmark.log",
+        "bytes": 154681,
+        "sha256": "192bcc1c8a552e4c235cd75b444bca45d263c8c7c47fd1ff0217414c94441636",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1458,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/full_focus_checkpoint-128_validation.log",
+        "bytes": 9408,
+        "sha256": "4c7395d816a4586c55017197450e73e63736696c6c074861fdd64acbbf5e13b3",
+        "selection": "warning_error_lines",
+        "scanned_lines": 63,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/full_focus_checkpoint-60_benchmark.log",
+        "bytes": 154964,
+        "sha256": "ca665fe1a790ed8601523d45be5cd650c861ef38d00d5e99512a4f2d1a4128d8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1461,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/full_focus_checkpoint-60_validation.log",
+        "bytes": 9082,
+        "sha256": "1f2c2f9dcaa0192e381cbb54c8f6cf778e3024501a003e7d0f2a0174c7c77844",
+        "selection": "warning_error_lines",
+        "scanned_lines": 60,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/full_focus_orchestrator.log",
+        "bytes": 42,
+        "sha256": "94e0200b6530ee039617bea098cdf738e29f0bffcf42180a5cd443c969cb5bd3",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/full_focus_validation.log",
+        "bytes": 1675,
+        "sha256": "ef29ca3fcb5c44ebd8b96f33fe979d8791fe07e3aa5996fb591bec7343f06a48",
+        "selection": "warning_error_lines",
+        "scanned_lines": 9,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/full_focus_validation_orchestrator.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "selection": "warning_error_lines",
+        "scanned_lines": 0,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/full_grpo_orchestrator.log",
+        "bytes": 19,
+        "sha256": "08fb39dc802aa610ee378c6a7b9b19af31b2a9dbbd4805a885678a216388c545",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/full_grpo_parent_zero_shot_validation.log",
+        "bytes": 9625,
+        "sha256": "6182e5a9befe73e4bb45363c17214b4ec4dc6fb89dd4f3098111cbc25f4461e0",
+        "selection": "warning_error_lines",
+        "scanned_lines": 64,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/full_grpo_validation_orchestrator.log",
+        "bytes": 30,
+        "sha256": "2c867f80653572038a508e35236cbd2d8ced183e0c2b1a05029d368fae33183c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/full_smoke.log",
+        "bytes": 17804,
+        "sha256": "9f4758b88d99204fe9aa48997c4a809e170a75d959047cec79fc182536602523",
+        "selection": "warning_error_lines",
+        "scanned_lines": 131,
+        "records": 22
+      },
+      {
+        "path": "agent_home/task/logs/full_smoke_fixed.log",
+        "bytes": 12470,
+        "sha256": "0d7c30f548e0fddccced6699da9eece358cfc748ecc162c7c2590d5964a85fb0",
+        "selection": "warning_error_lines",
+        "scanned_lines": 71,
+        "records": 15
+      },
+      {
+        "path": "agent_home/task/logs/greedy_base_control_orchestrator.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "selection": "warning_error_lines",
+        "scanned_lines": 0,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/greedy_base_full_benchmark.log",
+        "bytes": 164699,
+        "sha256": "b64654f38c36012087fae04cb27602638551d8572917c738fc29b813a41870e3",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1580,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/grpo_corrected_smoke_orchestrator.log",
+        "bytes": 37,
+        "sha256": "386fbf38c00b2325feba19b6cc201165723fb4eaa50117027aba301e2f83273b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/grpo_ddp_smoke10_validation.log",
+        "bytes": 12169,
+        "sha256": "a6aad43afcb25f523ed4c22db63bf552b6f9c974cafdb3000fd9137b5af04433",
+        "selection": "warning_error_lines",
+        "scanned_lines": 87,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/grpo_ddp_smoke_orchestrator.log",
+        "bytes": 19,
+        "sha256": "b43efb2ec9066eb0fdf103cad5cdc954efb8af7a573dafb854a2a354a592a513",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/grpo_early_stop_monitor.log",
+        "bytes": 108,
+        "sha256": "1f9128f38aaed3bdec3455b9f171fe745890182dcb6ca0a9ce8a73cd5ce6b274",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/grpo_full_checkpoint-120_benchmark.log",
+        "bytes": 156156,
+        "sha256": "9471a7212c3b1d966bbfdd0df14bece00de12216e3f8e36f02ff60f6a1b984e0",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1465,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/grpo_full_checkpoint-120_validation.log",
+        "bytes": 9103,
+        "sha256": "eb710dba493f0c8288e12ea04e77b354e08a9f20b7426f5472269887f212878d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 59,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/grpo_full_checkpoint-160_benchmark.log",
+        "bytes": 156827,
+        "sha256": "c68758ee6165ce8dfbef839e1e74db6611a6cf0105754581ff57c594883118fa",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1471,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/grpo_full_checkpoint-160_validation.log",
+        "bytes": 9103,
+        "sha256": "f2d188f23d60da81e73ab6dd0f8cfa82d807996a559bec00b5a8b5a283195864",
+        "selection": "warning_error_lines",
+        "scanned_lines": 59,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/grpo_full_checkpoint-200_benchmark.log",
+        "bytes": 156296,
+        "sha256": "50a8b5447f4983669081beeb123d485a4191d63e0cc280ff2dd75f7c9765a477",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1467,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/grpo_full_checkpoint-200_validation.log",
+        "bytes": 9203,
+        "sha256": "8a9566038528b123783bba7f142492f348c8560e375378b2874ade842a6878f5",
+        "selection": "warning_error_lines",
+        "scanned_lines": 60,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/grpo_full_checkpoint-240_benchmark.log",
+        "bytes": 157082,
+        "sha256": "7ac64deb04308b06eb49efbe50996e7068bd99cecb8e67f5cbaa6a586e0d2b1c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1474,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/grpo_full_checkpoint-240_validation.log",
+        "bytes": 9102,
+        "sha256": "fe592830efe69a91aaef1c067f0c9a89e331a62ab348d81cad6bb35be6ed6df6",
+        "selection": "warning_error_lines",
+        "scanned_lines": 59,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/grpo_full_checkpoint-40_benchmark.log",
+        "bytes": 157316,
+        "sha256": "57a1d11a3cbbe75f028633b3fcf05dae78528ad1b34bc90ad698434ff3f2af45",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1479,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/grpo_full_checkpoint-40_validation.log",
+        "bytes": 9400,
+        "sha256": "218828a773eca7e163b168c5511bcba38953e148dd0d904ecb2599b0f424da3a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 62,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/grpo_full_checkpoint-80_benchmark.log",
+        "bytes": 156721,
+        "sha256": "9694670fe84760cad0bd21655cccb6d50f58dc56df182e9f04a880ec258606ff",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1471,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/grpo_full_checkpoint-80_validation.log",
+        "bytes": 9334,
+        "sha256": "a183067e3ff1bdaea4c7b63d0d93b93c2a3a2eda527bdb95f64aa1311abef7e3",
+        "selection": "warning_error_lines",
+        "scanned_lines": 61,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/grpo_full_smoke_orchestrator.log",
+        "bytes": 27,
+        "sha256": "210524ac3ca97eb54e4de67f0b655757ed4317596b29cb5533d3ee34f2c3be88",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/grpo_full_validation.log",
+        "bytes": 4337,
+        "sha256": "c5803907d79c55daa221fa5db10740466b7a9ff2b256b6b9ccbe2176f7bd071a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 22,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/grpo_main_100_benchmark.log",
+        "bytes": 155697,
+        "sha256": "fe576252631bc65d80a6d78a4bb4828bd508b1093e3c83bd4dcf3087556c4f7b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1471,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/grpo_main_100_merge.log",
+        "bytes": 736,
+        "sha256": "01c10fe97572677ace2242ce78d6bdc4ea60383ae8978f61c693f44fcbedce44",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/grpo_main_100_validation.log",
+        "bytes": 12072,
+        "sha256": "698a4157dd10d01971f1f6fb9f17f50f274327716086f5def82d6913567c836c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/grpo_main_150_benchmark.log",
+        "bytes": 154816,
+        "sha256": "8896aca1e96ee951f25a3b52af3db5921742e3242568551467f126b694a6dd65",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1465,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/grpo_main_150_merge.log",
+        "bytes": 736,
+        "sha256": "e3400c170cd732a8b8412bf51abae7cfa17cad01cae9ff5adb4b43f1d59b2c9c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/grpo_main_150_validation.log",
+        "bytes": 12072,
+        "sha256": "5141dc934cc6467414299a7b3b0c8c9d92ca341ab5426dbcec75129a3355697c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/grpo_main_200_benchmark.log",
+        "bytes": 155253,
+        "sha256": "994319ae4fe4fa871befde79adaf0ac30499b27215d34012ae48da61ec0cda88",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1468,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/grpo_main_200_merge.log",
+        "bytes": 736,
+        "sha256": "148bd0d533b1a3fb3d765f66c686fc42faf99c015a9d14fd6cf99bad6332ba4e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/grpo_main_200_validation.log",
+        "bytes": 12094,
+        "sha256": "bd31228804f6f79213e386d192fe269e972044fda9cc3a6e177435a4b1d856fe",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/grpo_main_250_benchmark.log",
+        "bytes": 155363,
+        "sha256": "cbbc91904bbb5b27d4937d0baad882220cca8002c16ea4068370f811d3f384d1",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1469,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/grpo_main_250_merge.log",
+        "bytes": 736,
+        "sha256": "fab26f1c1e55daa0b29be5e36f6bd7774d806f2492a1ef410b3eee6112fe9080",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/grpo_main_250_validation.log",
+        "bytes": 12095,
+        "sha256": "35c8e9e8f28d1dd503924e468aeb21c51f32c5f4dd6c3362c74dcfac0ee8b48d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/grpo_main_300_benchmark.log",
+        "bytes": 155109,
+        "sha256": "d50cd6e30248ef89f5d4a7b240509636e5f56c4652893bbe399b857970626f99",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1467,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/grpo_main_300_merge.log",
+        "bytes": 736,
+        "sha256": "a157e268792a58a2b4fac1bf6ae274221cb02eeacc7edeb745bf75480f674431",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/grpo_main_300_validation.log",
+        "bytes": 12095,
+        "sha256": "274e9ff271e096ee28451b46561934600797348c4b7299199e6fd9c0769608c6",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/grpo_main_329_benchmark.log",
+        "bytes": 155691,
+        "sha256": "1c5601404f0b4d384ca35d95a376b1846f847641d5fe404fa66c284bf03f6731",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1473,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/grpo_main_329_merge.log",
+        "bytes": 736,
+        "sha256": "a19e40005f2fb19958fdaf365c73949b1436f553b876f806c394e53aedd4be79",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/grpo_main_329_validation.log",
+        "bytes": 12095,
+        "sha256": "587c408913806ff5ab1f762992632df08c9a58050195aaa8df830a66cfec6097",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/grpo_main_50_benchmark.log",
+        "bytes": 155333,
+        "sha256": "b4822de05254469b51bb97b59b2d290c37c3fc9a5f68fefd2e4716b065d1a096",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1470,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/grpo_main_50_merge.log",
+        "bytes": 736,
+        "sha256": "1cab9884689bd04d3734f12ea6f73f045968760eea90c62a48e08824ac7a0ef3",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/grpo_main_50_validation.log",
+        "bytes": 12071,
+        "sha256": "dedc9c6f5ef02a86bc1c7e19eed69462f242f9df51b341bb02801bc960bcc6ef",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/grpo_main_validation.log",
+        "bytes": 3483,
+        "sha256": "59b315699addcab66f5c6883e03705299bc61f8debbd17c8b16429671011a760",
+        "selection": "warning_error_lines",
+        "scanned_lines": 8,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/grpo_pilot_100_validation.log",
+        "bytes": 11082,
+        "sha256": "f96e9f0b712b4120744ee7d4b61f5dc9ee7041804b66c2be7bf2a15babd9aa45",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 6
+      },
+      {
+        "path": "agent_home/task/logs/grpo_pilot_25_validation.log",
+        "bytes": 11080,
+        "sha256": "78b4778264b19bcb50b5c186b75b714c48c39e1a28303e983ef786de35ea50b4",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 6
+      },
+      {
+        "path": "agent_home/task/logs/grpo_pilot_50_validation.log",
+        "bytes": 11079,
+        "sha256": "6edc01b2212ebdd23fc2adccc75f24f9b15d3f4577ed3bfe80099b6c6793e013",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 6
+      },
+      {
+        "path": "agent_home/task/logs/grpo_pilot_75_validation.log",
+        "bytes": 11081,
+        "sha256": "a1ac99193bd7bfe77d4b08301d5d6a6ceb4202eda3512b7c0306685ff894d21e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 6
+      },
+      {
+        "path": "agent_home/task/logs/grpo_pilot_best_full_benchmark.log",
+        "bytes": 155193,
+        "sha256": "a9ccb06d1a60aa03e2744f6e6e43a964a1a46f2c74e60169cf0205637334754f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1468,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/grpo_pilot_best_validation.log",
+        "bytes": 9516,
+        "sha256": "316402498fce8296b5a05fb3cba1b3f28599b85b3117c65a57db4211d362cc58",
+        "selection": "warning_error_lines",
+        "scanned_lines": 65,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/grpo_pilot_orchestrator.log",
+        "bytes": 1154,
+        "sha256": "e327c531ff6a6b1fc7311d3ad9439f9c0fc4574ac9d475382f01cdd12dc5de7e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 4,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/grpo_smoke.log",
+        "bytes": 6903,
+        "sha256": "576bab20ece580f44f53383ffc6f34ba4e5483c33184b1d74230f55c50edfe20",
+        "selection": "warning_error_lines",
+        "scanned_lines": 45,
+        "records": 7
+      },
+      {
+        "path": "agent_home/task/logs/install_train.log",
+        "bytes": 539,
+        "sha256": "4073f947800364e9271a19940273d033caadbf21abc0d7feadcbd963f48de000",
+        "selection": "warning_error_lines",
+        "scanned_lines": 8,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/install_train_local.log",
+        "bytes": 319,
+        "sha256": "3af09a792934b1470c77c3f1dcf188b02ceb78459e8897326a637c445507eedf",
+        "selection": "warning_error_lines",
+        "scanned_lines": 10,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/interp_full60_w25.log",
+        "bytes": 271,
+        "sha256": "643933b35834f78ef71246dacda79facc2d59b5f1d7536ea902cce18be431e5d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/interp_full60_w25_validation.log",
+        "bytes": 9692,
+        "sha256": "b489e6a73bcc9c6bd01d6ab87d4c1d80950d27a7d4035d2794de3bbcce5d0de1",
+        "selection": "warning_error_lines",
+        "scanned_lines": 67,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/interpolation_smoke_validation_controller.log",
+        "bytes": 536,
+        "sha256": "f809837b5e367dce91313b73693b08f8dbf643ee32c3f0f374f61a53115760d7",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/late_arithmetic_orchestrator.log",
+        "bytes": 3144,
+        "sha256": "e0ac593d1d8c721e438261dc6838bd796bc098fbf21d48d587764cb4ca4b012e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/late_best_r1_delta.log",
+        "bytes": 168125,
+        "sha256": "336c576295760eea074ca2677ff6ca219e22d7f1dea52b6cd3cc73818e71c5dc",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1555,
+        "records": 9
+      },
+      {
+        "path": "agent_home/task/logs/late_best_rl_delta.log",
+        "bytes": 167516,
+        "sha256": "363a099b2988689e3acfadc104ec09269b81e12757907e45639afd938813856c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1547,
+        "records": 9
+      },
+      {
+        "path": "agent_home/task/logs/late_full_blend_25.log",
+        "bytes": 166359,
+        "sha256": "f4c3e5604e6398d07895382b0732c4a894f86eed6c8dcce38f80f0301cfcfe60",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1537,
+        "records": 8
+      },
+      {
+        "path": "agent_home/task/logs/late_full_blend_50.log",
+        "bytes": 166460,
+        "sha256": "181133526336fe94aa30e559508db541fa8bcf7a6121889680bb2a911ad749ed",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1537,
+        "records": 8
+      },
+      {
+        "path": "agent_home/task/logs/late_thinking_scale_110.log",
+        "bytes": 168433,
+        "sha256": "c1d2aa63970e476730f6fb3f757c37b43651951d3506870d7824babfe006a75e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1561,
+        "records": 8
+      },
+      {
+        "path": "agent_home/task/logs/late_thinking_scale_80.log",
+        "bytes": 167614,
+        "sha256": "839a4c7f35c9d1ebbed89be934261a3edfa1f5714ce0326b0f01bf8ca11998b3",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1550,
+        "records": 8
+      },
+      {
+        "path": "agent_home/task/logs/main_grpo_orchestrator.log",
+        "bytes": 83,
+        "sha256": "9f136c956a97240418e834fb02c075ee20a00815d0cf94cd973d86cfad5f4674",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/main_grpo_validation_orchestrator.log",
+        "bytes": 554,
+        "sha256": "c86204bc23f566e5e2e036093132d52484e566a7c676aef8142b8808e3e0239b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/merge_controls.log",
+        "bytes": 759,
+        "sha256": "bdcc06b0c17a4263e7744a45b567c897b10bc6f924086ac5cb405935bb255f6a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 16,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/merge_few20_r1_scaled20.log",
+        "bytes": 735,
+        "sha256": "8d096cec1888868b0ad6eb2344ec218621b3896e3e1d4a2143398945e66bfa4e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/merge_fewshot_20.log",
+        "bytes": 620,
+        "sha256": "8b02b09808ebabf6b72b5da69984d7e481c45ca0c80d5d1c265f34d463b2f7ec",
+        "selection": "warning_error_lines",
+        "scanned_lines": 6,
+        "records": 2
+      },
+      {
+        "path": "agent_home/task/logs/merge_fewshot_extrap150.log",
+        "bytes": 254,
+        "sha256": "20547c018406329941a54d813e8e4fd2164bc846c100ba1311c91cc09d173927",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/merge_grpo_pilot_best.log",
+        "bytes": 733,
+        "sha256": "6f85b851cb2dcecb27ffc6368ddf23e618bd11b5d922bc255ea6606864a2388f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/merge_native_100.log",
+        "bytes": 620,
+        "sha256": "d0d36e13dd77232e1cbd2571dea45a2c1e8ba1318f2191e0ef1cf23184403a89",
+        "selection": "warning_error_lines",
+        "scanned_lines": 6,
+        "records": 2
+      },
+      {
+        "path": "agent_home/task/logs/merge_native_200.log",
+        "bytes": 620,
+        "sha256": "8f3f19cde25bd8933055b4466ac27786b8a6a9816d1c4fd0fff8359f5ff6af3a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 6,
+        "records": 2
+      },
+      {
+        "path": "agent_home/task/logs/merge_r1_scaled20.log",
+        "bytes": 906,
+        "sha256": "707bae0b19116c41981047d9079cf1b2cd70be736783708ece1d9aa2f9b9a095",
+        "selection": "warning_error_lines",
+        "scanned_lines": 9,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/merge_sft_100.log",
+        "bytes": 617,
+        "sha256": "2b31c2d00ce0eea2a1d8c387929260c75fc3708dc3375db89157b921f00f5f2e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 6,
+        "records": 2
+      },
+      {
+        "path": "agent_home/task/logs/native100_full_benchmark.log",
+        "bytes": 154827,
+        "sha256": "f3c5f4280ba09376f79f61a80179197895f67d0b4c3d72abbfcbc791fae3673f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1463,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/native200_full_benchmark.log",
+        "bytes": 155072,
+        "sha256": "17ae9added33d4bb7f030b1218e217239b84053c64e21cbc8b8da124baf6482d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1464,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/native300_full_benchmark.log",
+        "bytes": 154997,
+        "sha256": "a8e5ff34d939172779a1350a8652a395d62eed67a95c4802d68d5b5daeeb42a6",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1466,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/native400_full_benchmark.log",
+        "bytes": 154890,
+        "sha256": "449b918b97d58eb5e9de63cad66c3d0e8039e85b6e11fd183673e44066e50f5d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1464,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/native_100_benchmark.log",
+        "bytes": 27404,
+        "sha256": "39aa8b33123232aba7a86ca73a0283c5297d74b043277403cbb444d208adb2c5",
+        "selection": "warning_error_lines",
+        "scanned_lines": 261,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/native_dpo_40_validation.log",
+        "bytes": 12163,
+        "sha256": "e6e525f4476f53525631d7307fcaa569b03fca3795c91094cb8c9e1515e48f62",
+        "selection": "warning_error_lines",
+        "scanned_lines": 85,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/native_dpo_80_validation.log",
+        "bytes": 12063,
+        "sha256": "3961c63a934083c0fb788f71849ea91b7e20fe9453043792add05e7d9457e19f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 84,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/native_dpo_best_full_benchmark.log",
+        "bytes": 157388,
+        "sha256": "a1b810b832d868690dd84df955068a0427242cef2c856aa025d19cca804e199d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1476,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/native_dpo_merge.log",
+        "bytes": 742,
+        "sha256": "751b94d4ba88c718bc67739a47715cd6017b8c9ec94b6eef7c0e765ebda76043",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/native_dpo_orchestrator.log",
+        "bytes": 969,
+        "sha256": "e08767d4d23942534289be7b8c1748a0e518d0a7a29bca000c9801525eed847c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 4,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/native_dpo_parent_export.log",
+        "bytes": 81,
+        "sha256": "398435d43078171aa3be05a91d8c9985582afc5526f4b62ecfc38633e90a9060",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/native_fewshot_validation.log",
+        "bytes": 12550,
+        "sha256": "342fe9df91e1b2e11bb58dca0ddab2f49fd5bb11fa95c373423cf688848c9028",
+        "selection": "warning_error_lines",
+        "scanned_lines": 82,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/preference_rl_soup_50_full_benchmark.log",
+        "bytes": 156651,
+        "sha256": "367abbfa461ee3157dc5397f88c6d186069350a134f0c0df77b7041a943989b9",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1468,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/preference_rl_soup_50_validation.log",
+        "bytes": 9637,
+        "sha256": "7c67ae34258d13ba7497fc3bc05faaf7201e3f7f675eed3ee58402a48167e2f3",
+        "selection": "warning_error_lines",
+        "scanned_lines": 65,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/preference_rl_soup_75_full_benchmark.log",
+        "bytes": 156232,
+        "sha256": "809bfc05b62dd050551cb16578b5cd4ad0098b87307c1364a379f15ad67666a7",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1465,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/preference_rl_soup_75_validation.log",
+        "bytes": 9614,
+        "sha256": "4c2805538ce2ff904dc75445452d6ef11111123abf702694547f1b3e2d463917",
+        "selection": "warning_error_lines",
+        "scanned_lines": 65,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/prepare_augmented_curriculum.log",
+        "bytes": 286,
+        "sha256": "42cd94cef5f40f9b1fa34f4b744388a84ca713a0f1d6e5c205b329861b6ab806",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_augmented_preferences.log",
+        "bytes": 858,
+        "sha256": "b064f70c3ffaf3f4bcc64a0a329a88dfaa1591e87dd3d7443bd5be0aa5bc4e65",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_best_curriculum.log",
+        "bytes": 242,
+        "sha256": "7a6fe43b64a0e5dde3a3fff3966b187492c02c91023b8ed457777cddc93bb496",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_best_preferences.log",
+        "bytes": 711,
+        "sha256": "3022160e65ab1c5ac82b99d0904730e44583ec68328fb5d538158556ee9da1e6",
+        "selection": "warning_error_lines",
+        "scanned_lines": 9,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_consolidation.log",
+        "bytes": 1033,
+        "sha256": "2329dd6ecc3faf17d25eb8561a1a945b995566862759bd7740bd1364828d6be1",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_data.log",
+        "bytes": 1577,
+        "sha256": "2294ef3baec2d12554cc3a460c3bdd95bffc71e0a8585234d7c977ac21e2a841",
+        "selection": "warning_error_lines",
+        "scanned_lines": 18,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_fewshot.log",
+        "bytes": 501,
+        "sha256": "7f6a5a5707ce3bae08b18d0e43c90ecc14e1cf53ca4d8da249314f7ce7e1cce7",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_focused.log",
+        "bytes": 2177,
+        "sha256": "a8768c9875ed4b628d10eb20793a4eee1a39f1855f07101983f55eabb6b057f2",
+        "selection": "warning_error_lines",
+        "scanned_lines": 21,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_full_focus.log",
+        "bytes": 1304,
+        "sha256": "43387a5090802864fc335f66a6dabe17acaa553d3c2116481e879815cba90b6c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 12,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_late_thinking_arithmetic.log",
+        "bytes": 572,
+        "sha256": "f246c6d35397edcce606776dd0b1f4ad300be4d00b3cbc22de674879a1abe5cc",
+        "selection": "warning_error_lines",
+        "scanned_lines": 10,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_preference_rl_soup.log",
+        "bytes": 1698,
+        "sha256": "503f36b109f3421b0ef55ba0b9cb8f72b64b3943a888a13013c824cc495616d1",
+        "selection": "warning_error_lines",
+        "scanned_lines": 18,
+        "records": 2
+      },
+      {
+        "path": "agent_home/task/logs/prepare_preferences_native200.log",
+        "bytes": 693,
+        "sha256": "7c8b5a9c0b2b55725fe5decbc549b76ca7d8ecf703a4ff390a2d09b3e486689a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 9,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_r1.log",
+        "bytes": 1376,
+        "sha256": "8b5e9695305e182f15660e42a3a2e46d79779e52368e054ad53c31da9ce8515e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 10,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_self_check.log",
+        "bytes": 1040,
+        "sha256": "2630377b719596a13d4ed02970929be8d91c572d6e24c3e89d3727c0c4a1b856",
+        "selection": "warning_error_lines",
+        "scanned_lines": 6,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_smoke_preferences.log",
+        "bytes": 668,
+        "sha256": "acd166da0d38894f6300efc4ba33c990dbb8804e8d78671015d43f4adf471ff0",
+        "selection": "warning_error_lines",
+        "scanned_lines": 9,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_thinking_tokens.log",
+        "bytes": 807,
+        "sha256": "170e10ba7d3943c6074cbb9500766771565846096d613a1ccb89e9fdd5886120",
+        "selection": "warning_error_lines",
+        "scanned_lines": 6,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_token_calibration.log",
+        "bytes": 624,
+        "sha256": "06b85e6dcddd085acd900554afd6f4dae2b917cc6f6e91fa1465d146262d52d5",
+        "selection": "warning_error_lines",
+        "scanned_lines": 6,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/probe_sft_100.log",
+        "bytes": 2706,
+        "sha256": "2db6fb9fee38637dce883d603a81efb43e86f998f781ec6f3cfb79488b7d500c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 46,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/provisional_default_full_benchmark.log",
+        "bytes": 176324,
+        "sha256": "074fcf3865b9c26685d0c99ab3b8736491c671c19e8b77d7cb052e5a3d582ec4",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1771,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/provisional_default_orchestrator.log",
+        "bytes": 485,
+        "sha256": "fc872c5859b9005a1de21caef24fbf3049e91abc49b35c4a34d35ec73f3a187e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/r1_orchestrator.log",
+        "bytes": 97,
+        "sha256": "ae2ed07e2727329e417cbd03ce4039c9a1db4bf1653710aa012a8740a760b597",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/r1_quick_validation.log",
+        "bytes": 12739,
+        "sha256": "4e420660a85eea928add8d48c797d2cbb5f786eb4f39050322f6433f501fdbf7",
+        "selection": "warning_error_lines",
+        "scanned_lines": 88,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/r1_refine_validation.log",
+        "bytes": 12251,
+        "sha256": "624707967a110f9fa1019615ca951fa9a3f64719015636b5ca1a9996d2667b7d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 87,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/r1_scaled10_full_benchmark.log",
+        "bytes": 155412,
+        "sha256": "04135a731c10ef4b4fd1d77b913b616249419cc241ed973b42ed07b16ed53eab",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1469,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/r1_scaled10_validation.log",
+        "bytes": 9370,
+        "sha256": "da5fa8bb2fd3ecc923ae4765a9e0379c66e5bc1239ec0bfea3d8aa00b8a262f3",
+        "selection": "warning_error_lines",
+        "scanned_lines": 64,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/r1_scaled20_full_benchmark.log",
+        "bytes": 155524,
+        "sha256": "64987ec5a3d5cc595ca03c3b1956bbe06baffb969b311427ac15e5dbf8c58c7c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1470,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/r1_scaled20_validation.log",
+        "bytes": 9256,
+        "sha256": "0b05f52098c85e0c7f1a9891d65a354c8c6325da7e38c3bd238414dcd1f06f18",
+        "selection": "warning_error_lines",
+        "scanned_lines": 63,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/r1_scaled30_full_benchmark.log",
+        "bytes": 155381,
+        "sha256": "323b02691464394fcfd4fb614ad97ca659942f856edf7c465d836eb2131b538f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1473,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/r1_scaled30_validation.log",
+        "bytes": 9381,
+        "sha256": "bba40d5c6bc1b086261552027f032f10e79b076347f40d678c9f56a0cfae9592",
+        "selection": "warning_error_lines",
+        "scanned_lines": 64,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/r1_strength10_merge.log",
+        "bytes": 738,
+        "sha256": "7d6f8a1886a780dba463c1167ac7861a3476bb64e46fdd3be080c87a8bc707c6",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/r1_strength10_scale.log",
+        "bytes": 40,
+        "sha256": "62370e806c6a50fdc00a59bd0cea882c23b8a4188086e9a4f26399982fffffe3",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/r1_strength30_merge.log",
+        "bytes": 738,
+        "sha256": "3c538c8ee929828ac367f349cb2e5f9f15d9b1f8b42120b50e0fb81f72722bbd",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/r1_strength30_scale.log",
+        "bytes": 40,
+        "sha256": "9c42e7f9a92ec79310eb93290746454b2f3c300b33178f35f2fbf198ba954ff4",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/r1_strengths_controller.log",
+        "bytes": 876,
+        "sha256": "ae1537672bc09bf4bcea6e4b01716b283f52829dac4d9f65d6b538dc9ccea8fd",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/r1_validation_orchestrator.log",
+        "bytes": 634,
+        "sha256": "d8c27a295b966e9023a221636582e88eaf82f91ff8a7a25de2ce0f72c1468d71",
+        "selection": "warning_error_lines",
+        "scanned_lines": 6,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/resume_native_validation.log",
+        "bytes": 571,
+        "sha256": "9701ed82ec363ef5592196d3991786e396aa86ebedc7340caea615ee9610108d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 6,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/rft_best_120_benchmark.log",
+        "bytes": 155235,
+        "sha256": "3ca06798e340243eeced2a7e0cc50d1668d1e4ce9efc2defbd2b86bd879aad04",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1467,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/rft_best_120_merge.log",
+        "bytes": 748,
+        "sha256": "7d2a28c05178e355a37f5ef33ce608b22725a440ed3bff181e126d5a9dd614e5",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/rft_best_120_validation.log",
+        "bytes": 12208,
+        "sha256": "76d11f2c4e4e9bc448069d7c93a64a9b924fc508f777ac5eaba77c93f3fcd743",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/rft_best_160_benchmark.log",
+        "bytes": 155055,
+        "sha256": "5ca2ae01f772c36d87d75c69f0473a29d9553f3a54ffb0cfffc15e659a618a25",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1465,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/rft_best_160_merge.log",
+        "bytes": 748,
+        "sha256": "d58de9d9540f1a2ad621a18a4682b546274b824861ec1d95fb7490fc0ab98ca7",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/rft_best_160_validation.log",
+        "bytes": 12210,
+        "sha256": "85a510313e3d0825d913d5738bb68dca7fe4509ba3d0ed3c4186c63f0adba066",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/rft_best_40_benchmark.log",
+        "bytes": 154738,
+        "sha256": "35ce7966669a3c07c3495be3261f5167e71c42fa8771a9b4e263cd9a0633765b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1460,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/rft_best_40_merge.log",
+        "bytes": 748,
+        "sha256": "a55b4ac34c932189151323bf0642f985d4660fe6f77f8708850611dd990f2d22",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/rft_best_40_validation.log",
+        "bytes": 12305,
+        "sha256": "8ce2399aa5f9862679e9e45649e5222508fd5b488bf35b8bf37d7498a2cbfa9a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 87,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/rft_best_80_benchmark.log",
+        "bytes": 154903,
+        "sha256": "c0f108e5c4b9d6479e2c0b8883e780c8cd72aaca08d04c6ecb3545ce463057e7",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1466,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/rft_best_80_merge.log",
+        "bytes": 748,
+        "sha256": "816dee1a92108a1af4d21b0bc76eb5b84cbabcd2df75c0a8a6292b3ea433b594",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/rft_best_80_validation.log",
+        "bytes": 12210,
+        "sha256": "0fab78a5dfb2a0897c17b38407cab688441a68cd20a9d573feb2ea6664ec032a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 86,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/rft_best_validation.log",
+        "bytes": 2136,
+        "sha256": "983d1313b9f04041e449b99691ab20df42d4330720715f1a34a8b4ef4d1bde5f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/rft_native_validation.log",
+        "bytes": 12981,
+        "sha256": "fd34fa7f2d3c09482f9821e35473f69160f03ebc7c1f80d9109a724b77846782",
+        "selection": "warning_error_lines",
+        "scanned_lines": 83,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/self_check_25_merge.log",
+        "bytes": 849,
+        "sha256": "5f2b6e6a11c5ec401ba3a65e13e394eb794f59293992b9df74ff15de4d8d848d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 8,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/self_check_25_validation.log",
+        "bytes": 9672,
+        "sha256": "5b0ddbb27089f99d460f6e61a504215cc1a81e51631d354aecdb30a19bed0c33",
+        "selection": "warning_error_lines",
+        "scanned_lines": 65,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/self_check_50_merge.log",
+        "bytes": 756,
+        "sha256": "be50999b7044603eb2ccda7e55600932f9c453a3a232b9b9ee887cc83464896f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/self_check_50_validation.log",
+        "bytes": 9364,
+        "sha256": "a05698c5cb80feb4d6ad25545f0d6b8d97141e054f76259b2c47a4ccb8bbe27b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 62,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/self_check_best_full_benchmark.log",
+        "bytes": 157386,
+        "sha256": "7f46f46a73f525def75d0269f7f6ba9197e1d2cd2049be16720916a8543c6642",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1476,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/self_check_orchestrator.log",
+        "bytes": 28,
+        "sha256": "a89a7837c07555d1286f6551a3e4ae547fc81c2a52c1bbac74e9d31e4429f0b4",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/self_check_validation_orchestrator.log",
+        "bytes": 788,
+        "sha256": "61740622033573ebc227b243d392c93cdd203902bdd0db7716ea0662956275fc",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/sft_native_validation.log",
+        "bytes": 23077,
+        "sha256": "4798c8a645105521b58494451ba7b81bdaad29e279d84c192ab3a3c293dc7e00",
+        "selection": "warning_error_lines",
+        "scanned_lines": 160,
+        "records": 9
+      },
+      {
+        "path": "agent_home/task/logs/sft_native_validation_resumed.log",
+        "bytes": 10929,
+        "sha256": "f782499aa524c34365fd53cae3f81ff40d88022d022afda8b1c8a972164f1c7a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 78,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/sft_native_validation_resumed2.log",
+        "bytes": 11662,
+        "sha256": "1745b9bf78ec4ac10d298b6f990045b2141a4acc60af9d6d28fb2d729c47f991",
+        "selection": "warning_error_lines",
+        "scanned_lines": 80,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/sft_native_validation_resumed3.log",
+        "bytes": 11665,
+        "sha256": "d5d9e974047244c198218ee19a55da240c47635ed81005f42cd61c3f6e324f7a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 80,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/sft_r64_validation.log",
+        "bytes": 11303,
+        "sha256": "9d2120662d6afc89251b780d930e155333b51be2f9ddefe1099c790297dd4942",
+        "selection": "warning_error_lines",
+        "scanned_lines": 80,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/smoke_candidates.log",
+        "bytes": 10579,
+        "sha256": "ac6336e3bd1685d6d48e55a66b72daf3bf16b27e7abad7a2b9a4ad551d2ff4bf",
+        "selection": "warning_error_lines",
+        "scanned_lines": 76,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/thinking_token_cpu_probe25.log",
+        "bytes": 1296,
+        "sha256": "459d622890d4fc595ca1414c9a624e667fae64f04a7b781f707e2dcf33a85904",
+        "selection": "warning_error_lines",
+        "scanned_lines": 9,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/thinking_token_merge_smoke25.log",
+        "bytes": 796,
+        "sha256": "13d309b6f910ec176b693caf13f23ddcc13dd82c9626a44a0829f9cf247291e7",
+        "selection": "warning_error_lines",
+        "scanned_lines": 8,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/thinking_token_wordproblem_probe25.log",
+        "bytes": 1148,
+        "sha256": "bbfd0985c331cc531e82066acb512de93b20c74b3f8943f741b06574566955d6",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/thinking_tokens_100_merge.log",
+        "bytes": 804,
+        "sha256": "4ece3a72c6be89a182860aba4d56a165b7f679d9e23158cf10c800283f640a8a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 8,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/thinking_tokens_100_validation.log",
+        "bytes": 9526,
+        "sha256": "870289d5436d2cdd170cbd59fe2cfeb7d5b3fdb84f22151107f0f38b82465e20",
+        "selection": "warning_error_lines",
+        "scanned_lines": 64,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/thinking_tokens_25_merge.log",
+        "bytes": 803,
+        "sha256": "cdfe04376414cfe9534530bc8b7d89e3861c3e7e3ce8bc4948c90f1179596e36",
+        "selection": "warning_error_lines",
+        "scanned_lines": 8,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/thinking_tokens_25_validation.log",
+        "bytes": 9735,
+        "sha256": "75653d8a29c8965428ddf4c6156c7fd8fe0e0e3699320055a29a9f527b2d8a62",
+        "selection": "warning_error_lines",
+        "scanned_lines": 66,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/thinking_tokens_50_merge.log",
+        "bytes": 803,
+        "sha256": "cc98cd39f54a90eada39d4b76a545b45201c8e7550a1aa9f006e69ba0fc3de99",
+        "selection": "warning_error_lines",
+        "scanned_lines": 8,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/thinking_tokens_50_validation.log",
+        "bytes": 9429,
+        "sha256": "b7fa98bca78908efad40255551ed94c0e40ef7cbd86286916adc59a5a5a1c4e8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 63,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/thinking_tokens_75_merge.log",
+        "bytes": 803,
+        "sha256": "12c840ac314c7e24364b5100d48091cca24c6632415201501ff884d0c6d562ad",
+        "selection": "warning_error_lines",
+        "scanned_lines": 8,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/thinking_tokens_75_validation.log",
+        "bytes": 9328,
+        "sha256": "0a54ef5596e8318988caa05bfc49d1195512b2bcd96400a0332e00b8b99fa11c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 62,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/thinking_tokens_best_full_benchmark.log",
+        "bytes": 157063,
+        "sha256": "d0213e70039fa470ef7dd188a5cf7e8c47c245318bd101593bdcf3d04fc8d5f8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1490,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/token_calibration_10_merge.log",
+        "bytes": 973,
+        "sha256": "4c60d8725d7b819c04708a2161a07517b6fb4eba5bd510ba225b82b19229b8fe",
+        "selection": "warning_error_lines",
+        "scanned_lines": 10,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/token_calibration_10_validation.log",
+        "bytes": 9445,
+        "sha256": "0ae26addac9daccfd8f1cf0ab277e524d5b41d945f525df9eac6e680a8a61126",
+        "selection": "warning_error_lines",
+        "scanned_lines": 63,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/token_calibration_15_merge.log",
+        "bytes": 805,
+        "sha256": "5c34e518be9562b56fd30d06c46c86ae943bb81b9e0c41ca5bf9b0ab9842fccf",
+        "selection": "warning_error_lines",
+        "scanned_lines": 8,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/token_calibration_15_validation.log",
+        "bytes": 9328,
+        "sha256": "781d2f563d7a811da52fc5d98941a385ad2b354609e1fd7003cb621ed2098006",
+        "selection": "warning_error_lines",
+        "scanned_lines": 62,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/token_calibration_20_merge.log",
+        "bytes": 805,
+        "sha256": "ed3cb46449f48f1175d5738187f089e83147df5f996ef5a7797bc4ab7c07deaa",
+        "selection": "warning_error_lines",
+        "scanned_lines": 8,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/token_calibration_20_validation.log",
+        "bytes": 9559,
+        "sha256": "a340a3bedcc845538d58e7ac0fd62a224d14085abcb98700cf8fb455f1d388eb",
+        "selection": "warning_error_lines",
+        "scanned_lines": 64,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/token_calibration_5_merge.log",
+        "bytes": 972,
+        "sha256": "760170441c792ad557b4b1b2addecb03536ad6a581234350e3322ff727906900",
+        "selection": "warning_error_lines",
+        "scanned_lines": 10,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/token_calibration_5_validation.log",
+        "bytes": 9432,
+        "sha256": "73a576df3b414c2c2de2b03f1dc9c1a5410c3f106b850fd39ddef910516cceca",
+        "selection": "warning_error_lines",
+        "scanned_lines": 63,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/token_calibration_orchestrator.log",
+        "bytes": 35,
+        "sha256": "6276e93676ca7fe060f4e08444abafe5902b9aafecc61142b3e0984a4e1cb6d2",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/token_calibration_validation_orchestrator.log",
+        "bytes": 1223,
+        "sha256": "7c2512d67bcc1d78a40732d5ce3b09641c1abbe22344408babf59503dc66476e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 4,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/train_clean_sft.log",
+        "bytes": 75606,
+        "sha256": "c6e61ce1125915cce15025bb6d11d3b5b3b247ef98ed28b7cb777b176b476013",
+        "selection": "warning_error_lines",
+        "scanned_lines": 653,
+        "records": 43
+      },
+      {
+        "path": "agent_home/task/logs/train_concise_lora.log",
+        "bytes": 5554,
+        "sha256": "377ab9a4c5d94c7497c08620d0fdd667900393a6467edf8f34b7e90f8c2550c1",
+        "selection": "warning_error_lines",
+        "scanned_lines": 39,
+        "records": 2
+      },
+      {
+        "path": "agent_home/task/logs/train_consolidation.log",
+        "bytes": 11965,
+        "sha256": "6fa90635cb2355d12b822a1d7c3d11ada36f891cf00983740ef4ffc5c17f44b8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 72,
+        "records": 13
+      },
+      {
+        "path": "agent_home/task/logs/train_dpo_augmented.log",
+        "bytes": 39994,
+        "sha256": "19819965cdf83d63f0e0e0bc2961466edde0ed850f8dcaa1499bece6d3e1d2e8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 163,
+        "records": 8
+      },
+      {
+        "path": "agent_home/task/logs/train_dpo_avg.log",
+        "bytes": 20556,
+        "sha256": "8f237e6e3dd6b4d65a80de88213fceac88285ade7941a2215b88585156f72497",
+        "selection": "warning_error_lines",
+        "scanned_lines": 71,
+        "records": 8
+      },
+      {
+        "path": "agent_home/task/logs/train_dpo_best.log",
+        "bytes": 47980,
+        "sha256": "936676a08cbc79d3c94224682e348c8f6d7ab20caecd06bb36c25a4c6cd3b546",
+        "selection": "warning_error_lines",
+        "scanned_lines": 124,
+        "records": 8
+      },
+      {
+        "path": "agent_home/task/logs/train_dpo_regularization_smoke.log",
+        "bytes": 8033,
+        "sha256": "ed3d2ee2915736a1e492d32d2a4697ae28413947f05a46a5788f333bb5debe46",
+        "selection": "warning_error_lines",
+        "scanned_lines": 63,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/train_fewshot.log",
+        "bytes": 3199,
+        "sha256": "727a3d5966208b629a6cf44f5916d5cdc43dc8121df02757b1388bed35bb23aa",
+        "selection": "warning_error_lines",
+        "scanned_lines": 23,
+        "records": 2
+      },
+      {
+        "path": "agent_home/task/logs/train_full_focus.log",
+        "bytes": 14348,
+        "sha256": "c6899063496a69aa9ecb30b779342ef364635d3a680e706b00b4eb5429913512",
+        "selection": "warning_error_lines",
+        "scanned_lines": 87,
+        "records": 13
+      },
+      {
+        "path": "agent_home/task/logs/train_generation_orchestrator.log",
+        "bytes": 30,
+        "sha256": "5e02e037f08d532b708df658f3d17e07d8108e2b31a46825acc132b9ebf02f6a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/train_grpo_corrected_smoke.log",
+        "bytes": 10686,
+        "sha256": "1f9115e99f9503d9d6bd7ee2057714bd9ec835e6a2645482889c8db7b247c20b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 55,
+        "records": 7
+      },
+      {
+        "path": "agent_home/task/logs/train_grpo_ddp_smoke.log",
+        "bytes": 14937,
+        "sha256": "b9bcc80f38a94fe2faa8066971902a5d829a3e93452cd521010fb6387adc5d88",
+        "selection": "warning_error_lines",
+        "scanned_lines": 77,
+        "records": 13
+      },
+      {
+        "path": "agent_home/task/logs/train_grpo_full.log",
+        "bytes": 133445,
+        "sha256": "de20c5709600e48e97ed10e2f7e487a8ee2c4999708f6b51728352669c1f9aa5",
+        "selection": "warning_error_lines",
+        "scanned_lines": 293,
+        "records": 42
+      },
+      {
+        "path": "agent_home/task/logs/train_grpo_full_smoke.log",
+        "bytes": 21835,
+        "sha256": "3c6eb99423506c5afcfe6467d0664a548f42d6b894953662edba5d9f8bb5b45b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 124,
+        "records": 25
+      },
+      {
+        "path": "agent_home/task/logs/train_grpo_main.log",
+        "bytes": 173511,
+        "sha256": "38ae5e6c3e0e7f26e0673674351bf8e3b36098b415e9c9c65a9e83ff8ec5e006",
+        "selection": "warning_error_lines",
+        "scanned_lines": 313,
+        "records": 43
+      },
+      {
+        "path": "agent_home/task/logs/train_grpo_pilot.log",
+        "bytes": 48030,
+        "sha256": "c994fa62aadcb79a7bf7027ac8ccf975d126a08fa7bae3ec5adb75a260abaa2c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 99,
+        "records": 10
+      },
+      {
+        "path": "agent_home/task/logs/train_native_dpo.log",
+        "bytes": 25026,
+        "sha256": "419a3e91b0e5cbad12e0d4bfc072e9e5fed867831d9312c25cd481619018a555",
+        "selection": "warning_error_lines",
+        "scanned_lines": 128,
+        "records": 6
+      },
+      {
+        "path": "agent_home/task/logs/train_r1_refine.log",
+        "bytes": 15393,
+        "sha256": "f459747c300169915d7a3d68c053bbb45b96eb617ded405d3c7aca852b229e81",
+        "selection": "warning_error_lines",
+        "scanned_lines": 96,
+        "records": 15
+      },
+      {
+        "path": "agent_home/task/logs/train_rft_best.log",
+        "bytes": 16225,
+        "sha256": "30b2b37f0d7d9e292ee204f45b5a7e3a37dd81f1ae2334f867fd0c9c709da507",
+        "selection": "warning_error_lines",
+        "scanned_lines": 133,
+        "records": 6
+      },
+      {
+        "path": "agent_home/task/logs/train_rft_native.log",
+        "bytes": 10271,
+        "sha256": "32df88c8ac6cd0f646d72051aa9c2297993e3833d7ccc55df9502e1460dc9bec",
+        "selection": "warning_error_lines",
+        "scanned_lines": 71,
+        "records": 14
+      },
+      {
+        "path": "agent_home/task/logs/train_self_check.log",
+        "bytes": 13855,
+        "sha256": "9a538711ebbafb4d2a1da0426b14f49280f6b8716a79ab3df5b99f9d65059795",
+        "selection": "warning_error_lines",
+        "scanned_lines": 90,
+        "records": 12
+      },
+      {
+        "path": "agent_home/task/logs/train_sft_native.log",
+        "bytes": 24322,
+        "sha256": "78e1989e1a761b2ad013ee6595879d944fb7c98076d5aec4e0e69f314407f841",
+        "selection": "warning_error_lines",
+        "scanned_lines": 176,
+        "records": 17
+      },
+      {
+        "path": "agent_home/task/logs/train_sft_r64.log",
+        "bytes": 16744,
+        "sha256": "abc8b2635cf3b547846c345bdf6db1029390a20b31e82a693fcaa4df8df5a7a8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 125,
+        "records": 16
+      },
+      {
+        "path": "agent_home/task/logs/train_thinking_tokens.log",
+        "bytes": 5962,
+        "sha256": "55852423d9a7b2f6b7f7c5c8df18074548ef21a42f091e604e1a46a4d5339530",
+        "selection": "warning_error_lines",
+        "scanned_lines": 41,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/train_token_calibration.log",
+        "bytes": 12184,
+        "sha256": "5dcd3ecba78eef97a5b4d61d190e4b91c28cac4e5ae6e3682e137398f2329dca",
+        "selection": "warning_error_lines",
+        "scanned_lines": 75,
+        "records": 13
+      },
+      {
+        "path": "controller/base_full/evaluate.log",
+        "bytes": 203095,
+        "sha256": "c769ef158d08127d1379b584104fcb5304c8664ecfa6033984e519534017a171",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2126,
+        "records": 5
+      },
+      {
+        "path": "controller/final_full/evaluate.log",
+        "bytes": 178268,
+        "sha256": "064beaf2b090fc68717dcda35bb717c22aa05e9910c4afeb02d54a3f53be2ab2",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1761,
+        "records": 5
+      }
+    ],
+    "source_errors": [],
+    "records_by_event_type": {
+      "log_line": 1206
+    },
+    "records_by_severity": {
+      "error": 41,
+      "warning": 1165
+    }
+  },
+  "outputs": {
+    "agent_model": {
+      "path": "agent_model_outputs.jsonl",
+      "bytes": 124791,
+      "sha256": "db1eb8b74eec206cf0cef4f7d88e1087163ea776dbd73d8ae7cd33220fdfe2dc",
+      "records": 283
+    },
+    "agent_system": {
+      "path": "agent_system_outputs.jsonl",
+      "bytes": 2207499,
+      "sha256": "504646a2a7cf4241f01c58a8df6f9741a6d96f84bd10aef65401408ebe9d45e9",
+      "records": 978
+    },
+    "eval_model": {
+      "path": "eval_model_outputs.jsonl",
+      "bytes": 10082014,
+      "sha256": "34925ddad53f1a4dd142043c3106250814297bf69c124c943e728a6d4019565d",
+      "records": 2638
+    },
+    "linux_system": {
+      "path": "linux_system_outputs.jsonl",
+      "bytes": 855259,
+      "sha256": "a62320db59c1dec364dcbd1383f9a3bb8dd86f585eebec69df94cf1a74a4db34",
+      "records": 1206
+    }
+  },
+  "privacy": {
+    "sanitized": false,
+    "note": "Derived records can contain prompts, benchmark inputs, command outputs, paths, and other sensitive text. Review before sharing."
+  }
+}

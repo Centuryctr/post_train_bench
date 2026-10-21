@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "export_normalized_records.py",
+    "version": "1.1.0"
+  },
+  "generated_at": "2026-10-20T09:00:15.935239+00:00",
+  "run_id": "qwen17_gsm8k_10h_r01",
+  "task": "gsm8k",
+  "run_root": "/root/emhua/qrzeng/post_train_bench/runs/qwen17_gsm8k_10h_r01",
+  "semantics": {
+    "agent_model_outputs": "Completed Codex agent messages and exposed reasoning summaries. Reasoning summaries are not raw hidden chain-of-thought.",
+    "agent_system_outputs": "Completed Codex tool outputs, unstructured runtime messages, and any started items that never completed. Command output is the CLI aggregated stream and may combine stdout and stderr.",
+    "eval_model_outputs": "Per-sample downstream model completions exported from controller Inspect AI logs.",
+    "linux_system_outputs": "Experiment-scoped resource snapshots, separated stdout/stderr events, and conservative warning/error backfills from legacy logs. Host-wide journal and kernel logs are intentionally excluded."
+  },
+  "sources": {
+    "agent_log": {
+      "path": "agent_home/task/agent.jsonl",
+      "bytes": 2672906,
+      "sha256": "b16f12fcf7449e0c55ade854614dfedc4ba04849762321b22cc358ca6bcfd007"
+    },
+    "inspect_logs": [
+      {
+        "path": "final_full/inspect_logs/2026-10-15T07-50-51+00-00_gsm8k_kLGXFkS4wmBdEeccMzNxcK.json",
+        "bytes": 67560966,
+        "sha256": "52088fde3ebbc9af97b19964211658713b1fe72039d72b2addd0cf479ff311f8",
+        "sample_count": 1319
+      }
+    ],
+    "inspect_log_errors": []
+  },
+  "agent_trace": {
+    "exists": true,
+    "valid_json_lines": 1995,
+    "invalid_json_lines": 4183,
+    "model_output_records": 111,
+    "system_output_records": 5147,
+    "events_by_type": {
+      "error": 46,
+      "item.completed:agent_message": 58,
+      "item.completed:command_execution": 883,
+      "item.completed:error": 1,
+      "item.completed:file_change": 25,
+      "item.completed:reasoning": 53,
+      "item.completed:web_search": 9,
+      "item.started:command_execution": 883,
+      "item.started:file_change": 25,
+      "item.started:web_search": 9,
+      "thread.started": 1,
+      "turn.completed": 1,
+      "turn.started": 1
+    },
+    "thread_ids": [
+      "01a13c43-586a-7dd2-b942-e795e013015c"
+    ],
+    "turn_usage": [
+      {
+        "input_tokens": 126611019,
+        "cached_input_tokens": 125058432,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 422089,
+        "reasoning_output_tokens": 304114
+      }
+    ],
+    "unfinished_item_ids": []
+  },
+  "linux_system": {
+    "records": 5,
+    "structured_sources": [],
+    "legacy_sources": [
+      {
+        "path": "controller/final_full/evaluate.log",
+        "bytes": 200523,
+        "sha256": "2853835f43c38ffe4bf2df9fb3daa17c4146d07d21e52ed83551ad3d12e8d8bc",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2078,
+        "records": 5
+      }
+    ],
+    "source_errors": [],
+    "records_by_event_type": {
+      "log_line": 5
+    },
+    "records_by_severity": {
+      "warning": 5
+    }
+  },
+  "outputs": {
+    "agent_model": {
+      "path": "agent_model_outputs.jsonl",
+      "bytes": 61316,
+      "sha256": "eb60a0ff84f950afbe0d7590bae65a6305b55819e8bbf6481dd9109f666409fc",
+      "records": 111
+    },
+    "agent_system": {
+      "path": "agent_system_outputs.jsonl",
+      "bytes": 3127770,
+      "sha256": "32eb40da639fbda249252a68b5689b6f3406fa7e6254c2a531f47e83749e5197",
+      "records": 5147
+    },
+    "eval_model": {
+      "path": "eval_model_outputs.jsonl",
+      "bytes": 1832558,
+      "sha256": "1e13c078e21347f58a6cb629bb588df20f66d48b81a3640deffcd1f186ec722c",
+      "records": 1319
+    },
+    "linux_system": {
+      "path": "linux_system_outputs.jsonl",
+      "bytes": 2811,
+      "sha256": "11967db6bf89f57fdc1eb12c3e31668276f79df8b5647deca6d6625d602f084e",
+      "records": 5
+    }
+  },
+  "privacy": {
+    "sanitized": false,
+    "note": "Derived records can contain prompts, benchmark inputs, command outputs, paths, and other sensitive text. Review before sharing."
+  }
+}

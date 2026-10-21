@@ -1,0 +1,1540 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "export_normalized_records.py",
+    "version": "1.1.0"
+  },
+  "generated_at": "2026-10-20T09:00:30.693955+00:00",
+  "run_id": "qwen3_4b_aime2025_10h_max_r02",
+  "task": "aime2025",
+  "run_root": "/root/emhua/qrzeng/post_train_bench/runs/qwen3_4b_aime2025_10h_max_r02",
+  "semantics": {
+    "agent_model_outputs": "Completed Codex agent messages and exposed reasoning summaries. Reasoning summaries are not raw hidden chain-of-thought.",
+    "agent_system_outputs": "Completed Codex tool outputs, unstructured runtime messages, and any started items that never completed. Command output is the CLI aggregated stream and may combine stdout and stderr.",
+    "eval_model_outputs": "Per-sample downstream model completions exported from controller Inspect AI logs.",
+    "linux_system_outputs": "Experiment-scoped resource snapshots, separated stdout/stderr events, and conservative warning/error backfills from legacy logs. Host-wide journal and kernel logs are intentionally excluded."
+  },
+  "sources": {
+    "agent_log": {
+      "path": "agent_home/task/agent.jsonl",
+      "bytes": 2085898,
+      "sha256": "37810337b4ffc17d67f290176f381b0e96f0ffc0aa106ca6f4fbbaa96e259bcb"
+    },
+    "inspect_logs": [
+      {
+        "path": "base_full/inspect_logs/2026-10-19T17-00-43+00-00_aime2025_UZoactoxVpKsm36jPSYyMV.json",
+        "bytes": 1638261,
+        "sha256": "9db380dd37bd5d2ee3920d22992aca21556e9bcd2b545ee148ba0978749a3d7e",
+        "sample_count": 30
+      },
+      {
+        "path": "final_full/inspect_logs/2026-10-20T03-04-15+00-00_aime2025_gntAYZrDcEFatPWBhKuUca.json",
+        "bytes": 15356971,
+        "sha256": "9476021202e8dac4e2de9aec38d95a64b8fa203f81aa4e7f8ac53c068b9a3f1e",
+        "sample_count": 30
+      }
+    ],
+    "inspect_log_errors": []
+  },
+  "agent_trace": {
+    "exists": true,
+    "valid_json_lines": 1992,
+    "invalid_json_lines": 12,
+    "model_output_records": 121,
+    "system_output_records": 946,
+    "events_by_type": {
+      "item.completed:agent_message": 82,
+      "item.completed:command_execution": 831,
+      "item.completed:file_change": 95,
+      "item.completed:reasoning": 39,
+      "item.completed:web_search": 8,
+      "item.started:command_execution": 831,
+      "item.started:file_change": 95,
+      "item.started:web_search": 8,
+      "thread.started": 1,
+      "turn.completed": 1,
+      "turn.started": 1
+    },
+    "thread_ids": [
+      "01a1551d-26d7-7e63-b014-d1ab4195b99b"
+    ],
+    "turn_usage": [
+      {
+        "input_tokens": 125532549,
+        "cached_input_tokens": 123932544,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 654794,
+        "reasoning_output_tokens": 519418
+      }
+    ],
+    "unfinished_item_ids": []
+  },
+  "linux_system": {
+    "records": 688,
+    "structured_sources": [],
+    "legacy_sources": [
+      {
+        "path": "agent_home/task/runs/baseline_eval.log",
+        "bytes": 18476,
+        "sha256": "be3aa4bd314448f7581afd55d89fd88b2d0ef684fea705377d5e248412af4852",
+        "selection": "warning_error_lines",
+        "scanned_lines": 206,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/runs/baseline_full_eval.log",
+        "bytes": 20456,
+        "sha256": "07a0f379e132765e0b75832dcaacf8d1c665a5ff23b1e27ebfd31efa12d1b9b4",
+        "selection": "warning_error_lines",
+        "scanned_lines": 227,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/best_early_full16/eval-500.log",
+        "bytes": 16392,
+        "sha256": "6f6b0f26005d3f8388bcf8d95f065841bec9b0f05df04a54685dc6119c74089c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 166,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/runs/best_early_full16/evaluation_driver.log",
+        "bytes": 154,
+        "sha256": "09a2474e518deecb213ded0b88376712ad1194f5794fe5496be344aff5840fcc",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/best_early_full16_prepare.log",
+        "bytes": 262,
+        "sha256": "f4c8792b145f79af322bbb5945def281399522cb0fe7b3116b82e3f6055cc4dc",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/blend_actor_corrected025/eval-500.log",
+        "bytes": 11995,
+        "sha256": "13cddc8c717ae32bffc07181f51282dd2ecf86e3e1644b699a201de1c2027b5b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 110,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/runs/blend_actor_corrected025/evaluation_driver.log",
+        "bytes": 28,
+        "sha256": "ee7405b089b0e3dafceca19a48d4189e9969204b8a1f4689998eefb493b49414",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/blend_actor_corrected025/train.log",
+        "bytes": 763,
+        "sha256": "35ca1ff7893deff7272b410ba49dca5521b99b9509208423988c241f51d20877",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/runs/blend_mixed035/eval-500.log",
+        "bytes": 15138,
+        "sha256": "c5e67bd6e3271bdc99cfdbf848ea5a34a5e3712da35c3790336544b807a10af9",
+        "selection": "warning_error_lines",
+        "scanned_lines": 154,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/blend_mixed035/evaluation_driver.log",
+        "bytes": 154,
+        "sha256": "f74323dce42c2d89339261fe8f86d577a257a7d3bce001412fb11c4781578bf5",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/blend_mixed035/train.log",
+        "bytes": 592,
+        "sha256": "8ee3d68d17ce81a7ac56ea07c4ee149da9f5f02994970874c5bce7ca143e306f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 6,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/runs/checkpoint_evals.log",
+        "bytes": 29,
+        "sha256": "8c19f72efb7b88f0637ce94b4697a3c995dd210d67d60c7c443cc41f70411e51",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/checkpoint_evals_locked.log",
+        "bytes": 540,
+        "sha256": "0c446286cd48d7ae971119cc43cab320d6810863197c1417b20d5772443b979d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 19,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/concise_prep.log",
+        "bytes": 4472,
+        "sha256": "1fcddfb2d2bc5e75ece90ed221ddc4819c23ba7120008988965b2697e6c7dbe1",
+        "selection": "warning_error_lines",
+        "scanned_lines": 47,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/continue_curriculum.log",
+        "bytes": 607,
+        "sha256": "939cc6cc1abf3b6a7312b8312c78deca912ef430bb09fa584357e715fc3a2956",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/corrected_grpo_loss_test.log",
+        "bytes": 164,
+        "sha256": "171c699aac2c44869d95c64f9234b4f8625ea7cdb85a6e986e53c61e3f0f2e03",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/data_prep.log",
+        "bytes": 29018,
+        "sha256": "0923feb5d35928b07b6236ce352e01a608f764a443c9df6ae4e2bf62545c10f5",
+        "selection": "warning_error_lines",
+        "scanned_lines": 333,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/deadline_guard.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "selection": "warning_error_lines",
+        "scanned_lines": 0,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/deadline_guard_all.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "selection": "warning_error_lines",
+        "scanned_lines": 0,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/decode_focus100_greedy/eval-500.log",
+        "bytes": 15512,
+        "sha256": "9f8d08a7d0c765fc707342b23839ec8a58f36054389aa6dd840958260e1b1581",
+        "selection": "warning_error_lines",
+        "scanned_lines": 157,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/decode_focus100_greedy/evaluation_driver.log",
+        "bytes": 138,
+        "sha256": "ed83f38f29da71ac108d968bd1c136bd7786fdae2ece79c88094bf8b48ec48f7",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/decode_focus100_greedy_prepare.log",
+        "bytes": 268,
+        "sha256": "e25ccf752bd41e0f5abc284ea1df2b134c29188d1421d11c4ace383a346586bf",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/decode_r105/eval-500.log",
+        "bytes": 16126,
+        "sha256": "cff32aa1378b41f7fb1a5f76196c27ff14594c90783b7cac499507af540b8b7d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 162,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/runs/decode_r105_evaluation.log",
+        "bytes": 152,
+        "sha256": "d641df88421ca1cda5d9270bb5de51dd96f8a291b574808445e3343c2950a251",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/decoder_sweep.log",
+        "bytes": 3730,
+        "sha256": "4e320576875d1ce8af352567f8490abdad420def2f24bb738421a5b186ec12b5",
+        "selection": "warning_error_lines",
+        "scanned_lines": 70,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/dr_grpo_loss_test.log",
+        "bytes": 190,
+        "sha256": "dcb1aa64d62c8d08eb074a9cfc1a59b4fdbc14676cd773c51ca10a931138c39c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/evaluate_first_policy_epoch.log",
+        "bytes": 158,
+        "sha256": "60c8374e2b9d9914b43c453d5ff8b206f037eb16dd01279bf10953ebc648ea9a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 8,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/evaluate_focused2_rep.log",
+        "bytes": 421,
+        "sha256": "7d261ddd269e23c705ecb9ae2616df673ede60bb4b93688fc542b12d52db6c11",
+        "selection": "warning_error_lines",
+        "scanned_lines": 8,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/evaluation_audit.log",
+        "bytes": 12010,
+        "sha256": "c5f2fb223c40d9455b09bd8b80ba9c425ae802500cf6a3e0dbabdff9e1cabfa4",
+        "selection": "warning_error_lines",
+        "scanned_lines": 46,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/final_native_runtime_check.log",
+        "bytes": 883,
+        "sha256": "c874efa7872f96bab68723e1271eba2c5b5d67fcd9e0323ad9cabdb7720d2ec9",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/runs/finalization.log",
+        "bytes": 555,
+        "sha256": "b79e161901c72cf9b43bf0a927cc0acd66fa6eef76c4e23cf8821742cda6c1e2",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/focused_epoch2/train.log",
+        "bytes": 24714,
+        "sha256": "9dd1b28573bc9bfbdc5383a5196828d838459a7de770dd5435f769fad4350a40",
+        "selection": "warning_error_lines",
+        "scanned_lines": 127,
+        "records": 21
+      },
+      {
+        "path": "agent_home/task/runs/focused_epoch2_rep1000/eval-500.log",
+        "bytes": 16021,
+        "sha256": "0f8ce5b2443f271bb6190ceb36af4c3851c6bc86450000ed588f4cadb0e367a3",
+        "selection": "warning_error_lines",
+        "scanned_lines": 161,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/runs/format_check.log",
+        "bytes": 2737,
+        "sha256": "1cb529916c73eca6fab617de8252e503a4ebf9deab0ea3f2ecee25f61874bc12",
+        "selection": "warning_error_lines",
+        "scanned_lines": 22,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/runs/full_calibration100.log",
+        "bytes": 3158,
+        "sha256": "170923beab4d9a55547743a4d523d673b5298e842afb8e15ad4178bdcdbd2c9b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 25,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/runs/full_calibration100/eval-500.log",
+        "bytes": 15289,
+        "sha256": "2fe212e2cf925e129748edbca0ae7611a44a4370c2decdd9fe4b941f338e5f5e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 156,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/full_calibration100_evaluation.log",
+        "bytes": 152,
+        "sha256": "a2d6a8a072885cbbb5560596ad692b8125b2f08e7eaf220744d49845fb05db15",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/full_comparison.log",
+        "bytes": 405,
+        "sha256": "f2b07306608fb295487639037c26401f9f240518bf61b8a6ca206ad907f6c42b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 4,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/full_continue/eval-200.log",
+        "bytes": 15149,
+        "sha256": "85dad9d682d1eeef491ce42b5a5b61df63ac94a93173225262af2b36e3ad9ea8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 152,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/full_continue/evaluation_driver.log",
+        "bytes": 136,
+        "sha256": "64e5ed0e5d1dbdffb9fa415e7eb3219e492c511673d269163f2e55068161bda5",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/full_continue/train.log",
+        "bytes": 25312,
+        "sha256": "9746497f30e388da93abd0aeb2bca67bf4b0c6dddc6dc5ffc6f87e9141ba2f66",
+        "selection": "warning_error_lines",
+        "scanned_lines": 130,
+        "records": 21
+      },
+      {
+        "path": "agent_home/task/runs/full_focused/eval-100.log",
+        "bytes": 15055,
+        "sha256": "2d027c919728727582edcc10c903aee7840f7daa72549a55dcf8564609b5ebe5",
+        "selection": "warning_error_lines",
+        "scanned_lines": 152,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/full_focused/eval-167.log",
+        "bytes": 15045,
+        "sha256": "43fa19cdce992e028662bf77c881a9739abdf470a6455af4fb4ee9ff8090cf08",
+        "selection": "warning_error_lines",
+        "scanned_lines": 151,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/full_focused/evaluation_driver.log",
+        "bytes": 276,
+        "sha256": "7bb7861ac56b88693136ed0e5377899bc1feb87c91ac3d3843a36a034ceedbc8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 14,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/full_focused/train.log",
+        "bytes": 24128,
+        "sha256": "830be011600758a4ecc0202a3d7c1f70d21b8e956661e49a10363a280c72f13b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 127,
+        "records": 21
+      },
+      {
+        "path": "agent_home/task/runs/full_limo/eval-100.log",
+        "bytes": 15051,
+        "sha256": "405f2a4419cf8c726b684ae3e715726fe0f68508f4a2ba6f3e56bc1b73f007ff",
+        "selection": "warning_error_lines",
+        "scanned_lines": 148,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/runs/full_limo/eval-50.log",
+        "bytes": 14419,
+        "sha256": "b215e37f1aff1e73b107e467ad1e971ca4fe352b11a9fe1620852f632e676c6b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 144,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/full_limo/evaluation_driver.log",
+        "bytes": 288,
+        "sha256": "6b027c4d06f55f595bd1b92da4c131c1e541f45825612e9744be5bf3c4232d57",
+        "selection": "warning_error_lines",
+        "scanned_lines": 14,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/full_limo/merge_parent.log",
+        "bytes": 244,
+        "sha256": "450617c2bd4df860e4d0092a6e1ac5a8bea8922919d173f616a37b7a3081ea9a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/runs/full_limo/train.log",
+        "bytes": 19231,
+        "sha256": "35c8588605450277dc6450c839100d2d39d9dc50c142c8656b32251c73f92b8e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 121,
+        "records": 21
+      },
+      {
+        "path": "agent_home/task/runs/full_mixed/eval-100.log",
+        "bytes": 15368,
+        "sha256": "8c6e1bdbec52ef3a6349c818c6699e2fe46b6fc27991ba226c2a633aa291f333",
+        "selection": "warning_error_lines",
+        "scanned_lines": 154,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/full_mixed/eval-1000.log",
+        "bytes": 15751,
+        "sha256": "5a6531e86a4acf5f8d57d5a06b6ee5a03ab3e199e26ab53d38a469e4fa07e7ab",
+        "selection": "warning_error_lines",
+        "scanned_lines": 158,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/runs/full_mixed/eval-300.log",
+        "bytes": 15970,
+        "sha256": "d8a3dc7abdd50c52bd8c3d365506237852a1476be48c8554a197bb514a233099",
+        "selection": "warning_error_lines",
+        "scanned_lines": 161,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/runs/full_mixed/eval-600.log",
+        "bytes": 15566,
+        "sha256": "f2c07499b81a0f3a81b9bdaf9c7b6f42958d392c0c841f176dc59d370bbb0ed6",
+        "selection": "warning_error_lines",
+        "scanned_lines": 155,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/runs/full_mixed/evaluation_driver.log",
+        "bytes": 425,
+        "sha256": "2d4277bc516aeed6219b70dbcfbe6f8817d4374627aef0668dfee0aa6636da64",
+        "selection": "warning_error_lines",
+        "scanned_lines": 21,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/full_mixed/evaluation_driver_final.log",
+        "bytes": 140,
+        "sha256": "37f17876c25bc3f92abfe8286ec588c9263ead4a41ae171c4e081d96d0d96895",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/full_mixed/train.log",
+        "bytes": 58528,
+        "sha256": "f06d7512f5973b8f0b3138b7a4ab41ebe01197227c09aafb937d3f50dc4f4287",
+        "selection": "warning_error_lines",
+        "scanned_lines": 301,
+        "records": 21
+      },
+      {
+        "path": "agent_home/task/runs/generation_diagnostics.log",
+        "bytes": 4947,
+        "sha256": "ebb91ecb8c257806fa68be95665d250f8bb34e90139bd3d4f128d1af9743ca15",
+        "selection": "warning_error_lines",
+        "scanned_lines": 12,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/grpo_forward_test.log",
+        "bytes": 388,
+        "sha256": "b215936b49c0f28285b9a29c41ad25b9867234b33670d958f8355049c69d1537",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/grpo_loss_test.log",
+        "bytes": 164,
+        "sha256": "738cd761b7098233e73384f3b0df0e4a30b22d09c32ce8ade026c24efd079b4c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/half_checkpoint_bench.log",
+        "bytes": 1635,
+        "sha256": "1bd00bc51fee92c58372e59e4c0202b8e678bf9e57083858bce82d11e4b435aa",
+        "selection": "warning_error_lines",
+        "scanned_lines": 12,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/runs/hard_prep.log",
+        "bytes": 19828,
+        "sha256": "839a79258cbad12e46e115686d504e1301f2fbe7e9cdfd32242cfad40dbfdf41",
+        "selection": "warning_error_lines",
+        "scanned_lines": 211,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/human_aime_prep.log",
+        "bytes": 1216,
+        "sha256": "b2420a57f857f0612156465fe803cf64fa0177857934fba80b8d5fcafa7dccbe",
+        "selection": "warning_error_lines",
+        "scanned_lines": 69,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/launch_policy_round1.log",
+        "bytes": 4502,
+        "sha256": "16ad3641aaba841d5c799093c743ce26e7435cc0096d8baf6bccae8c1adf1941",
+        "selection": "warning_error_lines",
+        "scanned_lines": 45,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/launch_policy_round2.log",
+        "bytes": 4343,
+        "sha256": "3318d2b169ca77b18208309d094776ebcaca6f06ad7c8f15087d0168d2f23c7b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 42,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/limo_answer_prep.log",
+        "bytes": 728,
+        "sha256": "3f7052438122cfb189e93fbf8b8037808fe9219745a06d381fb11c1a13d8be8d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 4,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/limo_prep.log",
+        "bytes": 659,
+        "sha256": "871dc0ace8aeeb22bcee7e8ece97f348157ca52dd24588a6ba1d93ac9c08be11",
+        "selection": "warning_error_lines",
+        "scanned_lines": 4,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/mix_prep.log",
+        "bytes": 2109,
+        "sha256": "6e5e8e14538d6d64b3e1b1511f868347253f6f53c0d226311c108842c3c057b4",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/mixed_calibration300/eval-500.log",
+        "bytes": 15333,
+        "sha256": "12a15416c72e54e39d39cb5e0add8456d89932d2c3952c8365b3f61a5b857b60",
+        "selection": "warning_error_lines",
+        "scanned_lines": 155,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/mixed_calibration300/evaluation_driver.log",
+        "bytes": 136,
+        "sha256": "8df62afe7f5cf35e79336bd9e88f5e4a8e09198f81a211369155a87e52222ac2",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/mixed_calibration300/train.log",
+        "bytes": 2837,
+        "sha256": "0deafd70a7d919d012656b0cc25c2ead5092db6e764ed7577e9a56d5dbc685f3",
+        "selection": "warning_error_lines",
+        "scanned_lines": 22,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/runs/mixed_stage.log",
+        "bytes": 626,
+        "sha256": "9859921f9de1d6df08fa997510764dab3d830a580dacb292930f51aefa1b6ba6",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/native_runtime_check.log",
+        "bytes": 883,
+        "sha256": "8e4a359f710bd89e4b30f906fd345286b45a7df46bec4be813b961a4ba4e8e6e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/runs/native_validation/actor_rep1000.log",
+        "bytes": 25111,
+        "sha256": "09d1ac1a2e4a90279be7c27b1664e5b1af908b8957a5fdfd8465bc30c974102c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 246,
+        "records": 27
+      },
+      {
+        "path": "agent_home/task/runs/native_validation/actor_rep1000_driver.log",
+        "bytes": 672,
+        "sha256": "b6a3eda4e08e77863ccc4280c8110869a42e4619a7fc3750fad9c894212722e2",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/native_validation/best_rep1025.log",
+        "bytes": 26519,
+        "sha256": "c1940fbb49c42fa8f27f4f2ef8264a94a392da35d06f08ef13c4b9a5c18ab5a9",
+        "selection": "warning_error_lines",
+        "scanned_lines": 262,
+        "records": 27
+      },
+      {
+        "path": "agent_home/task/runs/native_validation/best_rep1025_driver.log",
+        "bytes": 678,
+        "sha256": "1903305b01797b19ba8d7b3e47765f3b928e1acb3c5ef64f63d4d2610774f79c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/native_validation/comparison_driver.log",
+        "bytes": 652,
+        "sha256": "4317871238a325f69037dfd394a9aa5243791c0a45a1516df7d191a1e754cf9a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/native_validation/current_best.log",
+        "bytes": 27405,
+        "sha256": "8702ef419cbc1d656ac4e87b5b1c258edb99a09f794937797996a7824bb23401",
+        "selection": "warning_error_lines",
+        "scanned_lines": 260,
+        "records": 31
+      },
+      {
+        "path": "agent_home/task/runs/native_validation/current_best_driver.log",
+        "bytes": 594,
+        "sha256": "c72b0c5e4c42b6044f668f29c9ce79fa4e98d90b4d3dc00904299538a399cd0f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/native_validation/dr_round2.log",
+        "bytes": 25060,
+        "sha256": "5fc9323fd6bc695aa320c41f8fd3eb720584750db5a384fcb73aae1aa5cb4997",
+        "selection": "warning_error_lines",
+        "scanned_lines": 248,
+        "records": 27
+      },
+      {
+        "path": "agent_home/task/runs/native_validation/dr_round2_driver.log",
+        "bytes": 651,
+        "sha256": "0fdad500704dd125bc97c5028f46e5a2f06fc3fd6860f21789263b47d0641727",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/native_validation/early_stop_driver.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "selection": "warning_error_lines",
+        "scanned_lines": 0,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/native_validation/extras_driver.log",
+        "bytes": 1043,
+        "sha256": "2ad5fbe0fc19467dab357f8e144e40a0ffb10db36498f3e0ea7b4a5021548c66",
+        "selection": "warning_error_lines",
+        "scanned_lines": 8,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/native_validation/last_trial_schedule.log",
+        "bytes": 361,
+        "sha256": "1b6fb355a91b8175dc66851c6e17c93eb84aadbd04d97acb181c67ab6f366287",
+        "selection": "warning_error_lines",
+        "scanned_lines": 4,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/native_validation/rft_rep1000.log",
+        "bytes": 21168,
+        "sha256": "36388e44ae72354807f5d4abf7efb1178bffe028ed8ced4ed57d511e16f912d7",
+        "selection": "warning_error_lines",
+        "scanned_lines": 198,
+        "records": 27
+      },
+      {
+        "path": "agent_home/task/runs/native_validation/rft_rep1000_driver.log",
+        "bytes": 1690,
+        "sha256": "7956a27843e03e961233d19c49d45f67b021c01069800be4618dfeb7352e79c1",
+        "selection": "warning_error_lines",
+        "scanned_lines": 16,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/native_validation/rft_round2.log",
+        "bytes": 30150,
+        "sha256": "41065e8240ee27d64e97b52e9bd7791fac9bbfd618c43a6687e9bb0578be1381",
+        "selection": "warning_error_lines",
+        "scanned_lines": 280,
+        "records": 35
+      },
+      {
+        "path": "agent_home/task/runs/native_validation/rft_round2_driver.log",
+        "bytes": 654,
+        "sha256": "e35785f16a55eb7c19760349ae085c9b58de84dab013049a1b9351cc03681ee9",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/no_checkpoint_bench.log",
+        "bytes": 5991,
+        "sha256": "585b980cfa2c8ecd7cf2260fb0eecf4f92ae2617f6c00e47f9a447d8cf40944e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 59,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/runs/output_only_calibration.log",
+        "bytes": 46,
+        "sha256": "4b6dd176bf68ad0c24c1b837b4cf91f82c2e57cd724d4d016d39c81bf49ec458",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/output_only_calibration/eval-500.log",
+        "bytes": 15418,
+        "sha256": "9fc16d2bf680cbc9fe2b7713f9692660304fdc88e1b50da44810f029d1214edf",
+        "selection": "warning_error_lines",
+        "scanned_lines": 154,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/runs/output_only_calibration_evaluation.log",
+        "bytes": 152,
+        "sha256": "6454b45e547da9e813c4f076387502fbd89e434ab5e7192696e456e53153e426",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/packed_attention_test.log",
+        "bytes": 561,
+        "sha256": "62a76cc83997bfb8d211d60a453b2376f28454ec4fda1b7f5dca7c1191cf1705",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/pilot_logprobs.log",
+        "bytes": 46,
+        "sha256": "38b1ae5ffc351892abb706209a71d83ad8ffa5e9dde70a92a9eefb5afa0eda36",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/pilot_rollouts.log",
+        "bytes": 79,
+        "sha256": "6bc8b2093a0b1e7b33ae3618934c308318755a6ea352ede5329d3baf6f8fa4db",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/pipeline.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "selection": "warning_error_lines",
+        "scanned_lines": 0,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/policy_round1/prepare-pg.log",
+        "bytes": 1414,
+        "sha256": "3edcd5cdc5bbf97bc98d47cad2b6341997585a03b9c260e46720504671aa1be9",
+        "selection": "warning_error_lines",
+        "scanned_lines": 31,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/policy_round1/prepare-rft.log",
+        "bytes": 1245,
+        "sha256": "454f1ab24168ef1b6efec708474f149623aa652baf86ac9145b3690de87fed45",
+        "selection": "warning_error_lines",
+        "scanned_lines": 31,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/policy_round1/rollout-0.log",
+        "bytes": 7424,
+        "sha256": "4a72e942e7d058ec528dbe2abe1a19d1d2f408d2fcf35fed87deb8be903b1192",
+        "selection": "warning_error_lines",
+        "scanned_lines": 49,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/policy_round1/rollout-1.log",
+        "bytes": 7421,
+        "sha256": "bd14faa4d5e466298aa3cb2ac1d467404f9bdb937e9b938b867fba6638a18b3f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 49,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/policy_round1/rollout-2.log",
+        "bytes": 7420,
+        "sha256": "1477553a7a9d44a0ff51926d8b69ed3a3cfc7818f102a895856eda7ae643d8db",
+        "selection": "warning_error_lines",
+        "scanned_lines": 49,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/policy_round1/rollout-3.log",
+        "bytes": 7423,
+        "sha256": "8a88e8dfeab4e4ec23b88ba809442a1a8fde4039e0454ac7fed379188757e828",
+        "selection": "warning_error_lines",
+        "scanned_lines": 49,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/policy_round1/rollout-4.log",
+        "bytes": 7421,
+        "sha256": "f4b565ccc737a7e9d1c96a281582926339e79d76aaee0e93968b444cd33c60f1",
+        "selection": "warning_error_lines",
+        "scanned_lines": 49,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/policy_round1/rollout-5.log",
+        "bytes": 7422,
+        "sha256": "1757adcc79be2c509c50618fdd610811cd47838ca61f03289cc2631bdc50c740",
+        "selection": "warning_error_lines",
+        "scanned_lines": 49,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/policy_round1/rollout-6.log",
+        "bytes": 7422,
+        "sha256": "5650b61d150f1960bca4091168b614bcab4844ed521a4d2a71055b911641e1f2",
+        "selection": "warning_error_lines",
+        "scanned_lines": 49,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/policy_round1_corrected/train.log",
+        "bytes": 23832,
+        "sha256": "580c14e6612b4ae6f2be8cd438e56f2c04a4a6f56e1fe369933a46b3b77f22bb",
+        "selection": "warning_error_lines",
+        "scanned_lines": 109,
+        "records": 18
+      },
+      {
+        "path": "agent_home/task/runs/policy_round1_pg/eval-122.log",
+        "bytes": 15481,
+        "sha256": "bd5dae1f097ea8c1343ec6b9a46daad20efcaf10271229a33c6151e8bd00a351",
+        "selection": "warning_error_lines",
+        "scanned_lines": 155,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/runs/policy_round1_pg/eval-61.log",
+        "bytes": 15741,
+        "sha256": "aba3c63ff4222eb060ab4c626d9f45e14c33c3da3d7c186bdf89120039965b86",
+        "selection": "warning_error_lines",
+        "scanned_lines": 159,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/runs/policy_round1_pg/evaluation_driver.log",
+        "bytes": 138,
+        "sha256": "7fd2a400750857b78d1c877f6b56275220c2f98bbebf2aee907955fa49f8d4db",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/policy_round1_pg/train.log",
+        "bytes": 25310,
+        "sha256": "549d51e6f4522c6669abba867658c67aa21ad2426204cabe576c432c03387d38",
+        "selection": "warning_error_lines",
+        "scanned_lines": 119,
+        "records": 21
+      },
+      {
+        "path": "agent_home/task/runs/policy_round1_rft/eval-46.log",
+        "bytes": 15758,
+        "sha256": "931bbe29485c28ae4fc23576af24ad162429b468164f9ff725a35ce8bef42254",
+        "selection": "warning_error_lines",
+        "scanned_lines": 160,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/policy_round1_rft/evaluation_driver.log",
+        "bytes": 136,
+        "sha256": "13788df88d2f20e71a3b417cb12d6a2ec8750789120bbfd5bb4c77c187d62b80",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/policy_round1_rft/train.log",
+        "bytes": 19963,
+        "sha256": "e539f87d8084c32491614dfc2ca4efab04153c899b6259d9a2fa60fb40097e94",
+        "selection": "warning_error_lines",
+        "scanned_lines": 104,
+        "records": 21
+      },
+      {
+        "path": "agent_home/task/runs/policy_round2/prepare-pg.log",
+        "bytes": 1440,
+        "sha256": "fe82489fde31883a28656f2de607ea69f79f7291a2ba35757893775a91d3d669",
+        "selection": "warning_error_lines",
+        "scanned_lines": 33,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/policy_round2/prepare-rft.log",
+        "bytes": 1367,
+        "sha256": "83d4d7a7e9af7f43436354b99140daf1ad38a47236c907e7725dba195b031485",
+        "selection": "warning_error_lines",
+        "scanned_lines": 33,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/policy_round2/rollout-0.log",
+        "bytes": 7202,
+        "sha256": "74da16983f3a122cad749f9feb9d1c7b6543452ae6f5b62dd8218a5f1be06bc8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 47,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/policy_round2/rollout-1.log",
+        "bytes": 7202,
+        "sha256": "29ddeb0eecd57af6118c0b7a36821c4ed6d0db99cb1a4af13f393f8117e3e086",
+        "selection": "warning_error_lines",
+        "scanned_lines": 47,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/policy_round2/rollout-2.log",
+        "bytes": 7202,
+        "sha256": "13590ff4b819d37190bc212afc5c67f9b47a3604f0aac80e24f93d116d47e1fa",
+        "selection": "warning_error_lines",
+        "scanned_lines": 47,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/policy_round2/rollout-3.log",
+        "bytes": 7200,
+        "sha256": "4901bcad9644bc245d51ea9c4d88ef2092300eb76686b77fd3c0cbfdbba458d3",
+        "selection": "warning_error_lines",
+        "scanned_lines": 47,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/policy_round2/rollout-4.log",
+        "bytes": 7202,
+        "sha256": "2c013f094adbadb1d112a34bee8f63385573c2c119232a4fe136a409a4e635d9",
+        "selection": "warning_error_lines",
+        "scanned_lines": 47,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/policy_round2/rollout-5.log",
+        "bytes": 7200,
+        "sha256": "0796211384b289ade9cf2191a12be3329e980dad90a9bc02b9efad47fa2c1ab5",
+        "selection": "warning_error_lines",
+        "scanned_lines": 47,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/policy_round2/rollout-6.log",
+        "bytes": 7203,
+        "sha256": "1476e592c89f1aafb28653b07c9f03543f4baaee682cc2aee33e5a0e1bf631be",
+        "selection": "warning_error_lines",
+        "scanned_lines": 47,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/policy_round2_pg/train.log",
+        "bytes": 22633,
+        "sha256": "eb49cd42e8e8db846462b90cbf9b704c3ef28cfd57b9e4d135b77383d37805c6",
+        "selection": "warning_error_lines",
+        "scanned_lines": 109,
+        "records": 21
+      },
+      {
+        "path": "agent_home/task/runs/policy_round2_rft/train.log",
+        "bytes": 19456,
+        "sha256": "88dcebf82a40d68e327aa527e1443c1e0e934bc4001f44cc6d0909c11df05396",
+        "selection": "warning_error_lines",
+        "scanned_lines": 101,
+        "records": 21
+      },
+      {
+        "path": "agent_home/task/runs/prepare_focused.log",
+        "bytes": 286,
+        "sha256": "82944198639a078fd1e73e1ec24bf08f23d41844aea5e9d9cd3c11b614d91bc6",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/prepare_long_curriculum.log",
+        "bytes": 243,
+        "sha256": "db223a1867605679ff054d9014d9642b73da0a5e1cbf7a2fd7ea036324238741",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/probe_formats.log",
+        "bytes": 2243,
+        "sha256": "695dcc7678669b14f1aa52f346cbfd25662468b2fee50e61365ff2e98f424ba1",
+        "selection": "warning_error_lines",
+        "scanned_lines": 13,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/runs/promote_best.log",
+        "bytes": 1978,
+        "sha256": "242651d58733eba82c6ead8055280935e2e4dee8c9416c69d7d525ca753b3faf",
+        "selection": "warning_error_lines",
+        "scanned_lines": 6,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/protected_files_check.log",
+        "bytes": 136,
+        "sha256": "df1107143c58647fc3599a4a457fa380bef6c6bbf8cebdf86a53f50dbe68d1fa",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/quarter_checkpoint_bench.log",
+        "bytes": 1634,
+        "sha256": "7fd8205b96b2f3afdc9e16ea4becc2fd4ab66dd03233c56da71af9a74b42ec69",
+        "selection": "warning_error_lines",
+        "scanned_lines": 12,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/runs/rep_sweep1.log",
+        "bytes": 4203,
+        "sha256": "d6184d2e5eefe0cdac0890b667a4e77e0b23299146ef4201d4faa926d49cb6a1",
+        "selection": "warning_error_lines",
+        "scanned_lines": 71,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/rep_sweep1_actor_1000/eval-500.log",
+        "bytes": 16254,
+        "sha256": "739c2752d0bbb10db2975f04b7c98436afbf3e01fe03a8590bc6b15cf11c6c4f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 163,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/runs/rep_sweep1_actor_1000/evaluation_driver.log",
+        "bytes": 138,
+        "sha256": "99b2f3581423e1f2317d3fe42da216a84e9ac17b351eda557685f7b5e1c3f5e9",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/rep_sweep1_corrected_1000/eval-500.log",
+        "bytes": 16326,
+        "sha256": "9299b795e3af0fb728ba990720c555c3e1078ddf660e2671457cfbacc4d08396",
+        "selection": "warning_error_lines",
+        "scanned_lines": 163,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/runs/rep_sweep1_corrected_1000/evaluation_driver.log",
+        "bytes": 154,
+        "sha256": "a7a7ff605c74447c14836cb5d6a3acc16c0692a86a94175301da8fea3c29efef",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/rep_sweep1_corrected_1050/eval-500.log",
+        "bytes": 16634,
+        "sha256": "44c5f3106c7f3a46e51f2ff418078bc22b1011363b128416ed6b2113b37b9cb5",
+        "selection": "warning_error_lines",
+        "scanned_lines": 167,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/runs/rep_sweep1_corrected_1050/evaluation_driver.log",
+        "bytes": 154,
+        "sha256": "a7a7ff605c74447c14836cb5d6a3acc16c0692a86a94175301da8fea3c29efef",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/rep_sweep1_rft_1000/eval-500.log",
+        "bytes": 16126,
+        "sha256": "19cc0382e87f11e36dad6e18674b3e7023d4b8710a0a1e0aa058ab577fe886fe",
+        "selection": "warning_error_lines",
+        "scanned_lines": 160,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/runs/rep_sweep1_rft_1000/evaluation_driver.log",
+        "bytes": 154,
+        "sha256": "f74323dce42c2d89339261fe8f86d577a257a7d3bce001412fb11c4781578bf5",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/rep_sweep1_rft_1025/eval-500.log",
+        "bytes": 15972,
+        "sha256": "55c63ee37b6c7692ec9b432bb3992f737706e318b648f0b2c602ebeec87c8a92",
+        "selection": "warning_error_lines",
+        "scanned_lines": 162,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/rep_sweep1_rft_1025/evaluation_driver.log",
+        "bytes": 154,
+        "sha256": "f74323dce42c2d89339261fe8f86d577a257a7d3bce001412fb11c4781578bf5",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/rep_sweep1_sft2_1050/eval-500.log",
+        "bytes": 16460,
+        "sha256": "0e3575b51edda9e2ff2eede641aeec2aefb74f8e0564af5316e36a9339735c65",
+        "selection": "warning_error_lines",
+        "scanned_lines": 166,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/runs/rep_sweep1_sft2_1050/evaluation_driver.log",
+        "bytes": 138,
+        "sha256": "ed83f38f29da71ac108d968bd1c136bd7786fdae2ece79c88094bf8b48ec48f7",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/rollout_logprob_pilot/engine.log",
+        "bytes": 6754,
+        "sha256": "b342566853bf6a193701903ac0016bae9055d108b1c5452145325738a1fc6793",
+        "selection": "warning_error_lines",
+        "scanned_lines": 44,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/rollout_pilot/engine.log",
+        "bytes": 6755,
+        "sha256": "802a287110c4ec09be03710de530168c4020b9ff1559dce695badfd0464e5237",
+        "selection": "warning_error_lines",
+        "scanned_lines": 44,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/run_corrected_policy.log",
+        "bytes": 470,
+        "sha256": "2a5f109036cddee396f5317a93d0bbb9d096984f7ea394d9fe01c3d0dc0c7096",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/run_focused_second_epoch.log",
+        "bytes": 479,
+        "sha256": "397e1a3d267eadf21f2ad22398d2e54a3676c7b9d2607cfaad32429b79ea5dbd",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/run_focused_stage.log",
+        "bytes": 490,
+        "sha256": "8ddea22d7ca25446d498ea111d0927444d24af6ccf9ab3680b017b38c041685c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/sft.log",
+        "bytes": 8305,
+        "sha256": "16f188ba98ca17a25b293e393b7368b3176ef59033ab521d07f2ce57e2691932",
+        "selection": "warning_error_lines",
+        "scanned_lines": 63,
+        "records": 14
+      },
+      {
+        "path": "agent_home/task/runs/sft_fast.log",
+        "bytes": 13479,
+        "sha256": "fc741f405c2f6372221b40dada79d595508b5c386e802b2355271d75c01872a6",
+        "selection": "warning_error_lines",
+        "scanned_lines": 93,
+        "records": 14
+      },
+      {
+        "path": "agent_home/task/runs/sft_r64/eval-100.log",
+        "bytes": 13666,
+        "sha256": "67b7c92bb7a5cc181914b673f807868faf09365305f0fffd02c202488f996df8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 135,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/sft_r64/eval-15.log",
+        "bytes": 15098,
+        "sha256": "f3701c8209f3605ad14d5562f23ea50bd7154aa517a9263c08f54b4635f52b85",
+        "selection": "warning_error_lines",
+        "scanned_lines": 152,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/sft_r64/eval-50.log",
+        "bytes": 14648,
+        "sha256": "23a77b7267356002f4bd4379b54fedad838a87ffbb718b08ed7a17110c8cf104",
+        "selection": "warning_error_lines",
+        "scanned_lines": 147,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/sft_r64/merge-100.log",
+        "bytes": 240,
+        "sha256": "d2d45e8edde39b5304fdb2320fb1cba85d5fa645efd382206eee544da45197c4",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/runs/sft_r64/merge-15.log",
+        "bytes": 239,
+        "sha256": "aea21c142b450fa84f8360d2ee2b97307654173c6a1dc6c95f70cbaf9e710e5d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/runs/sft_r64/merge-50.log",
+        "bytes": 239,
+        "sha256": "990b6cb1335e74f9611ff1b939b5e22e6a226940e693ae39f15121e4cdd6ee67",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/runs/signed_ce_test.log",
+        "bytes": 707,
+        "sha256": "83e1b176ed2a6c92e6772c99a62b46f3580a5ff5572f86c5cd0431184a599f8f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 6,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/stop_continuation.log",
+        "bytes": 44,
+        "sha256": "b66aac207369c382d3fa92c9be5298ac2ce8be5afec4ff714cfb8403f6dfd5b5",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/sweep_early_greedy/eval-500.log",
+        "bytes": 16328,
+        "sha256": "42c1c2bc6c59a9b8c6edcc1ea57d90e53f650e28b93cc3d413d0ae5c996a164b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 163,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/runs/sweep_early_greedy/evaluation_driver.log",
+        "bytes": 154,
+        "sha256": "a7a7ff605c74447c14836cb5d6a3acc16c0692a86a94175301da8fea3c29efef",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/sweep_early_rep110/eval-500.log",
+        "bytes": 16107,
+        "sha256": "17f293b0f16935841ce8fe480ab12284d24a246e194be820af9c382ebdd49bd4",
+        "selection": "warning_error_lines",
+        "scanned_lines": 164,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/sweep_early_rep110/evaluation_driver.log",
+        "bytes": 154,
+        "sha256": "f74323dce42c2d89339261fe8f86d577a257a7d3bce001412fb11c4781578bf5",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/sweep_early_t03/eval-500.log",
+        "bytes": 16191,
+        "sha256": "d5588b44332325ba6c64f7849d7b67963eddc774eca3f476b26dfb839104835c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 163,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/runs/sweep_early_t03/evaluation_driver.log",
+        "bytes": 154,
+        "sha256": "09a2474e518deecb213ded0b88376712ad1194f5794fe5496be344aff5840fcc",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/sweep_focused_greedy/eval-500.log",
+        "bytes": 16417,
+        "sha256": "5ee62874b026b019b11c6931bf64bc24699498ac996e15310526da5386f9d92b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 165,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/runs/sweep_focused_greedy/evaluation_driver.log",
+        "bytes": 153,
+        "sha256": "33197e1f54942fb6ca8e951827050a1e05ba7a9f0d4065486e2bbc8dc5f48e2a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/sweep_focused_rep110/eval-500.log",
+        "bytes": 16322,
+        "sha256": "3f90fbaac8988b064b1596bd6bc5d6da85978bd67c92ed85bc93594c893c396c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 164,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/runs/sweep_focused_rep110/evaluation_driver.log",
+        "bytes": 139,
+        "sha256": "793e6e6f0cca0f479f2186639b707661d51f61ea8637879678f53e8bf0668653",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/sweep_focused_t03/eval-500.log",
+        "bytes": 15435,
+        "sha256": "ec2b32abde1f0a6f38f8234416ddec2d957bd1336143d1a1f6ee029a10a4e34a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 157,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/runs/sweep_focused_t03/evaluation_driver.log",
+        "bytes": 154,
+        "sha256": "9a6c57a079b6a8752517aa7e0ec15270673be9d2359463f6f486e5d252bd6129",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/sweep_focused_t09/eval-500.log",
+        "bytes": 15778,
+        "sha256": "4e5839823f365faba703432acb822e00255c5f08d89e10bec331a4bfd8c025f3",
+        "selection": "warning_error_lines",
+        "scanned_lines": 158,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/runs/sweep_focused_t09/evaluation_driver.log",
+        "bytes": 139,
+        "sha256": "793e6e6f0cca0f479f2186639b707661d51f61ea8637879678f53e8bf0668653",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/runs/token_calibration.log",
+        "bytes": 2744,
+        "sha256": "cc4c32cd51ebacb272823db17e8c5ad1c9a00165942a7d390781013131c679b5",
+        "selection": "warning_error_lines",
+        "scanned_lines": 21,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/runs/token_calibration/eval-500.log",
+        "bytes": 15321,
+        "sha256": "9d9e3537fc27f0f01d21fb57118c2fb08828786261b4a9dae363ba626729cd42",
+        "selection": "warning_error_lines",
+        "scanned_lines": 154,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/runs/token_calibration_evaluation.log",
+        "bytes": 152,
+        "sha256": "6454b45e547da9e813c4f076387502fbd89e434ab5e7192696e456e53153e426",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "controller/base_full/evaluate.log",
+        "bytes": 22025,
+        "sha256": "1089ca0261dc4c79e6331703ac73d36ae8e6366c4085ba0290b9bfb1cdab3269",
+        "selection": "warning_error_lines",
+        "scanned_lines": 225,
+        "records": 5
+      },
+      {
+        "path": "controller/final_full/evaluate.log",
+        "bytes": 17053,
+        "sha256": "564be2387cbf0eb5f9de15a451fe65037ab19ec58c03435746c2ed237d4c796d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 155,
+        "records": 5
+      }
+    ],
+    "source_errors": [],
+    "records_by_event_type": {
+      "log_line": 688
+    },
+    "records_by_severity": {
+      "error": 18,
+      "warning": 670
+    }
+  },
+  "outputs": {
+    "agent_model": {
+      "path": "agent_model_outputs.jsonl",
+      "bytes": 59859,
+      "sha256": "67eeefd6bede5aa17d5e24c16942cf2748aae3c068e418dd35d74c8cee4a2a12",
+      "records": 121
+    },
+    "agent_system": {
+      "path": "agent_system_outputs.jsonl",
+      "bytes": 1836710,
+      "sha256": "880af0709dd8aeb005876f580748cf6c652a6ef99db43be2051260fecd9d3e3e",
+      "records": 946
+    },
+    "eval_model": {
+      "path": "eval_model_outputs.jsonl",
+      "bytes": 3982575,
+      "sha256": "37c0ae6dd90bf2c122e306d6311cf1475a6fd04331377dd102d99fe37e40429c",
+      "records": 60
+    },
+    "linux_system": {
+      "path": "linux_system_outputs.jsonl",
+      "bytes": 402651,
+      "sha256": "fb13390b315081a39424e1243eb9f9e2754a1bfcfde2095daa617b2717d8916f",
+      "records": 688
+    }
+  },
+  "privacy": {
+    "sanitized": false,
+    "note": "Derived records can contain prompts, benchmark inputs, command outputs, paths, and other sensitive text. Review before sharing."
+  }
+}

@@ -1,0 +1,2276 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "export_normalized_records.py",
+    "version": "1.1.0"
+  },
+  "generated_at": "2026-10-20T08:59:13.219888+00:00",
+  "run_id": "qwen17_aime2025_10h_max_r02",
+  "task": "aime2025",
+  "run_root": "/root/emhua/qrzeng/post_train_bench/runs/qwen17_aime2025_10h_max_r02",
+  "semantics": {
+    "agent_model_outputs": "Completed Codex agent messages and exposed reasoning summaries. Reasoning summaries are not raw hidden chain-of-thought.",
+    "agent_system_outputs": "Completed Codex tool outputs, unstructured runtime messages, and any started items that never completed. Command output is the CLI aggregated stream and may combine stdout and stderr.",
+    "eval_model_outputs": "Per-sample downstream model completions exported from controller Inspect AI logs.",
+    "linux_system_outputs": "Experiment-scoped resource snapshots, separated stdout/stderr events, and conservative warning/error backfills from legacy logs. Host-wide journal and kernel logs are intentionally excluded."
+  },
+  "sources": {
+    "agent_log": {
+      "path": "agent_home/task/agent.jsonl",
+      "bytes": 3694585,
+      "sha256": "2e016e619380b2951190c7906d9f3acf76c9f37bc4847de8d8be9ec7adb1d749"
+    },
+    "inspect_logs": [
+      {
+        "path": "base_full/inspect_logs/2026-10-15T14-23-20+00-00_aime2025_kb3cVMGqAPVpnRbRnLdxE7.json",
+        "bytes": 1521792,
+        "sha256": "3a1be1f3ffa7042a3e80028caf172003f9f01ceb0b06dd3a2cfa64d084857221",
+        "sample_count": 30
+      },
+      {
+        "path": "final_full/inspect_logs/2026-10-16T00-18-59+00-00_aime2025_bR8VTSLbvomj9dRLfqBesX.json",
+        "bytes": 16348111,
+        "sha256": "ad310ffc2883545c1374838e7db48626302adad3fc7859f6e558e2afdbae414d",
+        "sample_count": 30
+      }
+    ],
+    "inspect_log_errors": []
+  },
+  "agent_trace": {
+    "exists": true,
+    "valid_json_lines": 3193,
+    "invalid_json_lines": 6,
+    "model_output_records": 238,
+    "system_output_records": 1482,
+    "events_by_type": {
+      "item.completed:agent_message": 174,
+      "item.completed:command_execution": 1358,
+      "item.completed:file_change": 94,
+      "item.completed:reasoning": 64,
+      "item.completed:web_search": 24,
+      "item.started:command_execution": 1358,
+      "item.started:file_change": 94,
+      "item.started:web_search": 24,
+      "thread.started": 1,
+      "turn.completed": 1,
+      "turn.started": 1
+    },
+    "thread_ids": [
+      "01a13ff6-9876-7621-8d51-0ee5cba7b20a"
+    ],
+    "turn_usage": [
+      {
+        "input_tokens": 101473987,
+        "cached_input_tokens": 99346432,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 851677,
+        "reasoning_output_tokens": 605189
+      }
+    ],
+    "unfinished_item_ids": []
+  },
+  "linux_system": {
+    "records": 479,
+    "structured_sources": [],
+    "legacy_sources": [
+      {
+        "path": "agent_home/task/logs/after_midpoint.log",
+        "bytes": 138,
+        "sha256": "3ad1515e5bbf338dadbfd4222224dd4d8fd6cdb078fb91f947f65241d2a97317",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/amc_answer_audit.log",
+        "bytes": 7197,
+        "sha256": "9b8e31f5169b97b41d892c63bcc64dcc53af4cd82ae2b4571661c814f6f72634",
+        "selection": "warning_error_lines",
+        "scanned_lines": 57,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/answer_format.log",
+        "bytes": 12550,
+        "sha256": "6e3dd67c7c06d490774e9389c8b8f146b57ce7eab28eaba00f94fa94b35a5388",
+        "selection": "warning_error_lines",
+        "scanned_lines": 64,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/answer_format_20_dev.log",
+        "bytes": 9088,
+        "sha256": "2cd3bec632fa66c5b3e2ee0782eab21de4baac5a47e962de76318f75fe70ab91",
+        "selection": "warning_error_lines",
+        "scanned_lines": 60,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/answer_format_20_eval.log",
+        "bytes": 12723,
+        "sha256": "05851989e51ca962c70bee298e92ee8aade1b5c15bc2ae0ba2b4cfa8a2ab0f9a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 122,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/answer_format_20_queue.log",
+        "bytes": 522,
+        "sha256": "4ba7ee4459ec7dc346d5ba7228d03027c8a46fda79ea429c8287a9498fe0fa85",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/answer_format_60_pilot_eval.log",
+        "bytes": 10216,
+        "sha256": "73a84fec7f0bb6aa03b74ef9571df2a196a22b2ea100f4d3405efd166de5103b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 99,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/answer_format_60_pilot_queue.log",
+        "bytes": 441,
+        "sha256": "6e0476e7f691110b08d79d64ddc8bc322f52294e3e30018d5592e9cd08297b28",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/answer_format_interlude.log",
+        "bytes": 459,
+        "sha256": "3f9a53eb13ded5bc7d3a60d3536887ba1a3884e1f1459b787886a52064ff715c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/auto_promote.log",
+        "bytes": 815,
+        "sha256": "8d75bcad6777c220689fc9ca2d3d301a7c06f6bcb901d0d2459a6b5f2b140b3c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/base_eval.log",
+        "bytes": 19014,
+        "sha256": "3833f9054c5dd8616e91a597236cb9be89ed622c5a5a84c0be1f0defca4d00c4",
+        "selection": "warning_error_lines",
+        "scanned_lines": 212,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/base_matched16k_eval.log",
+        "bytes": 18758,
+        "sha256": "5aa1c36e99ef4e87448d0f1456a57bf7c115f6c54824b84799768d489a0c8ba3",
+        "selection": "warning_error_lines",
+        "scanned_lines": 209,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/baseline_interlude.log",
+        "bytes": 346,
+        "sha256": "3a3f61471387590fad94a5e9608d0745409d53268508823b33bed3dfd73e2425",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/best_decoding_interlude.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "selection": "warning_error_lines",
+        "scanned_lines": 0,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/competition_plain_pack.log",
+        "bytes": 643,
+        "sha256": "70e2a5ed29961c03540d4ab1105df836bccab7761366d2bffae52d0d2cb7ba51",
+        "selection": "warning_error_lines",
+        "scanned_lines": 28,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/competition_short_pack.log",
+        "bytes": 614,
+        "sha256": "b0f6e52c97f5826efa627fac4f539497f1892af1b59b95b4ce8bf351adf194ce",
+        "selection": "warning_error_lines",
+        "scanned_lines": 27,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/competition_short_prepare.log",
+        "bytes": 398,
+        "sha256": "27fd1bf60029e7e874d826c4d774f8d1fdedc856064d205cd007817f8c50ee74",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/concise_mix25.log",
+        "bytes": 413,
+        "sha256": "ae3ec33c5eaf957c5d878c7d5dd2ff704d06ba4a68e1aa29c26f01b5397a2394",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/concise_mix50.log",
+        "bytes": 411,
+        "sha256": "b78f0b3a94bad0df61b05506d13d5c3ddf1dce9cc1af816fddc732a20a51b23a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/concise_mix50_dev.log",
+        "bytes": 10037,
+        "sha256": "eca88bd7a5136966816b82803bedd57b612361df440589637b707ad40c6d869c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 68,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/concise_mix50_eval.log",
+        "bytes": 12466,
+        "sha256": "0d176bcb8ea015b2bc2e33397e6599f0a4114e239f0b612bacfad466b246fd7e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 122,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/concise_pilot_queue.log",
+        "bytes": 206,
+        "sha256": "736c5a4c64856fb6f657ab27c84cdd66b6984fa31234ac1ddb6943cd7b8865cb",
+        "selection": "warning_error_lines",
+        "scanned_lines": 4,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/conditional_base_curriculum.log",
+        "bytes": 917,
+        "sha256": "2d3c9ead8cf8e0ff599bc8213ba9548b4e6b924b8a3eedd2f7e6036fe8947f68",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/conditional_math_curriculum.log",
+        "bytes": 271,
+        "sha256": "0aff606a98241301685b6e6dd529c31274710fa341c828b6d9b618c473c8ca8e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/conditional_self_rft.log",
+        "bytes": 1540,
+        "sha256": "dd118bb078a3f01d73e0fd2406baacd33003b7d706494221681ae524e44ad925",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/curate_temporal.log",
+        "bytes": 3251,
+        "sha256": "e294e0c8d70d23b1155fdc7b7d62c9af010a4d9bdbd0e6d311d3229578d77a5b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 111,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/decoding_round2_eval.log",
+        "bytes": 14403,
+        "sha256": "92a5935d5161b597378215343f10ea9596116adaee6fb606c46729bb3e36eaa8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 146,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/decoding_round2_queue.log",
+        "bytes": 479,
+        "sha256": "5ee3b8ea5f95739dc0277062674ca78461229a53a36c3681edaf4e41bf685070",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/decoding_round2_sweep.log",
+        "bytes": 23933,
+        "sha256": "470df27194358527f555ec48e7a1e07065e412aeb899e1bd3b2621077d2f354f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 176,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/early_concise.log",
+        "bytes": 65801,
+        "sha256": "4ba7b8fdd1446b41c4436076afb15c39e38e3603344ecbd4dca1da6b60db537c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 324,
+        "records": 7
+      },
+      {
+        "path": "agent_home/task/logs/early_concise_dev.log",
+        "bytes": 10230,
+        "sha256": "7cea0088f79e5b41914346c2dfb38f6fcda39fc773ffed966240ac783b0dc830",
+        "selection": "warning_error_lines",
+        "scanned_lines": 69,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/early_concise_eval.log",
+        "bytes": 12430,
+        "sha256": "5357ec63e470f6b98a5ccbf87dba707ed3d766b4c3bcf9b1663c673fee531d5d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 121,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/early_concise_queue.log",
+        "bytes": 780,
+        "sha256": "c757efccfb38e6c3a98bfbe799979e5580ddd0bb5635738c1c35ae9d5ad70f91",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/efficient_then_conservative.log",
+        "bytes": 882,
+        "sha256": "da7222d5ab21e4554b189076abba1783acc4ded6b34a161bcd43ba24efa4c461",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/evaluation_queue.log",
+        "bytes": 147,
+        "sha256": "9d419ffb0c3bdfffc79bf7fa65e9be2e595f144a4ff4c3bcd10aa83cf21b5baf",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/expand_competition_rewards.log",
+        "bytes": 468,
+        "sha256": "6321dc16de99ebfc57d603136d7b7c9d05adcce6b2ecf8a6b28ad64a99dba17d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 18,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/expand_pilot_evaluations.log",
+        "bytes": 105,
+        "sha256": "3624463f071a976dd1f49a5e713875f3e2f619319f8fc20e6350bb90e86d7a5c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/expand_procedural_sft.log",
+        "bytes": 358,
+        "sha256": "55c92d5c9c9adcf012114fb7c0276c80bd974bbd285d03d07bd7170d5af9d799",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/extra_curation.log",
+        "bytes": 595,
+        "sha256": "982e153eae96cbc22a3c098402dc43295eb461266d9c6d99608bdf54c01dde41",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/final_base_control_eval.log",
+        "bytes": 20010,
+        "sha256": "d23049b5eebb61588b05f0d704c5336b5bc2dddccd4738bebb590b350e8894ec",
+        "selection": "warning_error_lines",
+        "scanned_lines": 223,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/final_base_control_queue.log",
+        "bytes": 485,
+        "sha256": "795e508f248f2f5b5c631d61ff943e1e9ee4878859073ef44da9f20481f59b59",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/final_dev_monitor.log",
+        "bytes": 1736,
+        "sha256": "8e5a597ae99e51aa921f7119c4f7cb7a493f22727549c6fc8c47ed9155c11293",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/final_interpolation.log",
+        "bytes": 1508,
+        "sha256": "797a334c8814eb0d676da7a2289e8065afea0d286e03d3dd4929158e645a5575",
+        "selection": "warning_error_lines",
+        "scanned_lines": 22,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/final_model_audit.log",
+        "bytes": 4789,
+        "sha256": "10e1bcefe38551ec32547d4400f7543e2e754837b54275fb30214bd58555fa89",
+        "selection": "warning_error_lines",
+        "scanned_lines": 131,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/final_round.log",
+        "bytes": 3413,
+        "sha256": "143beb90a60d3985246ec121d432de29d46b454b50945e2dd92ac483d86e0cf3",
+        "selection": "warning_error_lines",
+        "scanned_lines": 24,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/final_round_0_eval.log",
+        "bytes": 14393,
+        "sha256": "4660b66e7c2b8e9d83e62229b6d349a72c7d30fb486305ab5f33b9e33e55bc04",
+        "selection": "warning_error_lines",
+        "scanned_lines": 148,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/final_round_0_queue.log",
+        "bytes": 464,
+        "sha256": "a5028b5eaab072c05fc378ed31c2252fb1fc19bcbc5a005c4b498b9ae3105e94",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/final_round_1_eval.log",
+        "bytes": 14362,
+        "sha256": "30191ddb5907b461634379add4732032d6533e847aa8975a07705ac895420b11",
+        "selection": "warning_error_lines",
+        "scanned_lines": 144,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/final_round_1_queue.log",
+        "bytes": 487,
+        "sha256": "6319f06e934adca4eb4e4ae4d5e54e9e37995fffa5bc6328861b4669d2a85aa8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/final_round_2_eval.log",
+        "bytes": 14818,
+        "sha256": "d659379a31d2b44ac7814335a1a1d0de8aa7c46c922eb6a630384f82d4a53664",
+        "selection": "warning_error_lines",
+        "scanned_lines": 152,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/final_round_2_queue.log",
+        "bytes": 466,
+        "sha256": "4d66bf9d7c624e4ece12725cb2e4874df5e889beb8f40e288f9d7a74631641ad",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/final_round_3_eval.log",
+        "bytes": 15010,
+        "sha256": "d7212227c4e58a31133862d54e3f9c1ecb761a2c34d619dc0434d2bbfbf99196",
+        "selection": "warning_error_lines",
+        "scanned_lines": 152,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/final_round_3_queue.log",
+        "bytes": 478,
+        "sha256": "07b9b1ffd7e88cd962c51edb4f67a9e1541e91ee9f3cc7845d11db9bfc30ff7b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/final_round_4_eval.log",
+        "bytes": 14427,
+        "sha256": "300fc721d9bfc193834a0e6a014c852966a15adbc3188979f003d8ff001359ae",
+        "selection": "warning_error_lines",
+        "scanned_lines": 148,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/final_round_4_queue.log",
+        "bytes": 470,
+        "sha256": "a8f49a4b01ed7d38e1da22f1c00376756d89509405dba2b3cf8bbbe174dd7248",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/final_round_5_eval.log",
+        "bytes": 14232,
+        "sha256": "5f15bda8d1f7862dde618ed938fc1b856f2a82d3c2afc9dc083c7d3d61b33b2c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 145,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/final_round_5_queue.log",
+        "bytes": 488,
+        "sha256": "bf02a78d025fe2b485f22a506433fb93f8a125d29758f2bdf9f9f607f6b7a776",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/final_round_6_eval.log",
+        "bytes": 14591,
+        "sha256": "71e0a041d4890acf4acfc1121a4351400427a520afaab1bd7b9a0ca96d447d8b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 147,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/final_round_6_queue.log",
+        "bytes": 494,
+        "sha256": "569376f44c5fad442ac721d8b98fbbeffcd7f4e0e6fd3025aed71acb054c64ac",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/final_round_7_eval.log",
+        "bytes": 14086,
+        "sha256": "3bb4b85ab86dbb82c43bb94fcc094ca9434c773b6d7265e0eaca3416c6c5d752",
+        "selection": "warning_error_lines",
+        "scanned_lines": 144,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/final_round_7_queue.log",
+        "bytes": 490,
+        "sha256": "415ec0aa2d71a13ae5a1d491fd59224ec953c9dd70c9eed9e4a441043e096daa",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/final_source_audit.log",
+        "bytes": 2009,
+        "sha256": "af21e1bc3b51d4e1f26e8f6825bb92a66cef74e13a86b16c0b177c890bc518ec",
+        "selection": "warning_error_lines",
+        "scanned_lines": 14,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/grpo_ddp_pilot.log",
+        "bytes": 12835,
+        "sha256": "5945178eb606f73b4ef6748b10569b88298ca13dadb00787aebb5b91d1df2151",
+        "selection": "warning_error_lines",
+        "scanned_lines": 103,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/grpo_long_pilot.log",
+        "bytes": 11476,
+        "sha256": "db5392a885e53aadb449197f1d361bad501d4ba5f30882e325f9f7780399eeac",
+        "selection": "warning_error_lines",
+        "scanned_lines": 148,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/grpo_numerics_cpu.log",
+        "bytes": 1279,
+        "sha256": "f2ddb1da15d3dc58eb26feb5e9b9cc904c7e1d060681f37ba509c225c73f55cc",
+        "selection": "warning_error_lines",
+        "scanned_lines": 52,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/grpo_numerics_cuda.log",
+        "bytes": 1629,
+        "sha256": "504b5d4b5e9836012830abde6d1eba5e39041f1f11bcb0ee585bd41f83a37846",
+        "selection": "warning_error_lines",
+        "scanned_lines": 54,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/grpo_pilot.log",
+        "bytes": 11375,
+        "sha256": "d953b5e43eb54d8759d8b3359359cfeefc576cedf8440b3015a1568dce353b46",
+        "selection": "warning_error_lines",
+        "scanned_lines": 123,
+        "records": 10
+      },
+      {
+        "path": "agent_home/task/logs/grpo_pilot_queue.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "selection": "warning_error_lines",
+        "scanned_lines": 0,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/historical_crosscheck.log",
+        "bytes": 1904,
+        "sha256": "89d960c5cffefe0a44f3d3ab51a84b061687203e967bc74d81caafeeeff35298",
+        "selection": "warning_error_lines",
+        "scanned_lines": 36,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/install_flashinfer.log",
+        "bytes": 484,
+        "sha256": "072870e4ce72569349ac57e8e5160423b8dcb8c298f1889b2a7df397ac6df1b7",
+        "selection": "warning_error_lines",
+        "scanned_lines": 9,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/interpolation_evaluations.log",
+        "bytes": 556,
+        "sha256": "8d445369ed4b30897507f35643134104cb6435a440da0c1c97f24aa832cd26bb",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/limo_base.log",
+        "bytes": 63678,
+        "sha256": "31da1e30979de0a155e000f5cb68a8174fb99c68cd34d3bd8e1607d44a9729d0",
+        "selection": "warning_error_lines",
+        "scanned_lines": 319,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/limo_base_102_eval.log",
+        "bytes": 12878,
+        "sha256": "144f6b4eb27484bad46eb1bd656e4fadd515ccc31f4f8179d3d8543ebf1bdcb8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 126,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/limo_base_102_queue.log",
+        "bytes": 656,
+        "sha256": "6507d7a0f4cc6a1c904c33260b7584ea7110af172d1af58d4110631e7562f3b1",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/limo_base_204_pilot_eval.log",
+        "bytes": 10351,
+        "sha256": "1b73e66467043a58a361ac9e3c788f1937e8d27fe65fae6d5b1291bdf3c7b6b1",
+        "selection": "warning_error_lines",
+        "scanned_lines": 100,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/limo_base_204_pilot_queue.log",
+        "bytes": 435,
+        "sha256": "6d899086e021538b1feb119ba6fc026d096e3d25a18c3dee432212d61bcce0d0",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/limo_base_306_eval.log",
+        "bytes": 13791,
+        "sha256": "ed8f79af3c8ca10ec5ab19cd71f0dc42d7d72797695d5a57fae44c3e665be645",
+        "selection": "warning_error_lines",
+        "scanned_lines": 137,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/limo_base_306_queue.log",
+        "bytes": 701,
+        "sha256": "0ba8ca0724fa99cbd082abc0f1b05df8f868c860527c52cb366106ea58667537",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/limo_control_pack.log",
+        "bytes": 475,
+        "sha256": "c19d7d090515e3eeb69a175ba6a1ba8e1ee80278f01e4a63fdfab9f7a411a9d7",
+        "selection": "warning_error_lines",
+        "scanned_lines": 22,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/limo_then_efficient_reward.log",
+        "bytes": 859,
+        "sha256": "0991f3045c86806cbd9901fc0407a41832db939fbc3554c1904a54eb6ff824d7",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/lora_merge_validation.log",
+        "bytes": 208,
+        "sha256": "1ea97df83bde51b8d99dbe202861efcf60c27b41d0c42e85182fc2525b03d536",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/lora_plain_320_eval.log",
+        "bytes": 12376,
+        "sha256": "09857666f155f7df13db483ccdcd4ec004541f73d2d2f808362d6bae78cf0ce6",
+        "selection": "warning_error_lines",
+        "scanned_lines": 120,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/lora_plain_320_secondary_queue.log",
+        "bytes": 692,
+        "sha256": "65ee9e6c5125c914dc313696b8f8e97abc1cfa9efb3ddc0bcbc0dc397b2e8617",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/lora_plain_special.log",
+        "bytes": 64869,
+        "sha256": "2814eeedb3d99cf2bd53df3accf9d2ee0b146d55a6221f6025778c92c6ecea63",
+        "selection": "warning_error_lines",
+        "scanned_lines": 325,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/lora_replay.log",
+        "bytes": 130544,
+        "sha256": "e67f41933023e87c66dd954a55ff524217fd022479282d0091b21508d01099d6",
+        "selection": "warning_error_lines",
+        "scanned_lines": 652,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/lora_replay_320_eval.log",
+        "bytes": 12325,
+        "sha256": "dee84956f5ebc1ce8680ef7525f3303d00233a257aa2ce49e74b5e3cb81a5617",
+        "selection": "warning_error_lines",
+        "scanned_lines": 120,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/lora_replay_320_queue.log",
+        "bytes": 656,
+        "sha256": "838e1e820fdf504219e54784bef763636dc7c1e1b48478098f2d6fef1210807a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/lora_special_160_dev.log",
+        "bytes": 8527,
+        "sha256": "158327a0dc483b5ea799761b41bfaaa0ccf437259231e3a76569e73fc0105dc2",
+        "selection": "warning_error_lines",
+        "scanned_lines": 58,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/lora_special_160_eval.log",
+        "bytes": 13747,
+        "sha256": "faa2ece95d2519aaa2e86d5e44c5405f68ecb081b0565508ea8a5185662b38b6",
+        "selection": "warning_error_lines",
+        "scanned_lines": 133,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/lora_special_160_queue.log",
+        "bytes": 571,
+        "sha256": "52eadd424a361271770f40418e910ebdb5a445e5db7a40b7b68b38587da6e512",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/lora_special_320_eval.log",
+        "bytes": 13393,
+        "sha256": "c94d2b6937e21af500905cfcd05ff05c3e4f32ab4d918ff269f85fb152345d50",
+        "selection": "warning_error_lines",
+        "scanned_lines": 129,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/lora_special_320_queue.log",
+        "bytes": 705,
+        "sha256": "78087aedc4ea89c3bccd6107a88a4eaba3ed58c7dc14590a475a5a719896d169",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/lora_special_640_eval.log",
+        "bytes": 13244,
+        "sha256": "172f6ccc701e42e9a008a75e4c710447ff0fc1f1abb6003662dfe4c202bee552",
+        "selection": "warning_error_lines",
+        "scanned_lines": 131,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/lora_special_640_queue.log",
+        "bytes": 705,
+        "sha256": "8587f49ca91784db8e68cf379391bfa5b2fff44cb1f289bf81f8a85fe2055188",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/lora_special_replay.log",
+        "bytes": 131124,
+        "sha256": "2eb7b9cfd962bf728456ffa9bc5dccf71b53429a5efde9c5e61c989c0a1e313d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 656,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/medium_pack.log",
+        "bytes": 596,
+        "sha256": "39b95172afd27df405e47341d6502825c25efd4f4f6cb63ed152b82fa7e53a58",
+        "selection": "warning_error_lines",
+        "scanned_lines": 27,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/medium_prepare.log",
+        "bytes": 449,
+        "sha256": "bc0dae4b1c9b91891b6373bc1e884fbf63b440d23cebfbec22c983d416786458",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/openmath_400_pilot_eval.log",
+        "bytes": 10386,
+        "sha256": "63ff4b85e59e9d764bf253685f7e6e97388816a1c41cbb20404951ea3d8d1486",
+        "selection": "warning_error_lines",
+        "scanned_lines": 102,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/openmath_400_pilot_queue.log",
+        "bytes": 449,
+        "sha256": "72df2db09b3f9f169772d488b90992d1201c1583d1f22701707da166e3e8e439",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/openmath_800_eval.log",
+        "bytes": 12591,
+        "sha256": "cf20c5c073d527264b8271d1d42e0ec38eeff678b42ed54bf587afee6e598661",
+        "selection": "warning_error_lines",
+        "scanned_lines": 123,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/openmath_800_queue.log",
+        "bytes": 701,
+        "sha256": "2ba6a5019d90a300f8bb19eaece025337c9c8f683d4adc02487f22288e0cd4ff",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/openmath_focus.log",
+        "bytes": 164430,
+        "sha256": "b648107644ceea2d4cc286d75612e8fb7ecac6232685add9bcd20bab6ec069f9",
+        "selection": "warning_error_lines",
+        "scanned_lines": 813,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/openmath_pack.log",
+        "bytes": 461,
+        "sha256": "8f4bbf74dffe73e9d6b5b9573ae0d07b6cf2d4f8e557edca5d0a43e7856b4925",
+        "selection": "warning_error_lines",
+        "scanned_lines": 20,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/openmath_then_lora.log",
+        "bytes": 501,
+        "sha256": "4e3fcfb8dbb22e181649ca7848800d8e82a2207a5f8aab85468f4519e5ce141a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/packed_attention_validation.log",
+        "bytes": 254,
+        "sha256": "126667c1069c030ee8b9f6e82c887e7c16e76d9da820339e5ae831f7fbaacb8f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/plain_640_dev.log",
+        "bytes": 10275,
+        "sha256": "eb971a5625c57c6413e3317d405f64ae9bdbdde7067a5edbc7b45b26fa64afce",
+        "selection": "warning_error_lines",
+        "scanned_lines": 69,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/plain_640_eval.log",
+        "bytes": 12100,
+        "sha256": "cc88d5ccb7ee3c28daffc1f3d184e4a68e13d42fedba3a38dafea22275a1eb42",
+        "selection": "warning_error_lines",
+        "scanned_lines": 118,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/plain_base.log",
+        "bytes": 130784,
+        "sha256": "c2fc672663c78ff9b86f38d00fd67153e454a7f2f7e1d0ee9f7794a1533d19a7",
+        "selection": "warning_error_lines",
+        "scanned_lines": 650,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/plain_then_openmath.log",
+        "bytes": 779,
+        "sha256": "7c87f6d3185942311eb3c3f40de2c590af5a8ff30bba5118e9f4da48b9287a89",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare.log",
+        "bytes": 858,
+        "sha256": "bd5c106e3d4f58fcb38d26ce76bc87ff1d12254cc3306f35a6a45f889cd1086b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 31,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_answer_only.log",
+        "bytes": 474,
+        "sha256": "6829d1c2d3f4d9d053d78c7d18d81fe383ebcac780a5a4c4a61a0276a0a35251",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_concise.log",
+        "bytes": 97,
+        "sha256": "4053890a42194d46e6075ec3c0430d9ea1a738a79210fde3abbc8f5c57d7a1db",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_focus.log",
+        "bytes": 240,
+        "sha256": "af4c25fb8a48a4f452cc7e072a7b07a3f427780d3bd51c9802483d5b698de1b9",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_limo_control.log",
+        "bytes": 58,
+        "sha256": "54ac532bf42135ac724f15d676618398703aafc517d26b241de5afc6b69cd008",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_openmath.log",
+        "bytes": 256,
+        "sha256": "2a4106e7f3ae64d5727e84c66613428a385a729ddb654caaf62dad7b1708af28",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_procedural_sft.log",
+        "bytes": 475,
+        "sha256": "96ed69493c5788722efcb919c94a5d7bf845807db6d00897a200bdaa12a27bab",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_replay_focus.log",
+        "bytes": 919,
+        "sha256": "b2bbe47137d3ebda73eaaf4c6c3f3134948c776b1a46bf8646d7fc4e3b790fe2",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_replay_pilot.log",
+        "bytes": 862,
+        "sha256": "dd6990f88374362064a0d779cadda40764d2db74549a42199342fffe8979e0c1",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_s1k.log",
+        "bytes": 173,
+        "sha256": "9dc0c7dddbdbad9364660d685019029d1c6277f988e66e03213cb9f5d39aedce",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_self_rft.log",
+        "bytes": 3249,
+        "sha256": "c1307f2c91fa84c04c97cb804b6b012bffb6372a85b7acfd3e681dd466308fa9",
+        "selection": "warning_error_lines",
+        "scanned_lines": 40,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/prepare_verified_rewards.log",
+        "bytes": 821,
+        "sha256": "a5b24bc61cf679685c210b7835b735e741c5d28f421ebe81574cd1098bfecf1b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 25,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/probe_marker_generations.log",
+        "bytes": 2001,
+        "sha256": "fc36399fd65a9fda84d88d50a580439e62f9bbadb22f97739c0262718981f14f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/procedural.log",
+        "bytes": 248,
+        "sha256": "5fb67d042d8fe3166f42791714082036f02e80ecc1d9e179d8a36e272d79443a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/quality_500_dev.log",
+        "bytes": 10033,
+        "sha256": "c2ed4a3313bfda8e052ecdf1b8c4396a4816ef0f2ac04b5ec8c192498c07817c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 67,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/quality_500_eval.log",
+        "bytes": 12447,
+        "sha256": "1d13137cf6151981c062e61e59983829c944fd836b328e78a474491274f6a34e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 123,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/quality_base_anchor75.log",
+        "bytes": 452,
+        "sha256": "ac7685a8b86576ca1af09b9b328fd3ce7e55966a524890ec8e3da59ab104eb98",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/quality_base_anchor75_eval.log",
+        "bytes": 13775,
+        "sha256": "05a19ed6a565e01d1393164e29da4acbd6d9fffa5887e0b2b2a21954f9fe6efc",
+        "selection": "warning_error_lines",
+        "scanned_lines": 137,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/quality_base_anchor75_queue.log",
+        "bytes": 713,
+        "sha256": "1f9e170d964ae99232f3d79276fc778b9d8b4e5f9059de70555aaac11e8e0470",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/quality_focus.log",
+        "bytes": 104390,
+        "sha256": "e31edf1bbf6d9235278d362d9601349a42888918f92cbd00b13fb2f8a7712917",
+        "selection": "warning_error_lines",
+        "scanned_lines": 516,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/quality_greedy_r103_eval.log",
+        "bytes": 13533,
+        "sha256": "053e061b5ecc484d52942ca7305a8c9906ccd23b2810637fac65939c3c87d264",
+        "selection": "warning_error_lines",
+        "scanned_lines": 134,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/quality_greedy_r103_secondary_queue.log",
+        "bytes": 476,
+        "sha256": "416241ad354a05960bb59177004535efdd88827531e9e75c42e6807ed1a8339a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/quality_pack.log",
+        "bytes": 659,
+        "sha256": "6923a772ef985f17544fe8f550fac99d752cd11964a3d700f54f1b2d4cfc3dd7",
+        "selection": "warning_error_lines",
+        "scanned_lines": 29,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/quality_prepare.log",
+        "bytes": 360,
+        "sha256": "7afbca612c5ae8d789d7789ab97914f28566887be76bfa37184a7c270f630713",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/quality_then_limo.log",
+        "bytes": 488,
+        "sha256": "7928863b8180168f96fc4e2c61e81f134cfe6dfc21c6787d19c94bfc5e6509e8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/queue_reward_pair.log",
+        "bytes": 60,
+        "sha256": "414be1de7624a50f07bc43830b8f7dc97fbf9b7b9f4ecdd4f20f5d86e2556258",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/remove_flashinfer.log",
+        "bytes": 343,
+        "sha256": "69765ab58292d2e9930682bb7b27eccff45734312b682139225923164a7b592f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/replay_then_base_reward.log",
+        "bytes": 2138,
+        "sha256": "39ccdee0139907f07e252ce63aff7f73e1d4df7e82fdb0c385f5adcd9f32473f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/replay_then_special_lora.log",
+        "bytes": 561,
+        "sha256": "f66f08a1257246cae38beb1a0b1910f4042d79d1328dc390636bdffa0592d0a9",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/reward_evaluation_queue.log",
+        "bytes": 2217,
+        "sha256": "5f60298adb8b439189ff14218fc8f8d975cc0c175cb5dd5a9aceb31e9470f931",
+        "selection": "warning_error_lines",
+        "scanned_lines": 28,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/reward_pair_queue.log",
+        "bytes": 732,
+        "sha256": "2717458235f64ce9f60201c29bfdc18dfffb3299e9367765839bf771f2cf76d2",
+        "selection": "warning_error_lines",
+        "scanned_lines": 8,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/reward_pair_restart.log",
+        "bytes": 417,
+        "sha256": "6587fe8a0fbba01b40547229da8d68693e99a73572b05dbfea5ba55afccfc55d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 4,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/rl_base_direct.log",
+        "bytes": 145897,
+        "sha256": "be82bfffd6c3b2d6c39de6e0338b88aaaa4f591ca7b33fb573dce34647ec2db4",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2032,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/rl_base_direct_128_eval.log",
+        "bytes": 12841,
+        "sha256": "b97848f3442db21568d7bcfb1d9e8a0bccf31bac8bc1a2bccfa9b28430329b29",
+        "selection": "warning_error_lines",
+        "scanned_lines": 124,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/rl_base_direct_128_queue.log",
+        "bytes": 718,
+        "sha256": "849462b6b0435b32640860b87f43751f178a447f9128ee4f359370f8f6a50c16",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/rl_base_direct_64_eval.log",
+        "bytes": 12740,
+        "sha256": "06f65e8c443f9509f5aeed25039b0e8ac1036d0cfa692d20da3dde3bec8c3ff1",
+        "selection": "warning_error_lines",
+        "scanned_lines": 125,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/rl_base_direct_64_queue.log",
+        "bytes": 475,
+        "sha256": "b59b7d646ec265f3dc172695ec444ce5b1e92ceb9a590826e90b25b1d4efdb65",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/rl_conservative.log",
+        "bytes": 120635,
+        "sha256": "0609e60deb09f6a625de02a9ef0e65f0b995e19cb729fcc506f8f152ffc25448",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1553,
+        "records": 6
+      },
+      {
+        "path": "agent_home/task/logs/rl_conservative_32_eval.log",
+        "bytes": 14420,
+        "sha256": "cd4a0e36299140eaba52e0d72c03f1f445e72f2687322db13edd76171ad3eafb",
+        "selection": "warning_error_lines",
+        "scanned_lines": 144,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/rl_conservative_32_queue.log",
+        "bytes": 700,
+        "sha256": "0de6197b82d6bc5a802ea53f22b13beb7ba6973d6d550fb2271caf279e825e0a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/rl_conservative_64_eval.log",
+        "bytes": 13957,
+        "sha256": "1113c2127c2d4397cd7dde627866ac1369387435da94e41988ddccabf0446a5d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 140,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/rl_conservative_64_queue.log",
+        "bytes": 497,
+        "sha256": "ee7c7e9d087e949f9f2c020c053ac551599b5efd3be9dfbf8cf5e1a8c7e51cad",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/rl_conservative_96_eval.log",
+        "bytes": 14007,
+        "sha256": "24918bc3431003849f1af74677aa1a4eabc0ee897f820128da563d0b9fc01ff0",
+        "selection": "warning_error_lines",
+        "scanned_lines": 140,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/rl_conservative_96_secondary_queue.log",
+        "bytes": 720,
+        "sha256": "bc44af28e90695c923612d34d278c074d5b2d74dec11c03a719d21fd012db993",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/rl_curriculum_prepare.log",
+        "bytes": 903,
+        "sha256": "3c26e4257cec128090101782b237a4a8956106e2a95d095959ce562ae2a73738",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/rl_early.log",
+        "bytes": 206735,
+        "sha256": "07156bc647e0d7fe71e9452b81c3e2cb931f4e11431aec336b4060db33577661",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3076,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/rl_early_160_dev.log",
+        "bytes": 10096,
+        "sha256": "b470e84de91086117ce9445f3841db825be2b8870f70f9c3dead5132e4e537f7",
+        "selection": "warning_error_lines",
+        "scanned_lines": 68,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/rl_early_160_eval.log",
+        "bytes": 12549,
+        "sha256": "addfd6d646bf8e4358576230cc86defe0fed7adff1e62839b6379466c30f3193",
+        "selection": "warning_error_lines",
+        "scanned_lines": 122,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/rl_early_320_dev.log",
+        "bytes": 10213,
+        "sha256": "4859b3e5080cf21fe95fe552cb31e0b6e3ca6015775c65c5ac594fe7097355c9",
+        "selection": "warning_error_lines",
+        "scanned_lines": 69,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/rl_early_320_eval.log",
+        "bytes": 12896,
+        "sha256": "508970b937660728c72bf3fb5d1b34f45f17132cab5bce06fccf57fe3a6b3d95",
+        "selection": "warning_error_lines",
+        "scanned_lines": 125,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/rl_early_320_sampling.log",
+        "bytes": 25139,
+        "sha256": "5ec4a5f2054056dc7a10b7cf85b07dbdd92c9d2fb0095794450f5165241c1be2",
+        "selection": "warning_error_lines",
+        "scanned_lines": 188,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/rl_early_evaluation_queue.log",
+        "bytes": 1050,
+        "sha256": "6593f39dcd8969393a61d5521e81024fde5ca6954669313cb2a06528e038f4f3",
+        "selection": "warning_error_lines",
+        "scanned_lines": 6,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/rl_efficient.log",
+        "bytes": 80292,
+        "sha256": "dbf9562df151cd26a469894d882d0e24fe772f62b2e7b2189ed77ca19e655524",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1027,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/rl_efficient_32_eval.log",
+        "bytes": 14074,
+        "sha256": "6edccabd4022a33db76deeb13608f912d2b9fa56ecf58d789062cfa7d6b4d99d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 139,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/rl_efficient_32_queue.log",
+        "bytes": 707,
+        "sha256": "a93588c73c2111482c8fdd8dd2ab2cb3eb5f6fd53d18fca5641954fb685e387b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/rl_efficient_64_eval.log",
+        "bytes": 13454,
+        "sha256": "d7ccb2dcb6cf56b2b2ca4846adb9796dfa0997176f4c03074a77bc1747dd2f80",
+        "selection": "warning_error_lines",
+        "scanned_lines": 136,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/rl_efficient_64_secondary_queue.log",
+        "bytes": 496,
+        "sha256": "d75031edf893b79a91cdab1a110501ea35a468b4658cc439e42db65c0a791a2d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/rl_efficient_blend25.log",
+        "bytes": 410,
+        "sha256": "8831b5e555be8b6356afd366c19ccd946ceef69d587a49f0cef639cadc78c56b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/rl_efficient_blend25_dev.log",
+        "bytes": 9832,
+        "sha256": "b087f5bdf40aec04142cbf7cd9f8a6c0deca07dd2fb69be9c0d7ada08bc02a82",
+        "selection": "warning_error_lines",
+        "scanned_lines": 66,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/rl_efficient_blend25_eval.log",
+        "bytes": 13401,
+        "sha256": "5accf728b533bd84764cbc5dd8ab5d7040b4461e88052068f1e1361a85bb27c2",
+        "selection": "warning_error_lines",
+        "scanned_lines": 134,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/rl_efficient_blend25_secondary_queue.log",
+        "bytes": 563,
+        "sha256": "f79b35b15f706118174e224bfda494f2bf968c1807b3116cb96d10acbdad653b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/rl_fresh.log",
+        "bytes": 88,
+        "sha256": "d84a40c4621258f2ea505c464cfd629bc36671ce761e4e12982cbbcd0a07d314",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/rl_math_curriculum.log",
+        "bytes": 72149,
+        "sha256": "db5116ceb3477f70310038653829a64ccf789eccf1429a95b751ce2bf76d876a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 963,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/rl_math_curriculum_32_eval.log",
+        "bytes": 12861,
+        "sha256": "1b06822c8eb0c1d07257afdf26910b7be81881b6f4d0ce2cfe098976af5a099e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 126,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/rl_math_curriculum_32_queue.log",
+        "bytes": 705,
+        "sha256": "395ec1f333f86d364f294a0f2ac4fddb57201b02610efbf3ffe4aecc22739354",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/rl_math_curriculum_completed_eval.log",
+        "bytes": 12995,
+        "sha256": "f70f5772b7090b7e02a5842f8e06ccf8d99b304d3b5450a99aebd74bdda93410",
+        "selection": "warning_error_lines",
+        "scanned_lines": 128,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/rl_math_curriculum_completed_queue.log",
+        "bytes": 748,
+        "sha256": "3fa19df21ef62833cfc137420845fe63426d07e699f0a85f145b594ac8441a0e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/rl_plain.log",
+        "bytes": 127274,
+        "sha256": "549015eb58d7532d3dcd90693bd0fc9b69701332557910baddaac55f4e2d9bc0",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1730,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/rl_plain_128_eval.log",
+        "bytes": 12556,
+        "sha256": "04f69853d887f972d173e5ce7b6d32edad607cbc370d88661047dcd7bb825728",
+        "selection": "warning_error_lines",
+        "scanned_lines": 122,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/rl_plain_128_queue.log",
+        "bytes": 432,
+        "sha256": "8ae50520981d81822de33fcf94b909cd646110c26ea59817961eab9dc878a549",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/rl_plain_64_eval.log",
+        "bytes": 12220,
+        "sha256": "4f664bf8476520c5be40d9a7383ea7c246b2e7c46008773a647b5bd1cb3e9ca3",
+        "selection": "warning_error_lines",
+        "scanned_lines": 119,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/rl_plain_64_queue.log",
+        "bytes": 463,
+        "sha256": "136601f3b23c7c9e201d619d4241ad210bc36f816428821abdd072e8e0fe59cb",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/rl_plain_completed_eval.log",
+        "bytes": 12825,
+        "sha256": "8a9e4da7bfd6ab6e8ac9add5895356a2a03ca1a42430156f785bb7d186802d16",
+        "selection": "warning_error_lines",
+        "scanned_lines": 123,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/rl_plain_completed_queue.log",
+        "bytes": 467,
+        "sha256": "927fe428ba375e327535687128715613576c8ad88dd0e5688fa670576e38ca27",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/rl_quality.log",
+        "bytes": 41350,
+        "sha256": "5b89962a7e42dfa6fe1b4e2c22bd2615874a55495e4090def7494825225e7743",
+        "selection": "warning_error_lines",
+        "scanned_lines": 508,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/rl_quality_completed_dev.log",
+        "bytes": 9777,
+        "sha256": "66c51a035cb16e0b09ac7e3655ef52e82398afbc7dc16bb9d1f755bf3abba106",
+        "selection": "warning_error_lines",
+        "scanned_lines": 66,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/rl_quality_completed_eval.log",
+        "bytes": 13023,
+        "sha256": "6eb28e4a98adcd0e648d1eed81f05d3f820fd26528ec9152a94199b5e66f8538",
+        "selection": "warning_error_lines",
+        "scanned_lines": 130,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/rl_quality_completed_queue.log",
+        "bytes": 579,
+        "sha256": "b8e24cf1afcfaf007d65ffbb1b6b4e80d1160db301d6d5a6ac726ecfca0bdfcc",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/sampler_benchmark.log",
+        "bytes": 1769,
+        "sha256": "1b7c9a376bbe2be62f5ad379dbfbf49e6c70d9a8e7a99ae84add59322d45bc08",
+        "selection": "warning_error_lines",
+        "scanned_lines": 33,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/secondary_evaluations.log",
+        "bytes": 3650,
+        "sha256": "7e0c2915baeea935f8c44fd4a6dd11a04c67b2610288bba1418baaae9e59d31c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 35,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_high.log",
+        "bytes": 40646,
+        "sha256": "d13981e63e569e713859513def4843b9f08221aeb51a4071760681984910ca25",
+        "selection": "warning_error_lines",
+        "scanned_lines": 203,
+        "records": 2
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_high128_full2024.log",
+        "bytes": 12756,
+        "sha256": "3b027399b8f6f555302759e635bb85533fcd7a91b683a0b88f868746af1fcbb4",
+        "selection": "warning_error_lines",
+        "scanned_lines": 87,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_high_128_eval.log",
+        "bytes": 13348,
+        "sha256": "3c6e3e1ee6150c410eb6970368df798eb810c74f83433e5fb14a7e74c3360afe",
+        "selection": "warning_error_lines",
+        "scanned_lines": 135,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_high_128_queue.log",
+        "bytes": 494,
+        "sha256": "258bda0b7163598fc1006803abf396e7c190c9564bbfcbf87e8f4eecae17180a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_high_192_eval.log",
+        "bytes": 13601,
+        "sha256": "4e0a27849fed4051da76fb712806b53e00d3d1e39f3eb1abb3455c8a2b4710d3",
+        "selection": "warning_error_lines",
+        "scanned_lines": 137,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_high_192_secondary_queue.log",
+        "bytes": 510,
+        "sha256": "b7c91f35eceaba9caf538b9119686607b6caad09d5d42c86aa873f6f53aec4f8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_high_rl.log",
+        "bytes": 41853,
+        "sha256": "f6f4f5bdb17a4cf1962cddd219159522dc440ec7d4ba1c088f495d6cb8f129fd",
+        "selection": "warning_error_lines",
+        "scanned_lines": 543,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_high_rl_32_eval.log",
+        "bytes": 243,
+        "sha256": "a9e217a1ed0a9fc5960e7f317cd63b1eedeb1a2e3b6609629d96c21a4535824e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 1
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_high_rl_32_secondary_queue.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "selection": "warning_error_lines",
+        "scanned_lines": 0,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_interpolate50_eval.log",
+        "bytes": 14486,
+        "sha256": "3e689d3178f73d53ecd06dc953ac22b2f67ca5c0f3e3de177aecab06c9ca19b8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 146,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_interpolate50_full2024.log",
+        "bytes": 12177,
+        "sha256": "c09dcc9ed2829597144bb7aa43c98d5a842ed8465f94a07611260334bd7c16bb",
+        "selection": "warning_error_lines",
+        "scanned_lines": 83,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_interpolate50_prepare.log",
+        "bytes": 453,
+        "sha256": "4e3087e7a15e213da2a90d5a8b07d3e8bea38cdf33543acad079545ffd18d3a7",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_interpolate50_queue.log",
+        "bytes": 498,
+        "sha256": "be221b2e0dd489261bc526539112c3bebc3d51bf65ab20b0acffb225f38d931e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_long_reward.log",
+        "bytes": 724,
+        "sha256": "4eae51f3bb9534954792cfe44749257c74bf58481f72ec46d0c91246578e9b26",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_low.log",
+        "bytes": 40579,
+        "sha256": "26dcbb61b02c7c4fa3a539da739820879eff52467ff94003d783e94e8b898f6e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 203,
+        "records": 2
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_low_128_eval.log",
+        "bytes": 13451,
+        "sha256": "166737753ed63d9cc0127148f2835dd98cb39ca2bda35f7e1ff434d06921476a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 135,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_low_128_secondary_queue.log",
+        "bytes": 480,
+        "sha256": "dd55ca25e933f661e47dc8c145154b6a265a36747f67a7b1596a6b4054d696b8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_low_192_eval.log",
+        "bytes": 13515,
+        "sha256": "a263f6a8fd6f095408715e0553a5f394ddcb68293f0556151034aee21eec377d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 137,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_low_192_queue.log",
+        "bytes": 507,
+        "sha256": "1bf3626fa511a40f77559ebdb52dda1e38b5db333c5550af51392d27b02c4291",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_low_long_rl.log",
+        "bytes": 24691,
+        "sha256": "68ea89cadec01e1cd04ba050b56c4fdf5c1b08e448cc9e1143d607b86c5dba4b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 305,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_low_long_rl_16_eval.log",
+        "bytes": 8806,
+        "sha256": "7f4cdb142fe505d6c2812553e7ae042b999209de94bc064c6702eefeb2e119aa",
+        "selection": "warning_error_lines",
+        "scanned_lines": 80,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_low_long_rl_16_queue.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "selection": "warning_error_lines",
+        "scanned_lines": 0,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_low_rl.log",
+        "bytes": 41699,
+        "sha256": "b5f396dda655242b2169c660e83a910eb42f1276b19debc933d8beac55a55244",
+        "selection": "warning_error_lines",
+        "scanned_lines": 543,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/self_rft_then_reward.log",
+        "bytes": 1025,
+        "sha256": "440e65e76c86400e68cc7ec7902ef74919f9621b09232b6994ae016fbe95a931",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/sft_numerics_fp32_validation.log",
+        "bytes": 859,
+        "sha256": "aeb1c01a228863e547be3180e814c6196d603776233ad7a3221f083501289775",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/sft_numerics_validation.log",
+        "bytes": 1310,
+        "sha256": "1105d30bdc2e632d14b47241232d38539ff4d3cbac6ecfe953989a2384880a78",
+        "selection": "warning_error_lines",
+        "scanned_lines": 7,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/special_embedding_merge_validation.log",
+        "bytes": 370,
+        "sha256": "2a99989a8311a3664ee643954893856ff5bd090b55d0aa79d35a0e741d77459b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/special_only.log",
+        "bytes": 12583,
+        "sha256": "4de9188605c978c6e5f4f043d96cc1a5340d891fe22436c751d471a1b852f19a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 64,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/special_only_60_eval.log",
+        "bytes": 12191,
+        "sha256": "679ccc263177e3ded8113fe44e3ad896099ef8c8f1d6d7dd29b4ec34a7807ebb",
+        "selection": "warning_error_lines",
+        "scanned_lines": 119,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/special_only_60_queue.log",
+        "bytes": 694,
+        "sha256": "24458cfc40902e174b22465da7519ef9e7df9326ac8843840aedfe8bd8fe988e",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/special_then_short_lora.log",
+        "bytes": 517,
+        "sha256": "2d57725de6debaf5f4a24c5fd29e0252107947ddad43c1fc2c0563c281920d48",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/speed_12k_half_gc.log",
+        "bytes": 1110,
+        "sha256": "83153e38a76b48b2f1892e82f11edb0c4f7eacd2ae22e307a619a80c8d73bd2a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/speed_16k_half_gc.log",
+        "bytes": 1114,
+        "sha256": "6d3fb1411a601ac4c7eb65889e9e5fc5a7889b63616d5dc5094dd517b55f1755",
+        "selection": "warning_error_lines",
+        "scanned_lines": 5,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/speed_no_gc.log",
+        "bytes": 1179,
+        "sha256": "54eb7b9ed28d27651ed2fa5c39f55d2019c1312b878f017dfcd412e11a5d69a4",
+        "selection": "warning_error_lines",
+        "scanned_lines": 6,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/speed_test.log",
+        "bytes": 1178,
+        "sha256": "a7fba7d9a378b3d4ad835296317d924abc9e1177cba6e59e12569ebe6e8b2559",
+        "selection": "warning_error_lines",
+        "scanned_lines": 6,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/stage1.log",
+        "bytes": 83066,
+        "sha256": "8f45de3b296db30730ab64face2edcac4a95e1b280ece8ae1a2fcee897fa4cfe",
+        "selection": "warning_error_lines",
+        "scanned_lines": 418,
+        "records": 7
+      },
+      {
+        "path": "agent_home/task/logs/stage1_200_dev.log",
+        "bytes": 9352,
+        "sha256": "4352eb1013838b07afe98dce18781dd3b8895c2106574066f0d7be1e9e69b800",
+        "selection": "warning_error_lines",
+        "scanned_lines": 63,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/stage1_200_eval.log",
+        "bytes": 14474,
+        "sha256": "9e5b85eafb5c5807c8c519353384786a9f4dc15cac89ebd0838c1ef9f516ff03",
+        "selection": "warning_error_lines",
+        "scanned_lines": 147,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/stage1_400_dev.log",
+        "bytes": 9099,
+        "sha256": "ba340b63478bd8b7e1642e274bff20c7ad2a61b6c2e7a75b512be6a1857bd261",
+        "selection": "warning_error_lines",
+        "scanned_lines": 61,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/stage1_400_eval.log",
+        "bytes": 12978,
+        "sha256": "a68224ca824152fe72274307e275056455de2bd89157c0ff7969a97a66c1dd79",
+        "selection": "warning_error_lines",
+        "scanned_lines": 128,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/stage1_400_queue.log",
+        "bytes": 196,
+        "sha256": "492fdafdb68c33df8262ff81683812a1b1b55fcfda60fb913f2b991eb77cbea6",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/stage1_400_sampling.log",
+        "bytes": 12396,
+        "sha256": "3fdfd557c3f14b2285e1b98b11360bbb6377c57490d0a4f4f293fba0d909e5c1",
+        "selection": "warning_error_lines",
+        "scanned_lines": 93,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/stage1_decode_t08_r105.log",
+        "bytes": 375,
+        "sha256": "76befaaf7a64423deb61921eaa7c310cc90a7d04d6e10574a83835f449518027",
+        "selection": "warning_error_lines",
+        "scanned_lines": 18,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/stage1_decode_t08_r105_dev.log",
+        "bytes": 9960,
+        "sha256": "0feaede1409ab86dde9be8def354858693083a627da88999c9a537645dccbec7",
+        "selection": "warning_error_lines",
+        "scanned_lines": 67,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/stage1_decode_t08_r105_eval.log",
+        "bytes": 13778,
+        "sha256": "629cb8100c3aca7d2785d1b948a6edf569b53949d8bc638133b820539974eda1",
+        "selection": "warning_error_lines",
+        "scanned_lines": 140,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/stage1_decode_t08_r105_queue.log",
+        "bytes": 574,
+        "sha256": "6993076fb03f15e4f7124b1770d45b804dafa0c57d5b956f087dc0226ae889c2",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/stage1_short_mix50.log",
+        "bytes": 406,
+        "sha256": "3a6a76f5df5022ee183c390721666aab901e93fab74eb525fc9ab37fb8230613",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/stage1_short_mix50_dev.log",
+        "bytes": 10077,
+        "sha256": "af90c0873877b85c7e202a697a65b261d68ddc3b05e455a08d96f0352ab45634",
+        "selection": "warning_error_lines",
+        "scanned_lines": 68,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/stage1_short_mix50_eval.log",
+        "bytes": 12669,
+        "sha256": "763c0c42f5109c7e4ddb6d10d016bcb02860a8bae34930ee49f4a178e4c2daf0",
+        "selection": "warning_error_lines",
+        "scanned_lines": 122,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/stage1_short_mix50_queue.log",
+        "bytes": 505,
+        "sha256": "aa7c4b49e547b3e190f274fb1d9a06e410d45d3f632f32459b1f24a91717b9e4",
+        "selection": "warning_error_lines",
+        "scanned_lines": 3,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/stage2.log",
+        "bytes": 116871,
+        "sha256": "91e9905e02fc36778b8cc18712ce8ff4687b8834108dfc35fd4891512301a2b8",
+        "selection": "warning_error_lines",
+        "scanned_lines": 639,
+        "records": 18
+      },
+      {
+        "path": "agent_home/task/logs/stage2_500_dev.log",
+        "bytes": 9203,
+        "sha256": "83ff81a3f5fd85672d1f8419f57c3f90d781ddb7f17dcf91f12c65ff98920d86",
+        "selection": "warning_error_lines",
+        "scanned_lines": 62,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/stage2_500_eval.log",
+        "bytes": 12837,
+        "sha256": "6f3503fe5ae6d36312708fb3b774242c6744ae3bbb5dab1b5d6f1f3136fb351c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 126,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/stage2_evaluation_queue.log",
+        "bytes": 1070,
+        "sha256": "3f6eb9980206ac99541110b304e77b3934d186dd59cee5c42a9fb57cb50b24cd",
+        "selection": "warning_error_lines",
+        "scanned_lines": 6,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/stage2_queue.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "selection": "warning_error_lines",
+        "scanned_lines": 0,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/stage2b.log",
+        "bytes": 230752,
+        "sha256": "ab546fdfd173fc0d0ae7914b42c92fe42723a0f9b57a783a1cf2944fb20120ed",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1197,
+        "records": 18
+      },
+      {
+        "path": "agent_home/task/logs/stage2b_1000_dev.log",
+        "bytes": 9141,
+        "sha256": "3ff8a6a227a57ef998caed412a814d963f339aca8f6482edaefb81d542e84fd7",
+        "selection": "warning_error_lines",
+        "scanned_lines": 61,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/stage2b_1000_eval.log",
+        "bytes": 13305,
+        "sha256": "031a460fb6c0321b87cd7fd38b3c65473b1eb1400394a815aa9bd1d20c80d30f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 134,
+        "records": 4
+      },
+      {
+        "path": "agent_home/task/logs/stage2b_1000_sampling.log",
+        "bytes": 11493,
+        "sha256": "5b8d7280a6a6bd6428bdc065cb1fb2ab2b6a57e32a8bceb8be2f44e075f84eff",
+        "selection": "warning_error_lines",
+        "scanned_lines": 88,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/stage2b_500_dev.log",
+        "bytes": 9380,
+        "sha256": "2baa4e2f3ebad8134179d6c11c30424bd8d20df0d762ac0471d0503386573d3d",
+        "selection": "warning_error_lines",
+        "scanned_lines": 63,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/stage2b_500_eval.log",
+        "bytes": 13281,
+        "sha256": "fa52b3ca348496570bf169383abcfd0c1c5f0029606b1548f90ea83454dd4a7b",
+        "selection": "warning_error_lines",
+        "scanned_lines": 129,
+        "records": 5
+      },
+      {
+        "path": "agent_home/task/logs/stage2b_evaluation_queue.log",
+        "bytes": 1719,
+        "sha256": "3f3482579c3ddf4334557b5d8669a0571879fc894820a8cd172ee12211a78ddc",
+        "selection": "warning_error_lines",
+        "scanned_lines": 8,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/sync_native_dev_selection.log",
+        "bytes": 630,
+        "sha256": "57c2eb70f3ca0dc2f228c105ad0ef01526f5bf45d8c1391dfde30e53f1afefa3",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/tokenize_concise8k.log",
+        "bytes": 567,
+        "sha256": "b6cc245be9bed381ce0cf6c60da73fb08f959e9706121f22df3b988dd63550fa",
+        "selection": "warning_error_lines",
+        "scanned_lines": 26,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/tokenize_focused12k.log",
+        "bytes": 610,
+        "sha256": "bb4d97d59f25249b8c2a9862f589b61168c0878fd4e3b9a7524a779b38933ab4",
+        "selection": "warning_error_lines",
+        "scanned_lines": 28,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/tokenize_initial.log",
+        "bytes": 649,
+        "sha256": "74593e2652dbeebc3a7c20afbbbe4b72992618e46ade0a1a4fa4fbc3204507ae",
+        "selection": "warning_error_lines",
+        "scanned_lines": 30,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/tokenize_initial_competition.log",
+        "bytes": 677,
+        "sha256": "6760288789f118e9d8937cfe4959d4fd83234418cb530527bad24d58a5be8edc",
+        "selection": "warning_error_lines",
+        "scanned_lines": 31,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/tokenize_openmath_think.log",
+        "bytes": 467,
+        "sha256": "8da0794a47afcb6de36cad7b5edce27b37502019ca87018728e53929d9fd1e3a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 20,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/tokenize_replay_focus.log",
+        "bytes": 1226,
+        "sha256": "d6ec5570d301ae3303b36f6d9aceaaa3961347d6eaf4d61f1b8c0dd772c83b27",
+        "selection": "warning_error_lines",
+        "scanned_lines": 49,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/tokenize_temporal12k.log",
+        "bytes": 508,
+        "sha256": "13c04b043ef456eb762d8b2c68e0a04688455bf10c32e8fb3c1755acb8db520a",
+        "selection": "warning_error_lines",
+        "scanned_lines": 24,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/tp_pilot_1.log",
+        "bytes": 7462,
+        "sha256": "a02d5180ab4f19bdd28fa6534b40545696b0f3e3cfe45b904bb83a3be438487c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 99,
+        "records": 2
+      },
+      {
+        "path": "agent_home/task/logs/tp_pilot_2.log",
+        "bytes": 7699,
+        "sha256": "b651f3dabcd556e327a8b48b633080feceff01f3d8d40941771c208477666360",
+        "selection": "warning_error_lines",
+        "scanned_lines": 101,
+        "records": 3
+      },
+      {
+        "path": "agent_home/task/logs/train_special_only.log",
+        "bytes": 483,
+        "sha256": "59b6c0bf39bad0bd56371b18cbe3e6c73d3c9d948a58f55d6fe620e04acb63c5",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/transition_to_variants.log",
+        "bytes": 115,
+        "sha256": "88ef9fecf9366210574e379b80e74d362593a1890ea6dae22144f37013fe0d2c",
+        "selection": "warning_error_lines",
+        "scanned_lines": 2,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/variant_evaluation_queue.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "selection": "warning_error_lines",
+        "scanned_lines": 0,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/variant_evaluations.log",
+        "bytes": 1002,
+        "sha256": "09a11a4a6b0276d4a41648e204061504fcf3f08be3e1562dd9f960acd14c426f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 6,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/variant_training_queue.log",
+        "bytes": 362,
+        "sha256": "14f8b592aeec90a886d6ea8196f92a665e5050139960b37aa37decf355b0c522",
+        "selection": "warning_error_lines",
+        "scanned_lines": 4,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/verify_procedural.log",
+        "bytes": 366,
+        "sha256": "55cbee497866ff242fdce75bc678c4c9f82343908558f6c68bd2aad6d8e72b10",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "agent_home/task/logs/verify_procedural_expanded.log",
+        "bytes": 366,
+        "sha256": "0f7646e10cc067ac8baeedaa76b07d5a999240d3671ed2d1ee443407798ce88f",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1,
+        "records": 0
+      },
+      {
+        "path": "controller/base_full/evaluate.log",
+        "bytes": 20132,
+        "sha256": "d4f4ff95613a0facad6d4ef023b8d7bec29c5ea3fb8e67c173cec2f6a3fac637",
+        "selection": "warning_error_lines",
+        "scanned_lines": 207,
+        "records": 5
+      },
+      {
+        "path": "controller/final_full/evaluate.log",
+        "bytes": 14777,
+        "sha256": "3b1ded0f9488d84d62134968c2c37807b9ad7357e51c1db88c1a702cf52330a3",
+        "selection": "warning_error_lines",
+        "scanned_lines": 131,
+        "records": 5
+      }
+    ],
+    "source_errors": [],
+    "records_by_event_type": {
+      "log_line": 479
+    },
+    "records_by_severity": {
+      "error": 37,
+      "warning": 442
+    }
+  },
+  "outputs": {
+    "agent_model": {
+      "path": "agent_model_outputs.jsonl",
+      "bytes": 116081,
+      "sha256": "b4f15d8302c79951ae1150d2efa6b18853d5b30bcbcbef9d85f0ffb6105808b3",
+      "records": 238
+    },
+    "agent_system": {
+      "path": "agent_system_outputs.jsonl",
+      "bytes": 3052575,
+      "sha256": "7e6fe90aa3068dc5fa6727ec95309b5431b459a7b3d87603a2e80273a74312ce",
+      "records": 1482
+    },
+    "eval_model": {
+      "path": "eval_model_outputs.jsonl",
+      "bytes": 4489470,
+      "sha256": "93584e511fce4a3051d1092e97ea0289646a5e1f458a46113021888e4c988347",
+      "records": 60
+    },
+    "linux_system": {
+      "path": "linux_system_outputs.jsonl",
+      "bytes": 276835,
+      "sha256": "16f7edae13113d1e41ae39ebc2f8972a484f1702ca7a7c54042cb74ec82504d5",
+      "records": 479
+    }
+  },
+  "privacy": {
+    "sanitized": false,
+    "note": "Derived records can contain prompts, benchmark inputs, command outputs, paths, and other sensitive text. Review before sharing."
+  }
+}

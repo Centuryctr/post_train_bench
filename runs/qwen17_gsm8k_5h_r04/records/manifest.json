@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "name": "export_normalized_records.py",
+    "version": "1.1.0"
+  },
+  "generated_at": "2026-10-20T09:00:20.786850+00:00",
+  "run_id": "qwen17_gsm8k_5h_r04",
+  "task": "gsm8k",
+  "run_root": "/root/emhua/qrzeng/post_train_bench/runs/qwen17_gsm8k_5h_r04",
+  "semantics": {
+    "agent_model_outputs": "Completed Codex agent messages and exposed reasoning summaries. Reasoning summaries are not raw hidden chain-of-thought.",
+    "agent_system_outputs": "Completed Codex tool outputs, unstructured runtime messages, and any started items that never completed. Command output is the CLI aggregated stream and may combine stdout and stderr.",
+    "eval_model_outputs": "Per-sample downstream model completions exported from controller Inspect AI logs.",
+    "linux_system_outputs": "Experiment-scoped resource snapshots, separated stdout/stderr events, and conservative warning/error backfills from legacy logs. Host-wide journal and kernel logs are intentionally excluded."
+  },
+  "sources": {
+    "agent_log": {
+      "path": "agent_home/task/agent.jsonl",
+      "bytes": 1086686,
+      "sha256": "6d22763ad964ce8b6fa2de3c8ad3d27514cf70b3c610a9835d931926c3a2aec5"
+    },
+    "inspect_logs": [
+      {
+        "path": "final_full/inspect_logs/2026-10-15T07-23-55+00-00_gsm8k_TqW8bxyvNm7GpMjnsKWWrj.json",
+        "bytes": 56452235,
+        "sha256": "314062467a129b11bafa6aeb1b609bfff022de5cccf15e958f344108fb33f03b",
+        "sample_count": 1319
+      }
+    ],
+    "inspect_log_errors": []
+  },
+  "agent_trace": {
+    "exists": true,
+    "valid_json_lines": 746,
+    "invalid_json_lines": 1,
+    "model_output_records": 116,
+    "system_output_records": 315,
+    "events_by_type": {
+      "error": 1,
+      "item.completed:agent_message": 71,
+      "item.completed:command_execution": 303,
+      "item.completed:reasoning": 45,
+      "item.completed:web_search": 10,
+      "item.started:command_execution": 303,
+      "item.started:web_search": 10,
+      "thread.started": 1,
+      "turn.completed": 1,
+      "turn.started": 1
+    },
+    "thread_ids": [
+      "01a13b34-95a8-7b62-8d20-6fc6c7595b5f"
+    ],
+    "turn_usage": [
+      {
+        "input_tokens": 40562056,
+        "cached_input_tokens": 39222272,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 372393,
+        "reasoning_output_tokens": 288329
+      }
+    ],
+    "unfinished_item_ids": []
+  },
+  "linux_system": {
+    "records": 5,
+    "structured_sources": [],
+    "legacy_sources": [
+      {
+        "path": "controller/final_full/evaluate.log",
+        "bytes": 163640,
+        "sha256": "a1ce4f19d5582012ea3d6e6201f1d19a4747b163be697d5364544bb79c6dab49",
+        "selection": "warning_error_lines",
+        "scanned_lines": 1588,
+        "records": 5
+      }
+    ],
+    "source_errors": [],
+    "records_by_event_type": {
+      "log_line": 5
+    },
+    "records_by_severity": {
+      "warning": 5
+    }
+  },
+  "outputs": {
+    "agent_model": {
+      "path": "agent_model_outputs.jsonl",
+      "bytes": 61483,
+      "sha256": "d67e2bb75cf43964ad1619e7498cc37ec67c1db426eeba4058e283a86068bd9a",
+      "records": 116
+    },
+    "agent_system": {
+      "path": "agent_system_outputs.jsonl",
+      "bytes": 760332,
+      "sha256": "033e88d118c01ce0fb0b31d57de5403bde0fe06de4b60cd4f0356416f4038342",
+      "records": 315
+    },
+    "eval_model": {
+      "path": "eval_model_outputs.jsonl",
+      "bytes": 2995363,
+      "sha256": "531518d4259a7e57a9ca47cc0a860c575dfd9f4914040bbd433d5035c9ad2bda",
+      "records": 1319
+    },
+    "linux_system": {
+      "path": "linux_system_outputs.jsonl",
+      "bytes": 2805,
+      "sha256": "68c7c20e056667feb207eda961719a491c0d8f36bf3d6e2992781abb02f57941",
+      "records": 5
+    }
+  },
+  "privacy": {
+    "sanitized": false,
+    "note": "Derived records can contain prompts, benchmark inputs, command outputs, paths, and other sensitive text. Review before sharing."
+  }
+}
